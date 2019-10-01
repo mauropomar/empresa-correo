@@ -1,7 +1,7 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row>
     <mat-button-toggle #buttonMenu (click)="onToggleSideNav(buttonMenu.checked)"><mat-icon>menu</mat-icon></mat-button-toggle>
-    <span>R.H PLUS</span>
+    <span>{{constantes.title}}</span>
     <span class="example-spacer"></span>
     <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
       <i class="material-icons">more_vert</i>

@@ -19,7 +19,7 @@ import {
   MatGridListModule,
   MatSidenavModule,
   MatDialogModule,
-} from '@angular/material';
+  } from '@angular/material';
 
 const modules = [
   CommonModule,

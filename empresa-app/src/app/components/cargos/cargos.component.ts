@@ -64,6 +64,7 @@ export class CargosComponent implements OnInit{
 
   editarForm(element){
      this.constantes.editando = true;
+     this.constantes.title = 'Editar Cargo';
      let id = element.id;
      this.router.navigate(['cargo', id]);
   }

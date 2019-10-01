@@ -3,10 +3,11 @@
   <mat-form-field>
     <input matInput placeholder="Nombre" [(ngModel)] = "cargo.nombre">
   </mat-form-field>
-  
+
   <mat-form-field>
     <textarea matInput placeholder="Descripción" [(ngModel)] = "cargo.descripcion"></textarea>
   </mat-form-field>
+
   <mat-card-actions align="right">
     <button mat-flat-button color="primary" *ngIf="!editando">
       <mat-icon >add</mat-icon>Agregar</button>

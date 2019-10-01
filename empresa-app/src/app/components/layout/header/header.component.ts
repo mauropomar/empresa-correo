@@ -1,4 +1,5 @@
-import { Component, OnInit, Output, EventEmitter  } from '@angular/core';
+import {Component, OnInit, Output, EventEmitter} from '@angular/core';
+import {ConstantesService} from "../../../services/constantes.service";
 
 @Component({
   selector: 'app-header',
@@ -7,14 +8,16 @@ import { Component, OnInit, Output, EventEmitter  } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   @Output() sidenavToggle: EventEmitter<boolean>;
-  constructor() {
+
+  constructor(private constantes:ConstantesService) {
     this.sidenavToggle = new EventEmitter();
+    this.constantes.title = 'R.H Plus'
   }
 
   ngOnInit() {
   }
 
-  onToggleSideNav(value){
+  onToggleSideNav(value) {
     this.sidenavToggle.emit(!value)
   }
 

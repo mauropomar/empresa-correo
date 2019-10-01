@@ -9,8 +9,8 @@ import { CargoComponent} from './components/cargos/cargo.component';
 const routes: Routes = [
     { path: '', component: HomeComponent },
     {path : 'login', component : LoginComponent},
-    {path : 'cargos', component : CargosComponent},
-    {path : 'cargo/:id', component : CargoComponent}
+    {path : 'cargos', component : CargosComponent },
+    {path : 'cargo/:id', component : CargoComponent },
 ];
 
 @NgModule({
