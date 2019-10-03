@@ -1,0 +1,19 @@
+<div class="x-fav-button">
+ <button mat-fab [color]="color" [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+   <mat-icon>add</mat-icon>
+ </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item (click)="mostrarVentanaNueva()">
+      <mat-icon>add</mat-icon>
+      <span>Nuevo</span>
+    </button>
+    <button mat-menu-item *ngIf="!showAllActive" (click)="mostrarActivos(true)">
+      <mat-icon>visibility</mat-icon>
+      <span>Solo Activos</span>
+    </button>
+    <button mat-menu-item *ngIf="showAllActive" (click)="mostrarActivos(false)">
+      <mat-icon>visibility_off</mat-icon>
+      <span>Mostrar Todos</span>
+    </button>
+  </mat-menu>
+</div>

@@ -20,7 +20,7 @@ export class CargosComponent implements OnInit {
   displayedColumns: string[] = ['nombre', 'descripcion', 'actions'];
   cargos: MatTableDataSource<CargoModel>;
   showLoading: boolean = true;
-  textoLoading:string = 'Cargando...'
+  textoLoading: string = 'Cargando...'
 
 
   constructor(private router: Router,
@@ -28,11 +28,7 @@ export class CargosComponent implements OnInit {
               private cargosService: CargosService,
               public dialog: MatDialog,
               private constantes: ConstantesService) {
-    this.cargosService.obtenerTodos()
-      .subscribe(data => {
-        this.cargos = new MatTableDataSource<CargoModel>(data);
-        this.showLoading = false;
-      })
+       this.obtenerTodos(true);
   }
 
   ngOnInit() {
@@ -61,7 +57,6 @@ export class CargosComponent implements OnInit {
   }
 
   deleteElement(id) {
-
     let myArray = this.cargos.data;
     for (let i = 0; i < myArray.length; i++) {
       if (myArray[i].id === id) {
@@ -72,10 +67,27 @@ export class CargosComponent implements OnInit {
     }
   }
 
-  editarForm(element) {
+  nuevo() {
+    this.constantes.editando = false;
+    this.router.navigate(['cargo/nuevo']);
+  }
+
+  editar(element) {
     this.constantes.editando = true;
     let id = element.id;
     this.router.navigate(['cargo', id]);
   }
 
+  obtenerTodos(activo){
+    this.cargosService.obtenerTodos()
+      .subscribe(data => {
+        this.cargos = new MatTableDataSource<CargoModel>(data);
+        this.showLoading = false;
+      }, (error) => {
+        console.log(error)
+      })
+  }
 }
+
+
+

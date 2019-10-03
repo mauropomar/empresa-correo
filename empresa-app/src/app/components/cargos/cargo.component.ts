@@ -3,6 +3,7 @@ import {ActivatedRoute} from '@angular/router'
 import {CargosService} from "../../services/cargos.service";
 import {CargoModel} from "../../models/cargo.model";
 import {ConstantesService} from "../../services/constantes.service";
+import {Router} from '@angular/router'
 
 @Component({
   selector: 'app-cargo',
@@ -20,7 +21,8 @@ export class CargoComponent implements OnInit {
 
   constructor(private activateRoute: ActivatedRoute,
               private cargoService: CargosService,
-              private constantesService: ConstantesService) {
+              private constantesService: ConstantesService,
+              private router:Router) {
     this.editando = constantesService.editando;
   //  this.activateRouter.snapshot.data.title
     this.activateRoute.params.subscribe(params => {
@@ -32,6 +34,10 @@ export class CargoComponent implements OnInit {
 
   ngOnInit() {
     this.constantesService.title = this.activateRoute.snapshot.data.title;
+  }
+
+  cancelar(){
+      this.router.navigate(["/cargos"]);
   }
 
 }

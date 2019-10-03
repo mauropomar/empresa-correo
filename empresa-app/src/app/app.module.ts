@@ -24,6 +24,7 @@ import {CargoComponent} from './components/cargos/cargo.component';
 //services
 import { ConstantesService } from "./services/constantes.service";
 import { LoadingComponent } from './components/genericos/loading/loading.component';
+import { FavbuttonComponent } from './components/genericos/favbutton/favbutton.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { LoadingComponent } from './components/genericos/loading/loading.compone
     CargosComponent,
     CargoComponent,
     ConfirmDeleteComponent,
-    LoadingComponent
+    LoadingComponent,
+    FavbuttonComponent
   ],
   imports: [
     BrowserModule,
