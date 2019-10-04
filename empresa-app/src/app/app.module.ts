@@ -22,7 +22,7 @@ import {CargosComponent} from './components/cargos/cargos.component';
 import {CargoComponent} from './components/cargos/cargo.component';
 
 //services
-import { ConstantesService } from "./services/constantes.service";
+import { GlobalesService } from "./services/constantes.service";
 import { LoadingComponent } from './components/genericos/loading/loading.component';
 import { FavbuttonComponent } from './components/genericos/favbutton/favbutton.component';
 
@@ -51,7 +51,7 @@ import { FavbuttonComponent } from './components/genericos/favbutton/favbutton.c
     FlexLayoutModule,
     HttpClientModule
   ],
-  providers: [ConstantesService],
+  providers: [GlobalesService],
   bootstrap: [AppComponent],
   entryComponents: [
     ConfirmDeleteComponent

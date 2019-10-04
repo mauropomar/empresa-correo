@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router'
 import {CargosService} from "../../services/cargos.service";
 import {CargoModel} from "../../models/cargo.model";
-import {ConstantesService} from "../../services/constantes.service";
+import {GlobalesService} from "../../services/constantes.service";
 import {Router} from '@angular/router'
 
 @Component({
@@ -12,6 +12,8 @@ import {Router} from '@angular/router'
 })
 export class CargoComponent implements OnInit {
   editando:boolean = false;
+  showLoading: boolean = false;
+  textoLoading: string = 'Guardando...'
   private cargo: CargoModel = {
     id: 0,
     nombre: '',
@@ -21,10 +23,9 @@ export class CargoComponent implements OnInit {
 
   constructor(private activateRoute: ActivatedRoute,
               private cargoService: CargosService,
-              private constantesService: ConstantesService,
+              private globales: GlobalesService,
               private router:Router) {
-    this.editando = constantesService.editando;
-  //  this.activateRouter.snapshot.data.title
+    this.editando = globales.editando;
     this.activateRoute.params.subscribe(params => {
       let id = params['id'];
       this.cargoService.obtener(id)
@@ -33,7 +34,22 @@ export class CargoComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.constantesService.title = this.activateRoute.snapshot.data.title;
+    this.globales.title = this.activateRoute.snapshot.data.title;
+    this.editando = (this.globales.title.indexOf('Nuevo') > -1)?false:true;
+  }
+
+  insertar(cerrar){
+    this.showLoading = true;
+    this.cargoService.crear(this.cargo)
+      .subscribe(data => {
+        this.globales.datos.push(this.cargo);
+        this.showLoading = false;
+        if(cerrar){
+           this.router.navigate(['cargos'])
+        }
+      }, (error) => {
+        console.log(error)
+      })
   }
 
   cancelar(){

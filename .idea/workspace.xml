@@ -3,13 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="662a405a-72ed-48b0-bfb0-83b95f2351a3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/app-routing.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/empresa-app/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/app.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/cargos/cargo.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/cargos/cargo.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/cargos/cargo.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/cargos/cargo.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/cargos/cargos.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/cargos/cargos.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/cargos/cargos.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/cargos/cargos.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/genericos/loading/loading.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/genericos/favbutton/favbutton.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/genericos/favbutton/favbutton.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/layout/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/layout/header/header.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/layout/header/header.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/layout/header/header.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/layout/sidenav/sidenav.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/layout/sidenav/sidenav.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/services/cargos.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/services/cargos.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/services/constantes.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/services/constantes.service.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -150,7 +153,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/empresa-app" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../siemprevino" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -267,7 +270,13 @@
       <workItem from="1569977723092" duration="7379000" />
       <workItem from="1572727974997" duration="1719000" />
       <workItem from="1572729743723" duration="3049000" />
-      <workItem from="1570055491002" duration="8965000" />
+      <workItem from="1570055491002" duration="9196000" />
+      <workItem from="1570102071444" duration="1631000" />
+      <workItem from="1572785553046" duration="597000" />
+      <workItem from="1572803244178" duration="694000" />
+      <workItem from="1572806080531" duration="1589000" />
+      <workItem from="1572827822338" duration="2240000" />
+      <workItem from="1570148476381" duration="6151000" />
     </task>
     <task id="LOCAL-00001" summary="Primer commit">
       <created>1570802375227</created>
@@ -584,7 +593,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572626676393</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="Configuracion del crud de cargos">
+      <created>1570068281064</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1570068281064</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TodoView">

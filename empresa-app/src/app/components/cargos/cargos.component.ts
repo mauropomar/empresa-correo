@@ -6,8 +6,7 @@ import {ConfirmDeleteComponent} from '../genericos/dialog/confirm-delete/confirm
 import {CargoModel} from "../../models/cargo.model";
 import {MatTableDataSource} from '@angular/material/table';
 import {Router} from '@angular/router'
-import {ConstantesService} from "../../services/constantes.service";
-
+import {GlobalesService} from "../../services/constantes.service";
 
 @Component({
   selector: 'app-cargos',
@@ -27,12 +26,12 @@ export class CargosComponent implements OnInit {
               private activeRoute: ActivatedRoute,
               private cargosService: CargosService,
               public dialog: MatDialog,
-              private constantes: ConstantesService) {
+              private globales: GlobalesService) {
        this.obtenerTodos(true);
   }
 
   ngOnInit() {
-    this.constantes.title = this.activeRoute.snapshot.data.title;
+    this.globales.title = this.activeRoute.snapshot.data.title;
   }
 
   openDialogDelete(element) {
@@ -68,25 +67,38 @@ export class CargosComponent implements OnInit {
   }
 
   nuevo() {
-    this.constantes.editando = false;
+    this.globales.editando = false;
     this.router.navigate(['cargo/nuevo']);
   }
 
   editar(element) {
-    this.constantes.editando = true;
+    this.globales.editando = true;
     let id = element.id;
     this.router.navigate(['cargo', id]);
+  }
+
+  deleteOfData(id,array){
+    let myArray = array.data;
+    for (let i = 0; i < myArray.length; i++) {
+      if (myArray[i].id === id) {
+        myArray.splice(i, 1);
+        array = new MatTableDataSource(myArray);
+        break
+      }
+    }
   }
 
   obtenerTodos(activo){
     this.cargosService.obtenerTodos()
       .subscribe(data => {
         this.cargos = new MatTableDataSource<CargoModel>(data);
+        this.globales.datos = this.cargos;
         this.showLoading = false;
       }, (error) => {
         console.log(error)
       })
   }
+
 }
 
 

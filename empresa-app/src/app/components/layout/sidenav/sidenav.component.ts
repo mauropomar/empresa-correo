@@ -1,5 +1,5 @@
 import {Component, OnInit, Input} from '@angular/core';
-import {ConstantesService} from "../../../services/constantes.service";
+import {GlobalesService} from "../../../services/constantes.service";
 import {Router} from "@angular/router";
 
 @Component({
@@ -9,7 +9,7 @@ import {Router} from "@angular/router";
 })
 export class SidenavComponent implements OnInit {
     @Input() opened: boolean;
-    constructor(private constantes:ConstantesService, private router: Router) {
+    constructor(private globales:GlobalesService, private router: Router) {
     }
 
     ngOnInit() {

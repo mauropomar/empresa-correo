@@ -30,6 +30,15 @@ export class CargosService {
       .pipe(map(data => data['data']));
   }
 
+  crear(cargo:CargoModel){
+     let body = JSON.stringify(cargo);
+     let url = this.getQuery('crear');
+     return this.http.post(url, body)
+       .pipe(map(response=> {
+         console.log(response)
+       }));
+  }
+
   borrar(id){
     let url = this.getQuery('eliminar/' + id);
     return this.http.delete(url)

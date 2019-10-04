@@ -1,5 +1,5 @@
 import {Component, OnInit, Output, EventEmitter} from '@angular/core';
-import {ConstantesService} from "../../../services/constantes.service";
+import {GlobalesService} from "../../../services/constantes.service";
 
 
 @Component({
@@ -10,7 +10,7 @@ import {ConstantesService} from "../../../services/constantes.service";
 export class HeaderComponent implements OnInit {
   @Output() sidenavToggle: EventEmitter<boolean>;
 
-  constructor(private constantes:ConstantesService) {
+  constructor(private globales:GlobalesService) {
     this.sidenavToggle = new EventEmitter();
   }
 
