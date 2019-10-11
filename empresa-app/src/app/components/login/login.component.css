@@ -1,7 +1,6 @@
 .example-card {
-    margin-top: 100px;
     width: 95%;
-    height: 99%;
+    height: 100%;
 }
 
 .mat-form-field {
@@ -31,4 +30,15 @@ mat-card-content {
 .button{
     width: 10%;
     margin-left: 10px;
+}
+
+.imagen_login{
+    text-align: center;
+}
+
+.mat-card-image{
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+    margin-top: -20px;
 }

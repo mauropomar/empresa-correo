@@ -9,7 +9,9 @@ import {
     MatToolbarModule,
     MatTooltipModule,
     MatCheckboxModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatIconModule,
+    MatMenuModule
 } from '@angular/material';
 
 const modules = [
@@ -21,7 +23,9 @@ const modules = [
     MatToolbarModule,
     MatTooltipModule,
     MatCheckboxModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatIconModule,
+    MatMenuModule
 ];
 
 @NgModule({
