@@ -3,6 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="662a405a-72ed-48b0-bfb0-83b95f2351a3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/styles.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,7 +35,31 @@
           <entry key="PLAIN_TEXT" value="14" />
         </counts>
       </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="gitignore" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="PLAIN_TEXT" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.js.language.service.starts">
+        <counts>
+          <entry key="TypeScriptServerServiceImpl" value="1" />
+        </counts>
+      </usages-collector>
     </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/empresa-app/.gitignore">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="ROOT_SYNC" value="DONT_SYNC" />
@@ -68,6 +99,11 @@
               <item name="empresa" type="b2602c69:ProjectViewProjectNode" />
               <item name="empresa" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="empresa" type="b2602c69:ProjectViewProjectNode" />
+              <item name="empresa" type="462c0819:PsiDirectoryNode" />
+              <item name="empresa-app" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -103,7 +139,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1570800716769</updated>
-      <workItem from="1570800718025" duration="1873000" />
+      <workItem from="1570800718025" duration="2748000" />
     </task>
     <task id="LOCAL-00001" summary="Primer commit">
       <created>1570802375227</created>
@@ -112,11 +148,18 @@
       <option name="project" value="LOCAL" />
       <updated>1570802375227</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Primer commit">
+      <created>1570803173927</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1570803173927</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1873000" />
+    <option name="totallyTimeSpent" value="2748000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -130,9 +173,10 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31990883" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.31990883" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="TypeScript" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32879046" />
@@ -145,7 +189,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="REST Client" order="10" weight="0.5178876" />
       <window_info anchor="bottom" id="Command Line Tools Console" order="11" weight="0.32879046" />
-      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49544072" visible="true" weight="0.32786885" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="12" sideWeight="0.49544072" visible="true" weight="0.32786885" />
       <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.5045593" side_tool="true" visible="true" weight="0.32786885" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -162,5 +206,10 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Primer commit" />
     <option name="LAST_COMMIT_MESSAGE" value="Primer commit" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/empresa-app/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
   </component>
 </project>
