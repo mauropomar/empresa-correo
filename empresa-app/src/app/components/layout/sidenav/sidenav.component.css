@@ -10,3 +10,9 @@ mat-sidenav{
     background-color: aliceblue;
     width: 100%;
 }
+
+.x-text-menu{
+   padding-left: 55px;
+   font-family: "Arial Black";
+    font-weight: bold;
+}
