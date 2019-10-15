@@ -15,14 +15,4 @@ export class SidenavComponent implements OnInit {
 
     opened: boolean = true;
     sidenavWidth:number = 4;
-    ngStyle: string;
-
-    increase() {
-        this.sidenavWidth = 15;
-        console.log('increase sidenav width');
-    }
-    decrease() {
-        this.sidenavWidth = 4;
-        console.log('decrease sidenav width');
-    }
 }
