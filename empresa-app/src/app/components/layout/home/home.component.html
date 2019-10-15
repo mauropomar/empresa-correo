@@ -1,7 +1,7 @@
-<mat-grid-list cols="2" rowHeight="5:2">
-    <mat-grid-tile
-            [colspan]="2"
-            [rowspan]="2"
-            [style.background]="'lightpink'">
-    </mat-grid-tile>
-</mat-grid-list>
+<div flexLayout="row" fxFlex>
+    <div fxFlex="15" style="background-color: aliceblue">
+        <app-sidenav></app-sidenav>
+    </div>
+    <div fxFlex="85" class="content">
+    </div>
+</div>
