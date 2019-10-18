@@ -14,5 +14,4 @@ export class SidenavComponent implements OnInit {
     }
 
     opened: boolean = true;
-    sidenavWidth:number = 4;
 }

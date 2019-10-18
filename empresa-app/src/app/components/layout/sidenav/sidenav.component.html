@@ -1,12 +1,15 @@
 <mat-sidenav-container class="example-container">
     <mat-sidenav mode="side" [(opened)] = "opened">
+      <div class="x-image-side">
+        <img mat-card-image src="../../../../assets/images/logo.jpg" alt="Usuario">
+      </div>
         <div class="x-text-menu">Menú</div>
         <mat-nav-list>
             <mat-list-item routerLink="1" routerLinkActive="active" >
                 <mat-icon mat-list-icon>person</mat-icon>
                 <div fxFlex="10"></div>
                 <div class="sidenav-item">
-                    <h5 class="lead">About</h5>
+                    <h5 class="lead">Trabajadores</h5>
                 </div>
             </mat-list-item>
 
@@ -14,21 +17,16 @@
                 <mat-icon mat-list-icon>settings</mat-icon>
                 <div fxFlex="10"></div>
                 <div class="sidenav-item">
-                    <h5 class="lead">Services</h5>
+                    <h5 class="lead">Accidentes</h5>
                 </div>
             </mat-list-item>
-
             <mat-list-item routerLink="3" routerLinkActive="active">
                 <mat-icon mat-list-icon>local_phone</mat-icon>
                 <div fxFlex="10"></div>
                 <div class="sidenav-item">
-                    <h5 class="lead">Contact</h5>
+                    <h5 class="lead">Cargos</h5>
                 </div>
             </mat-list-item>
-
-
-
         </mat-nav-list>
-
     </mat-sidenav>
 </mat-sidenav-container>
