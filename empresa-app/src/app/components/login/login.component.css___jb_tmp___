@@ -1,0 +1,44 @@
+.example-card {
+    width: 95%;
+    height: 100%;
+}
+
+.mat-form-field {
+    width: 100%;
+    min-width: 300px;
+}
+
+mat-card-header,
+mat-card-content {
+    display: flex;
+    justify-content: center;
+}
+
+.error {
+    padding: 16px;
+    width: 300px;
+    color: white;
+    background-color: red;
+}
+
+.mat-card-actions {
+    display: flex;
+    justify-content: center;
+    text-align: left;
+}
+
+.button{
+    width: 10%;
+    margin-left: 10px;
+}
+
+.imagen_login{
+    text-align: center;
+}
+
+.mat-card-image{
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+    margin-top: -20px;
+}
