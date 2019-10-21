@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import {
     MatButtonModule,
+    MatButtonToggleModule,
     MatFormFieldModule,
     MatInputModule,
     MatCardModule,
@@ -23,6 +24,7 @@ const modules = [
     MatCardModule,
     MatInputModule,
     MatButtonModule,
+    MatButtonToggleModule,
     MatToolbarModule,
     MatTooltipModule,
     MatCheckboxModule,

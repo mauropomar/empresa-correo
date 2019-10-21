@@ -5,3 +5,9 @@
 .example-spacer {
     flex: 1 1 auto;
 }
+
+mat-button-toggle{
+  margin-right: 10px;
+  background-color: transparent;
+  color:white;
+}

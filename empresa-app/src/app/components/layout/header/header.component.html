@@ -1,8 +1,6 @@
 <mat-toolbar color="primary">
     <mat-toolbar-row>
-        <button mat-icon-button aria-label="Example icon-button with a menu">
-            <mat-icon>menu</mat-icon>
-        </button>
+      <mat-button-toggle #buttonMenu (click)="onToggleSideNav(buttonMenu.checked)"><mat-icon>menu</mat-icon></mat-button-toggle>
         <span>Empresa de Correos</span>
         <span class="example-spacer"></span>
         <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
