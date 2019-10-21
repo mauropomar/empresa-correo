@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="662a405a-72ed-48b0-bfb0-83b95f2351a3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/layout/header/header.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/layout/header/header.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/layout/header/header.component.css___jb_tmp___" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/layout/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/layout/header/header.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/layout/header/header.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/layout/header/header.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/layout/sidenav/sidenav.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/layout/sidenav/sidenav.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/layout/sidenav/sidenav.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/layout/sidenav/sidenav.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/material.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/material.module.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -95,7 +86,7 @@
       <workItem from="1571535664734" duration="4758000" />
       <workItem from="1571541734684" duration="3471000" />
       <workItem from="1571578492339" duration="7126000" />
-      <workItem from="1571606446940" duration="8328000" />
+      <workItem from="1571606446940" duration="10655000" />
     </task>
     <task id="LOCAL-00001" summary="Primer commit">
       <created>1570802375227</created>
@@ -202,7 +193,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571580413941</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Creacion del sidenav y el home">
+      <created>1571616096550</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1571616096550</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TodoView">
@@ -235,7 +233,8 @@
     <MESSAGE value="Creacion del header y el footer" />
     <MESSAGE value="Creacion del home layout" />
     <MESSAGE value="Creacion del sidenav" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creacion del sidenav" />
+    <MESSAGE value="Creacion del sidenav y el home" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creacion del sidenav y el home" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
