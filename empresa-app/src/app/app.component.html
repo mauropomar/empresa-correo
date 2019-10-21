@@ -1,9 +1,9 @@
 <div flexLayout="row" fxFlex style="height: 100vh; min-height: 100vh">
-  <div fxFlex="15" style="background-color: aliceblue;">
+  <div [fxFlex]="sizeLeft" style="background-color: aliceblue;">
     <app-sidenav [opened] = "openedSideNav"></app-sidenav>
   </div>
-  <div fxFlex="85">
-    <app-header (sidenavToggle)="openedSideNav = $event"></app-header>
+  <div [fxFlex]="sizeCenter">
+    <app-header (sidenavToggle)="resizeLayout($event)"></app-header>
     <div class="content">
       <router-outlet></router-outlet>
     </div>
