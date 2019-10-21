@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="662a405a-72ed-48b0-bfb0-83b95f2351a3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/layout/sidenav/sidenav.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/layout/sidenav/sidenav.component.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -90,7 +86,7 @@
       <workItem from="1571541734684" duration="3471000" />
       <workItem from="1571578492339" duration="7126000" />
       <workItem from="1571606446940" duration="10925000" />
-      <workItem from="1571643777448" duration="1792000" />
+      <workItem from="1571643777448" duration="3237000" />
     </task>
     <task id="LOCAL-00001" summary="Primer commit">
       <created>1570802375227</created>
@@ -218,7 +214,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571624075953</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Creacion del sidenav y el home">
+      <created>1571645652777</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1571645652777</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TodoView">
