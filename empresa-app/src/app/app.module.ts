@@ -15,6 +15,7 @@ import { SidenavComponent } from './components/layout/sidenav/sidenav.component'
 import { NoimagePipe } from './pipes/noimage.pipe';
 import { DomseguroPipe } from './pipes/domseguro.pipe';
 
+
 @NgModule({
     declarations: [
         AppComponent,

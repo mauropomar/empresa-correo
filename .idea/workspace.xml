@@ -1,98 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="662a405a-72ed-48b0-bfb0-83b95f2351a3" name="Default Changelist" comment="Creacion del sidenav y el home">
-      <change afterPath="$PROJECT_DIR$/empresa-api/.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/.env.example" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/.gitattributes" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/.styleci.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/app/Console/Kernel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/app/Exceptions/Handler.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/app/Http/Controllers/Auth/ForgotPasswordController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/app/Http/Controllers/Auth/ResetPasswordController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/app/Http/Controllers/Auth/VerificationController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/app/Http/Controllers/Controller.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/app/Http/Kernel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/app/Http/Middleware/Authenticate.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/app/Http/Middleware/CheckForMaintenanceMode.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/app/Http/Middleware/EncryptCookies.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/app/Http/Middleware/RedirectIfAuthenticated.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/app/Http/Middleware/TrimStrings.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/app/Http/Middleware/TrustProxies.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/app/Http/Middleware/VerifyCsrfToken.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/app/Providers/AppServiceProvider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/app/Providers/AuthServiceProvider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/app/Providers/BroadcastServiceProvider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/app/Providers/EventServiceProvider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/app/Providers/RouteServiceProvider.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/app/User.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/artisan" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/bootstrap/app.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/bootstrap/cache/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/composer.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/composer.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/config/app.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/config/auth.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/config/broadcasting.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/config/cache.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/config/database.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/config/filesystems.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/config/hashing.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/config/logging.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/config/mail.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/config/queue.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/config/services.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/config/session.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/config/view.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/database/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/database/factories/UserFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/database/migrations/2014_10_12_100000_create_password_resets_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/phpunit.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/public/.htaccess" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/public/css/app.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/public/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/public/js/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/public/robots.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/public/web.config" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/resources/js/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/resources/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/resources/js/components/ExampleComponent.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/resources/lang/en/auth.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/resources/lang/en/pagination.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/resources/lang/en/passwords.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/resources/lang/en/validation.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/resources/sass/_variables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/resources/sass/app.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/resources/views/welcome.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/routes/api.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/routes/channels.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/routes/console.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/routes/web.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/server.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/storage/app/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/storage/app/public/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/storage/framework/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/storage/framework/cache/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/storage/framework/cache/data/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/storage/framework/sessions/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/storage/framework/testing/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/storage/framework/views/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/storage/logs/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/tests/CreatesApplication.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/tests/Feature/ExampleTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/tests/TestCase.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/tests/Unit/ExampleTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-api/webpack.mix.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-app/src/app/components/login/login.component.css___jb_tmp___" afterDir="false" />
+    <list default="true" id="662a405a-72ed-48b0-bfb0-83b95f2351a3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/empresa.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/empresa.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/styles.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -100,105 +19,11 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/empresa-app/src/app/material.module.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="35" column="17" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/empresa-app/src/app/components/layout/sidenav/sidenav.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="43" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/empresa-app/src/app/app.module.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="34" column="24" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
-              <folding>
-                <element signature="e#0#56#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/empresa-app/src/app/components/layout/sidenav/sidenav.component.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/empresa-app/src/app/components/layout/sidenav/sidenav.component.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/empresa-app/src/app/components/layout/home/home.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/empresa-app/src/app/components/login/login.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/empresa-app/src/app/components/layout/home/home.component.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/empresa-app/src/app/app.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="31" selection-start-line="1" selection-start-column="31" selection-end-line="1" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/empresa-app/src/styles.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="85" selection-start-line="3" selection-start-column="85" selection-end-line="3" selection-end-column="85" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/empresa-api/composer.json</pharConfigPath>
+    <execution>
+      <executable />
+    </execution>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -212,49 +37,9 @@
     <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="NodePackageJsonFileManager">
-    <packageJsonPaths>
-      <path value="$PROJECT_DIR$/empresa-api/package.json" />
-    </packageJsonPaths>
-  </component>
   <component name="PhpDebugGeneral" ignore_connections_through_unregistered_servers="true" xdebug_force_break_when_no_path_mapping="false" xdebug_force_break_when_outside_project="false" />
   <component name="ProjectId" id="1SLNkXSgyEM6KgAJqPOMt6Rwmfb" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="empresa" type="b2602c69:ProjectViewProjectNode" />
-              <item name="empresa" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="empresa" type="b2602c69:ProjectViewProjectNode" />
-              <item name="empresa" type="462c0819:PsiDirectoryNode" />
-              <item name="empresa-api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="empresa" type="b2602c69:ProjectViewProjectNode" />
-              <item name="empresa" type="462c0819:PsiDirectoryNode" />
-              <item name="empresa-app" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
-  </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -275,138 +60,6 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\ms4w\Apache\htdocs\empresa\empresa-app\src\app" />
     </key>
-  </component>
-  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
-    <UpdatedFiles>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Updated from server" />
-        <option name="myStatusName" value="Changed on server" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="CHANGED_ON_SERVER" />
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated" />
-          <option name="myStatusName" value="Changed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/empresa-app/src/app/app-routing.module.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/empresa-app/src/app/app.component.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/empresa-app/src/app/app.component.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/empresa-app/src/app/app.module.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/empresa-app/src/app/components/layout/header/header.component.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/empresa-app/src/app/components/layout/header/header.component.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/empresa-app/src/app/components/layout/header/header.component.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/empresa-app/src/app/components/layout/home/home.component.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/empresa-app/src/app/components/layout/sidenav/sidenav.component.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/empresa-app/src/app/components/layout/sidenav/sidenav.component.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/empresa-app/src/app/components/layout/sidenav/sidenav.component.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/empresa-app/src/app/components/login/login.component.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/empresa-app/src/app/material.module.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/empresa-app/src/styles.css</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Created" />
-          <option name="myStatusName" value="Created" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CREATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/empresa-app/src/app/pipes/domseguro.pipe.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/empresa-app/src/app/pipes/noimage.pipe.ts</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/empresa-app/src/assets/images/logo.jpg</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/empresa-app/src/assets/images/noimage.png</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Deleted" />
-          <option name="myStatusName" value="Deleted" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="true" />
-          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/empresa-app/src/app/components/layout/header/header.component.css___jb_tmp___</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/empresa-app/src/app/components/layout/header/header.component.html___jb_tmp___</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/empresa-app/src/index.html___jb_tmp___</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Restored" />
-          <option name="myStatusName" value="Will be restored" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="RESTORED" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Modified" />
-        <option name="myStatusName" value="Modified" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MODIFIED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Skipped" />
-        <option name="myStatusName" value="Skipped" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SKIPPED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with conflicts" />
-        <option name="myStatusName" value="Will be merged with conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_CONFLICTS" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with tree conflicts" />
-        <option name="myStatusName" value="Merged with tree conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with property conflicts" />
-        <option name="myStatusName" value="Will be merged with property conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged" />
-        <option name="myStatusName" value="Will be merged" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Not in repository" />
-        <option name="myStatusName" value="Not in repository" />
-        <option name="mySupportsDeletion" value="true" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="UNKNOWN" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally added" />
-        <option name="myStatusName" value="Locally added" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_ADDED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally removed" />
-        <option name="myStatusName" value="Locally removed" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_REMOVED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Switched" />
-        <option name="myStatusName" value="Switched" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SWITCHED" />
-      </FILE-GROUP>
-    </UpdatedFiles>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -445,6 +98,7 @@
       <workItem from="1571606446940" duration="10925000" />
       <workItem from="1571643777448" duration="3249000" />
       <workItem from="1571659567342" duration="1209000" />
+      <workItem from="1571678309563" duration="2216000" />
     </task>
     <task id="LOCAL-00001" summary="Primer commit">
       <created>1570802375227</created>
@@ -589,9 +243,6 @@
     <option name="localTasksCounter" value="21" />
     <servers />
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1102000" />
-  </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
@@ -600,33 +251,6 @@
       <are-packages-shown value="true" />
       <is-autoscroll-to-source value="true" />
     </todo-panel>
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3799392" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32879046" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49848023" weight="0.39863715" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49848023" weight="0.32786885" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" sideWeight="0.49848023" weight="0.32879046" />
-      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="REST Client" order="10" weight="0.5178876" />
-      <window_info anchor="bottom" id="Command Line Tools Console" order="11" weight="0.32879046" />
-      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49468085" visible="true" weight="0.32786885" />
-      <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.5053192" side_tool="true" weight="0.32786885" />
-      <window_info anchor="bottom" id="TypeScript" order="14" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" />
-    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -637,12 +261,6 @@
         <entry key="MAIN">
           <value>
             <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
               <option name="COLUMN_ORDER" />
             </State>
           </value>
