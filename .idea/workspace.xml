@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="662a405a-72ed-48b0-bfb0-83b95f2351a3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+    <list default="true" id="662a405a-72ed-48b0-bfb0-83b95f2351a3" name="Default Changelist" comment="Creacion del sidenav y el home">
+      <change afterPath="$PROJECT_DIR$/.idea/commandlinetools/Tool_based_on_Symfony_Console_21_10_19_15_36_artisan.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/commandlinetools/schemas/frameworkDescriptionVersion1.1.4.xsd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/empresa.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/empresa.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-app/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/angular.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-app/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-app/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/styles.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,10 +14,10 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/empresa-api/composer.json</pharConfigPath>
     <execution>
-      <executable />
+      <executable path="D:\Tony\www\empresa-correo\empresa-api\composer.json" />
     </execution>
   </component>
   <component name="FindInProjectRecents">
@@ -38,6 +33,91 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpDebugGeneral" ignore_connections_through_unregistered_servers="true" xdebug_force_break_when_no_path_mapping="false" xdebug_force_break_when_outside_project="false" />
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP7.1.18">
+    <include_path>
+      <path value="$PROJECT_DIR$/empresa-api/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/symfony/mime" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/symfony/css-selector" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/opis/closure" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/phpunit/php-token-stream" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/symfony/polyfill-iconv" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/nunomaduro/collision" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/sebastian/resource-operations" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/phpspec/prophecy" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/laravel/framework" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/laravel/tinker" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/psy/psysh" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/beyondcode/laravel-dump-server" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/vlucas/phpdotenv" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/hamcrest/hamcrest-php" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/fzaninotto/faker" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/tijsverkoyen/css-to-inline-styles" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/erusev/parsedown" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/league/flysystem" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/dragonmantank/cron-expression" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/dnoegel/php-xdg-base-dir" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/filp/whoops" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/mockery/mockery" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/fideloper/proxy" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/composer" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/jakub-onderka/php-console-highlighter" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/jakub-onderka/php-console-color" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/ramsey/uuid" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/phpoption/phpoption" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/symfony/polyfill-php73" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/nesbot/carbon" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/symfony/debug" />
+    </include_path>
+  </component>
   <component name="ProjectId" id="1SLNkXSgyEM6KgAJqPOMt6Rwmfb" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
@@ -53,13 +133,23 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.zend.framework.tool" />
     <property name="ts.external.directory.path" value="D:\Tony\www\empresa-correo\empresa-app\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Tony\www\empresa-correo\empresa-api\app\Models" />
+      <recent name="D:\Tony\www\empresa-correo\empresa-api\app\Provincias.php Municipios.php" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Tony\www\empresa-correo\empresa-api" />
       <recent name="C:\ms4w\Apache\htdocs\empresa\empresa-app\src\app" />
     </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="artisan migrate --path=database/migrations" />
+    </option>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -98,7 +188,11 @@
       <workItem from="1571606446940" duration="10925000" />
       <workItem from="1571643777448" duration="3249000" />
       <workItem from="1571659567342" duration="1209000" />
-      <workItem from="1571678309563" duration="2216000" />
+      <workItem from="1571678309563" duration="7611000" />
+      <workItem from="1571709394140" duration="3215000" />
+      <workItem from="1571751855161" duration="1127000" />
+      <workItem from="1571753522438" duration="886000" />
+      <workItem from="1571764241951" duration="6264000" />
     </task>
     <task id="LOCAL-00001" summary="Primer commit">
       <created>1570802375227</created>
@@ -240,7 +334,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571653415512</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Creacion del sidenav y el home">
+      <created>1571681145606</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1571681145607</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TodoView">
