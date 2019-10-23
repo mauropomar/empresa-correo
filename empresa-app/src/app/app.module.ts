@@ -1,9 +1,12 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MaterialModule} from "./material.module";
+
+
 import { LoginComponent } from './components/login/login.component';
 import {FormsModule} from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -14,6 +17,8 @@ import { SidenavComponent } from './components/layout/sidenav/sidenav.component'
 //Pipes
 import { NoimagePipe } from './pipes/noimage.pipe';
 import { DomseguroPipe } from './pipes/domseguro.pipe';
+import { CargosComponent } from './components/cargos/cargos.component';
+import { CargoComponent } from './components/cargos/cargo.component';
 
 
 @NgModule({
@@ -25,7 +30,9 @@ import { DomseguroPipe } from './pipes/domseguro.pipe';
         HomeComponent,
         SidenavComponent,
         NoimagePipe,
-        DomseguroPipe
+        DomseguroPipe,
+        CargosComponent,
+        CargoComponent
     ],
     imports: [
         BrowserModule,
@@ -33,7 +40,8 @@ import { DomseguroPipe } from './pipes/domseguro.pipe';
         BrowserAnimationsModule,
         MaterialModule,
         FormsModule,
-        FlexLayoutModule
+        FlexLayoutModule,
+        HttpClientModule
     ],
     providers: [],
     bootstrap: [AppComponent]
