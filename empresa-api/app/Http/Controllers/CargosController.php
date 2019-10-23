@@ -2,83 +2,69 @@
 
 namespace App\Http\Controllers;
 
+use App\Clases\Estado;
+use App\Models\Cargos;
 use Illuminate\Http\Request;
 
 class CargosController extends Controller
 {
+
+
     /**
-     * Display a listing of the resource.
+     * Obtener cargos
      *
-     * @return \Illuminate\Http\Response
+     * @param string $id identificador del cargo a obtener
+     *
+     * @return \Illuminate\Http\JsonResponse contiene los datos y estado de la respuesta;
      */
-    public function index()
+    public function obtener($id)
     {
-        //
+        $cargos = Cargos::findOrFail($id, ['nombre', 'id', 'descripcion', 'activo', 'creado_por', 'modificado_por']);
+        return $this->json(true, $cargos, "", Estado::OK);
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Devuelve todas las Cargos
      *
-     * @return \Illuminate\Http\Response
+     * @param Request $peticion contiene los parametros de la peticion
+     *
+     * @return \Illuminate\Http\JsonResponse contiene los datos y estado de la respuesta
      */
-    public function create()
+
+    public function obtenerTodas(Request $peticion)
     {
-        //
+        $cantElementos = $peticion->input('limit') ?? Controller::LIMITE_REGISTROS;
+        $cargos = Cargos::paginate($cantElementos, ['nombre', 'id', 'descripcion', 'activo', 'creado_por', 'modificado_por']);
+        return $this->json(true, $cargos->toArray());
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+    public function crear(Request $peticion)
     {
-        //
+        $this->validate($peticion, ['nombre' => 'required']);
+        $cargo = Cargos::create($peticion->all());
+        $mensaje = __('El cargo ha sido creado satisfactoriamente');
+        return $this->json(true, $cargo, $mensaje, Estado::CREADO);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
+    public function editar(Request $peticion, $id)
     {
-        //
+        $this->validate($peticion, ['nombre' => 'required']);
+        Cargos::findOrFail($id)->update($peticion->all());
+        $datos = $peticion->all();
+        $datos['id'] = $id;
+        $mensaje = __('El cargo ha sido modificado satisfactoriamente');
+        return $this->json(true, $datos, $mensaje, Estado::MODIFICADO);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
+    public function eliminar($id)
     {
-        //
+        $cargo = cargos::find($id);
+        if($cargo) {
+            $cargo->activo = false;
+            $cargo->save();
+        }
+        $mensaje = __('El cargo ha sido borrado satisfactoriamente');
+        return $this->json(true, [], $mensaje, Estado::OK);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
 }
