@@ -19,6 +19,9 @@
       <excludeFolder url="file://$MODULE_DIR$/empresa-api/vendor/hamcrest/hamcrest-php" />
       <excludeFolder url="file://$MODULE_DIR$/empresa-api/vendor/jakub-onderka/php-console-color" />
       <excludeFolder url="file://$MODULE_DIR$/empresa-api/vendor/jakub-onderka/php-console-highlighter" />
+      <excludeFolder url="file://$MODULE_DIR$/empresa-api/vendor/laravel-cors-master/config" />
+      <excludeFolder url="file://$MODULE_DIR$/empresa-api/vendor/laravel-cors-master/src" />
+      <excludeFolder url="file://$MODULE_DIR$/empresa-api/vendor/laravel-cors-master/tests" />
       <excludeFolder url="file://$MODULE_DIR$/empresa-api/vendor/laravel/framework" />
       <excludeFolder url="file://$MODULE_DIR$/empresa-api/vendor/laravel/tinker" />
       <excludeFolder url="file://$MODULE_DIR$/empresa-api/vendor/league/flysystem" />

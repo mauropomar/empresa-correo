@@ -2,17 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="662a405a-72ed-48b0-bfb0-83b95f2351a3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/empresa-app/src/app/components/cargos/cargo.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-app/src/app/components/cargos/cargo.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-app/src/app/components/cargos/cargos.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-app/src/app/components/cargos/cargos.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-app/src/app/components/cargos/cargos.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-app/src/app/services/cargos.service.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-app/src/app/services/cargos.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/empresa-app/proxy.conf.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/empresa.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/empresa.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-api/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-api/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-api/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-api/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-api/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-api/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-api/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-api/public/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/empresa-app/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/layout/sidenav/sidenav.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/layout/sidenav/sidenav.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/cargos/cargos.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/cargos/cargos.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/services/cargos.service.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/services/cargos.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/services/cargos.service.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -114,6 +115,9 @@
       <path value="$PROJECT_DIR$/empresa-api/vendor/symfony/translation-contracts" />
       <path value="$PROJECT_DIR$/empresa-api/vendor/symfony/service-contracts" />
       <path value="$PROJECT_DIR$/empresa-api/vendor/symfony/debug" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/laravel-cors-master/config" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/laravel-cors-master/tests" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/laravel-cors-master/src" />
     </include_path>
   </component>
   <component name="ProjectId" id="1SLNkXSgyEM6KgAJqPOMt6Rwmfb" />
@@ -121,7 +125,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/empresa-app/src/app/components/cargos" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -131,7 +135,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
     <property name="ts.external.directory.path" value="D:\Tony\www\empresa-correo\empresa-app\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
@@ -196,7 +200,8 @@
       <workItem from="1571764241951" duration="7848000" />
       <workItem from="1571774561437" duration="2042000" />
       <workItem from="1571794787475" duration="5789000" />
-      <workItem from="1571840170898" duration="2252000" />
+      <workItem from="1571840170898" duration="2468000" />
+      <workItem from="1571850945966" duration="8588000" />
     </task>
     <task id="LOCAL-00001" summary="Primer commit">
       <created>1570802375227</created>
@@ -366,7 +371,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571804161325</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Configuracion del crud de cargos">
+      <created>1571842452523</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1571842452523</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TodoView">
