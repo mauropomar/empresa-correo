@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +11,8 @@ export class CargosService {
   }
 
   obtenerTodos(){
-     this.http.get('https://localhost:5800/empresa-correo/empresa-api/public/api/cargos/obtenerTodas')
+     let headers = new HttpHeaders().set('Content-Type', 'application/json');
+     this.http.get('http://localhost:5800/empresa-correo/empresa-api/public/api/cargos/obtenerTodas', {headers:headers})
        .subscribe(data => {
             console.log(data)
        })
