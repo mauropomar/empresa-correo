@@ -11,7 +11,7 @@ export class CargosService {
   }
 
   obtenerTodos(){
-     this.http.get('localhost:5800/empresa-correo/empresa-api/public/api/cargos/obtenerTodas')
+     this.http.get('https://localhost:5800/empresa-correo/empresa-api/public/api/cargos/obtenerTodas')
        .subscribe(data => {
             console.log(data)
        })

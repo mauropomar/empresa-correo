@@ -86,6 +86,8 @@
       <path value="$PROJECT_DIR$/empresa-api/vendor/laravel-cors-master/config" />
       <path value="$PROJECT_DIR$/empresa-api/vendor/laravel-cors-master/tests" />
       <path value="$PROJECT_DIR$/empresa-api/vendor/laravel-cors-master/src" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/asm89/stack-cors" />
+      <path value="$PROJECT_DIR$/empresa-api/vendor/barryvdh/laravel-cors" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />

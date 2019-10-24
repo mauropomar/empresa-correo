@@ -18,9 +18,11 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 //--------------------------------------cargos------------------------------------------------//
-Route::post('cargos/crear', [\App\Http\Controllers\CargosController::class, 'crear']);
-Route::put('cargos/editar/{id}', [\App\Http\Controllers\CargosController::class, 'editar']);
-Route::get('cargos/obtener/{id}', [\App\Http\Controllers\CargosController::class, 'obtener']);
-Route::get('cargos/obtenerTodas', [\App\Http\Controllers\CargosController::class, 'obtenerTodas']);
-Route::delete('cargos/eliminar/{id}', [\App\Http\Controllers\CargosController::class, 'eliminar']);
-Route::post('cargos/eliminarVarios', [\App\Http\Controllers\CargosController::class, 'eliminarVarios']);
+Route::group(['middleware' => 'cors'], function() {
+    Route::post('cargos/crear', [\App\Http\Controllers\CargosController::class, 'crear']);
+    Route::put('cargos/editar/{id}', [\App\Http\Controllers\CargosController::class, 'editar']);
+    Route::get('cargos/obtener/{id}', [\App\Http\Controllers\CargosController::class, 'obtener']);
+    Route::get('cargos/obtenerTodas', [\App\Http\Controllers\CargosController::class, 'obtenerTodas']);
+    Route::delete('cargos/eliminar/{id}', [\App\Http\Controllers\CargosController::class, 'eliminar']);
+    Route::post('cargos/eliminarVarios', [\App\Http\Controllers\CargosController::class, 'eliminarVarios']);
+});
