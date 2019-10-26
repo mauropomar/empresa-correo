@@ -29,10 +29,10 @@
     <ng-container matColumnDef="actions">
       <th mat-header-cell *matHeaderCellDef>Acciones</th>
       <td mat-cell *matCellDef="let element">
-        <button mat-icon-button matTooltip="Click to Edit" class="iconbutton" color="primary">
+        <button mat-icon-button matTooltip="Editar" class="iconbutton" color="primary">
           <mat-icon aria-label="Edit">edit</mat-icon>
         </button>
-        <button mat-icon-button matTooltip="Click to Delete" class="iconbutton" color="warn">
+        <button mat-icon-button matTooltip="Borrar" class="iconbutton" color="warn" (click) = "openDialogDelete()">
           <mat-icon aria-label="Delete">delete</mat-icon>
         </button>
       </td>

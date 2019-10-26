@@ -1,0 +1,13 @@
+h3{
+  width: 100%;
+  color: blue;
+  margin-top: -18px;
+}
+
+mat-dialog-content{
+  margin-top: -10px;
+}
+
+.mat-dialog-actions {
+  justify-content: flex-end;
+}
