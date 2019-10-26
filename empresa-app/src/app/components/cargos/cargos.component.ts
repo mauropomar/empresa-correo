@@ -6,10 +6,14 @@ import { CargosService } from '../../services/cargos.service';
   templateUrl: './cargos.component.html',
   styleUrls: ['./cargos.component.css']
 })
-export class CargosComponent implements OnInit {
-
+export class CargosComponent {
+  displayedColumns: string[] = ['nombre', 'descripcion','actions'];
+  dataSource: any = [];
   constructor( private cargosService:CargosService) {
         this.cargosService.obtenerTodos()
+          .subscribe(data=>{
+              this.dataSource = data['data'];
+          })
   }
 
 

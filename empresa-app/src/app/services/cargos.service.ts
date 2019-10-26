@@ -11,10 +11,7 @@ export class CargosService {
   }
 
   obtenerTodos(){
-     let headers = new HttpHeaders().set('Content-Type', 'application/json');
-     this.http.get('http://localhost:5800/empresa-correo/empresa-api/public/api/cargos/obtenerTodas', {headers:headers})
-       .subscribe(data => {
-            console.log(data)
-       })
+     return this.http.get('http://localhost:5800/empresa-correo/empresa-api/public/api/cargos/obtenerTodas');
+
   }
 }
