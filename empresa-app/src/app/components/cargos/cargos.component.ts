@@ -9,7 +9,7 @@ import { ConfirmDeleteComponent } from '../genericos/dialog/confirm-delete/confi
   templateUrl: './cargos.component.html',
   styleUrls: ['./cargos.component.css']
 })
-export class CargosComponent {
+export class CargosComponent implements OnInit{
 
   message: string = "Esta seguro que desea eliminar el cargo seleccionado.";
   displayedColumns: string[] = ['nombre', 'descripcion','actions'];
@@ -26,10 +26,18 @@ export class CargosComponent {
   ngOnInit() {
   }
 
-  openDialogDelete(){
-    this.dialog.open(ConfirmDeleteComponent, {
+  openDialogDelete(element){
+    let dialog = this.dialog.open(ConfirmDeleteComponent, {  //muestro la ventana y le paso el mensaje a mostrar
       width: '440px',
       data: {message: this.message}
+    })
+    dialog.afterClosed().subscribe(result => {
+          if(result === true){   //si voy a eliminar
+            let id = element.id;
+            this.cargosService.borrar(id)
+              .subscribe(res=>{
+              })
+          }
     });
   }
 

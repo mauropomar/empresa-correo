@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="662a405a-72ed-48b0-bfb0-83b95f2351a3" name="Default Changelist" comment="Configuracion del crud de cargos">
-      <change afterPath="$PROJECT_DIR$/empresa-api/config/cors.php" afterDir="false" />
+    <list default="true" id="662a405a-72ed-48b0-bfb0-83b95f2351a3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/app.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/cargos/cargos.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/cargos/cargos.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/cargos/cargos.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/cargos/cargos.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/material.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/material.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/genericos/dialog/confirm-delete/confirm-delete.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/genericos/dialog/confirm-delete/confirm-delete.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/empresa-app/src/app/services/cargos.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/services/cargos.service.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -204,7 +202,7 @@
       <workItem from="1571939370017" duration="622000" />
       <workItem from="1571952025524" duration="1997000" />
       <workItem from="1572071865026" duration="5431000" />
-      <workItem from="1572100930506" duration="13715000" />
+      <workItem from="1572100930506" duration="20116000" />
     </task>
     <task id="LOCAL-00001" summary="Primer commit">
       <created>1570802375227</created>
@@ -416,7 +414,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572077885633</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Configuracion del crud de cargos">
+      <created>1572133986899</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1572133986899</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TodoView">

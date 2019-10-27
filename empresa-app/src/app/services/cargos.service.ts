@@ -11,11 +11,20 @@ export class CargosService {
     console.log('servicio listo para usar');
   }
 
-  obtenerTodos(){
-     return this.http.get('http://localhost:5800/empresa-correo/empresa-api/public/api/cargos/obtenerTodas')
-       .pipe(map(data =>{
-           return data['data']
-       }));
+  getQuery(query:string){
+    let url = `http://localhost:5800/empresa-correo/empresa-api/public/api/cargos/${query}`
+    return url;
+  }
 
+  obtenerTodos(){
+     let url = this.getQuery('obtenerTodas');
+     return this.http.get(url)
+       .pipe(map(data => data['data']));
+  }
+
+  borrar(element){
+    let url = this.getQuery('borrar');
+    return this.http.delete(url)
+      .pipe(map(response => response));
   }
 }
