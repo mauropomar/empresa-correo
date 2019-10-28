@@ -13,7 +13,7 @@ use Watson\Validating\ValidatingTrait;
  */
 class ApModel extends Model
 {
-    use ValidatingTrait, UniqueWithInjector;
+   // use ValidatingTrait, UniqueWithInjector;
 
     protected $primaryKey = 'id';
     public $timestamps = true;

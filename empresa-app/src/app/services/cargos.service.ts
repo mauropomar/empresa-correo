@@ -22,8 +22,8 @@ export class CargosService {
        .pipe(map(data => data['data']));
   }
 
-  borrar(element){
-    let url = this.getQuery('borrar');
+  borrar(id){
+    let url = this.getQuery('eliminar/' + id);
     return this.http.delete(url)
       .pipe(map(response => response));
   }

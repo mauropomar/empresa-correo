@@ -58,7 +58,7 @@ class CargosController extends Controller
 
     public function eliminar($id)
     {
-        $cargo = cargos::find($id);
+        $cargo = Cargos::find($id);
         if($cargo) {
             $cargo->activo = false;
             $cargo->save();
