@@ -14,8 +14,14 @@ class CreateProvinciasTable extends Migration
     public function up()
     {
         Schema::create('provincias', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->timestamps();
+            $table->increments('id');
+            $table->string('nombre', 50 );
+            $table->integer('orden');
+            $table->timestamp('creado')->nullable();
+            $table->timestamp('modificado')->nullable();
+            $table->integer('creado_por')->nullable();
+            $table->integer('modificado_por')->nullable();
+            $table->boolean('activo')->default(true);
         });
     }
 
