@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="662a405a-72ed-48b0-bfb0-83b95f2351a3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-api/database/migrations/2019_10_22_192050_create_provincias_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-api/database/migrations/2019_10_22_192050_create_provincias_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-api/database/migrations/2019_10_22_192208_create_municipios_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-api/database/migrations/2019_10_22_192208_create_municipios_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-api/database/migrations/2019_10_28_012929_create_tipos_accidentes_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-api/database/migrations/2019_10_28_012929_create_tipos_accidentes_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-api/database/migrations/2019_10_28_013101_create_causas_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-api/database/migrations/2019_10_28_013101_create_causas_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-api/database/migrations/2019_10_28_013345_create_accidentes_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-api/database/migrations/2019_10_28_013345_create_accidentes_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-api/database/migrations/2019_10_28_013515_create_trabajadores_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-api/database/migrations/2019_10_28_013515_create_trabajadores_table.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -123,7 +125,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/empresa-api/vendor" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -212,7 +214,8 @@
       <workItem from="1572071865026" duration="5431000" />
       <workItem from="1572100930506" duration="21265000" />
       <workItem from="1572206316641" duration="6152000" />
-      <workItem from="1572215126014" duration="6743000" />
+      <workItem from="1572215126014" duration="7105000" />
+      <workItem from="1572246693442" duration="4458000" />
     </task>
     <task id="LOCAL-00001" summary="Primer commit">
       <created>1570802375227</created>
@@ -452,7 +455,21 @@
       <option name="project" value="LOCAL" />
       <updated>1572222356895</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Configuracion del crud de cargos">
+      <created>1572226892005</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1572226892005</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Configuracion del crud de cargos">
+      <created>1572226911415</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1572226911415</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TodoView">

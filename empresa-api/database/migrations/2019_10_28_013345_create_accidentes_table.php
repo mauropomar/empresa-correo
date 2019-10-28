@@ -14,8 +14,17 @@ class CreateAccidentesTable extends Migration
     public function up()
     {
         Schema::create('accidentes', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->timestamps();
+            $table->increments('id');
+            $table->string('codigo')->nullable();
+            $table->timestamp('fecha');
+            $table->integer('id_trabajador');
+            $table->integer('id_tipo_accidente');
+            $table->integer('id_causa');
+            $table->timestamp('creado')->nullable();
+            $table->timestamp('modificado')->nullable();
+            $table->integer('creado_por')->nullable();
+            $table->integer('modificado_por')->nullable();
+            $table->boolean('activo')->default(true);
         });
     }
 

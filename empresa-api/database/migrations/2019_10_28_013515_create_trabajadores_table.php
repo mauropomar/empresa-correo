@@ -14,8 +14,19 @@ class CreateTrabajadoresTable extends Migration
     public function up()
     {
         Schema::create('trabajadores', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->timestamps();
+            $table->increments('id');
+            $table->string('codigo', 30 );
+            $table->string('nombre', 30 );
+            $table->string('apellidos', 80);
+            $table->string('sexo', 10);
+            $table->integer('edad');
+            $table->integer('id_cargo');
+            $table->integer('id_actividad');
+            $table->timestamp('creado')->nullable();
+            $table->timestamp('modificado')->nullable();
+            $table->integer('creado_por')->nullable();
+            $table->integer('modificado_por')->nullable();
+            $table->boolean('activo')->default(true);
         });
     }
 
