@@ -9,3 +9,21 @@ table {
 }
 
 
+.example-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.example-container > * {
+  width: 50%;
+}
+
+mat-card-actions > button {
+   margin-left: 5px;
+}
+
+button mat-icon{
+  margin-right: 5px;
+}
+
+

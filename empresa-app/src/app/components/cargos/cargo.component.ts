@@ -6,7 +6,7 @@ import {CargoModel} from "../../models/cargo.model";
 @Component({
   selector: 'app-cargo',
   templateUrl: './cargo.component.html',
-  styles: []
+  styleUrls: ['./cargos.component.css']
 })
 export class CargoComponent implements OnInit {
 
