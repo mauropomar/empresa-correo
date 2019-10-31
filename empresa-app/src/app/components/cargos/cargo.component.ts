@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute} from '@angular/router'
+import {CargosService} from "../../services/cargos.service";
+import {CargoModel} from "../../models/cargo.model";
 
 @Component({
   selector: 'app-cargo',
@@ -7,7 +10,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CargoComponent implements OnInit {
 
-  constructor() { }
+  private cargo: CargoModel = {
+    id: 0,
+    nombre: '',
+    descripcion: '',
+    activo: 0
+  }
+
+  constructor(private activateRouter: ActivatedRoute, private cargoService: CargosService) {
+    this.activateRouter.params.subscribe(params => {
+      let id = params['id'];
+      this.cargoService.obtener(id)
+        .subscribe(data => this.cargo = data);
+    })
+  }
 
   ngOnInit() {
   }

@@ -19,7 +19,7 @@ class CargosController extends Controller
      */
     public function obtener($id)
     {
-        $cargos = Cargos::findOrFail($id, ['nombre', 'id', 'descripcion', 'activo', 'creado_por', 'modificado_por']);
+        $cargos = Cargos::findOrFail($id, ['nombre', 'id', 'descripcion', 'activo']);
         return $this->json(true, $cargos, "", Estado::OK);
     }
 

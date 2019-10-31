@@ -54,6 +54,11 @@ class ApModel extends Model
         return $query->where(ApModel::UPDATED_AT, '>', $fechaCliente);
     }
 
+    public function scopeActivos($query, $activo)
+    {
+        return $query->where(ApModel::Activo, $activo);
+    }
+
     public function getActivoAttribute()
     {
         if($this->attributes['activo']) {

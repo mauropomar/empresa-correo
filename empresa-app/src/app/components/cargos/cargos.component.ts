@@ -4,6 +4,7 @@ import {MatDialog} from '@angular/material/dialog';
 import { ConfirmDeleteComponent } from '../genericos/dialog/confirm-delete/confirm-delete.component';
 import { CargoModel } from "../../models/cargo.model";
 import {MatTableDataSource} from '@angular/material/table';
+import { Router } from '@angular/router'
 
 
 @Component({
@@ -17,7 +18,7 @@ export class CargosComponent implements OnInit{
   displayedColumns: string[] = ['nombre', 'descripcion','actions'];
   dataSource : MatTableDataSource<CargoModel>;
 
-  constructor( private cargosService:CargosService, public dialog: MatDialog) {
+  constructor( private router:Router,  private cargosService:CargosService, public dialog: MatDialog) {
         this.cargosService.obtenerTodos()
           .subscribe(data=>{
               this.dataSource = new MatTableDataSource<CargoModel>(data);
@@ -55,6 +56,12 @@ export class CargosComponent implements OnInit{
           break
         }
       }
+  }
+
+  editarForm(element){
+     let id = element.id;
+     this.router.navigate(['cargo', id]);
+
   }
 
 }

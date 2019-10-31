@@ -23,6 +23,12 @@ export class CargosService {
        .pipe(map(data => data['data']));
   }
 
+  obtener(id){
+    let url = this.getQuery('obtener/'+id);
+    return this.http.get(url)
+      .pipe(map(data => data['data']));
+  }
+
   borrar(id){
     let url = this.getQuery('eliminar/' + id);
     return this.http.delete(url)
