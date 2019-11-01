@@ -1,13 +1,12 @@
 .example-card {
-    margin-top: 10px;
-    min-height: 100vh;
-    height: 100vh;
+  margin-top: 10px;
+  min-height: 100vh;
+  height: 100vh;
 }
 
 table {
   width: 100%;
 }
-
 
 .example-container {
   display: flex;
@@ -19,11 +18,12 @@ table {
 }
 
 mat-card-actions > button {
-   margin-left: 5px;
+  margin-left: 5px;
 }
 
-button mat-icon{
+button mat-icon {
   margin-right: 5px;
 }
+
 
 

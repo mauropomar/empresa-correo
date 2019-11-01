@@ -1,12 +1,13 @@
 <mat-card class="example-card">
 <div class="example-container">
   <mat-form-field>
-    <input matInput placeholder="Nombre" [(ngModel)] = "cargo.nombre">
+    <input matInput placeholder="Nombre" [(ngModel)] = "cargo.nombre" autofocus>
   </mat-form-field>
 
   <mat-form-field>
     <textarea matInput placeholder="Descripción" [(ngModel)] = "cargo.descripcion"></textarea>
   </mat-form-field>
+  <mat-checkbox [(ngModel)] = "cargo.activo">Activo</mat-checkbox>
 
   <mat-card-actions align="right">
     <button mat-flat-button color="primary" *ngIf="!editando">

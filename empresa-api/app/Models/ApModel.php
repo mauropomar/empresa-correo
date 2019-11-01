@@ -56,7 +56,7 @@ class ApModel extends Model
 
     public function scopeActivos($query, $activo)
     {
-        return $query->where(ApModel::Activo, $activo);
+         return $query->where('activo', $activo);
     }
 
     public function getActivoAttribute()

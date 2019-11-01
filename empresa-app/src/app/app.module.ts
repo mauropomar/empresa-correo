@@ -23,6 +23,7 @@ import {CargoComponent} from './components/cargos/cargo.component';
 
 //services
 import { ConstantesService } from "./services/constantes.service";
+import { LoadingComponent } from './components/genericos/loading/loading.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { ConstantesService } from "./services/constantes.service";
     DomseguroPipe,
     CargosComponent,
     CargoComponent,
-    ConfirmDeleteComponent
+    ConfirmDeleteComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,

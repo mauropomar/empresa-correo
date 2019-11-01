@@ -33,8 +33,9 @@ class CargosController extends Controller
 
     public function obtenerTodas(Request $peticion)
     {
+     //   $activo =  $peticion->get('activo');
         $cantElementos = $peticion->input('limit') ?? Controller::LIMITE_REGISTROS;
-        $cargos = Cargos::paginate($cantElementos, ['nombre', 'id', 'descripcion', 'activo', 'creado_por', 'modificado_por']);
+        $cargos = Cargos::activos(true)->get();
         return $this->json(true, $cargos->toArray());
     }
 

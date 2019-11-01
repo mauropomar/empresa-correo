@@ -18,6 +18,7 @@ export class CargosService {
   }
 
   obtenerTodos(){
+     let activo = true;
      let url = this.getQuery('obtenerTodas');
      return this.http.get(url)
        .pipe(map(data => data['data']));
