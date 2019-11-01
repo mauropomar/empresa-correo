@@ -19,7 +19,9 @@ export class CargosComponent implements OnInit {
   message: string = "Esta seguro que desea eliminar el cargo seleccionado.";
   displayedColumns: string[] = ['nombre', 'descripcion', 'actions'];
   cargos: MatTableDataSource<CargoModel>;
-  cargando: boolean = true;
+  showLoading: boolean = true;
+  textoLoading:string = 'Cargando...'
+
 
   constructor(private router: Router,
               private activeRoute: ActivatedRoute,
@@ -29,7 +31,7 @@ export class CargosComponent implements OnInit {
     this.cargosService.obtenerTodos()
       .subscribe(data => {
         this.cargos = new MatTableDataSource<CargoModel>(data);
-        this.cargando = false;
+        this.showLoading = false;
       })
   }
 
@@ -45,10 +47,13 @@ export class CargosComponent implements OnInit {
     dialog.afterClosed().subscribe(result => {
       if (result === true) {   //si voy a eliminar
         let id = element.id;
+        this.textoLoading = 'Eliminando...';
+        this.showLoading = true;
         this.cargosService.borrar(id)
           .subscribe((res: any) => {
             if (res.success) {
               this.deleteElement(id);
+              this.showLoading = false;
             }
           })
       }
@@ -56,6 +61,7 @@ export class CargosComponent implements OnInit {
   }
 
   deleteElement(id) {
+
     let myArray = this.cargos.data;
     for (let i = 0; i < myArray.length; i++) {
       if (myArray[i].id === id) {
