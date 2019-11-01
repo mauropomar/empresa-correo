@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router'
 import {CargosService} from "../../services/cargos.service";
 import {CargoModel} from "../../models/cargo.model";
+import {ConstantesService} from "../../services/constantes.service";
 
 @Component({
   selector: 'app-cargo',
@@ -9,7 +10,7 @@ import {CargoModel} from "../../models/cargo.model";
   styleUrls: ['./cargos.component.css']
 })
 export class CargoComponent implements OnInit {
-
+  editando:boolean = false;
   private cargo: CargoModel = {
     id: 0,
     nombre: '',
@@ -17,7 +18,10 @@ export class CargoComponent implements OnInit {
     activo: 0
   }
 
-  constructor(private activateRouter: ActivatedRoute, private cargoService: CargosService) {
+  constructor(private activateRouter: ActivatedRoute,
+              private cargoService: CargosService,
+              private constantesService: ConstantesService) {
+    this.editando = constantesService.editando;
     this.activateRouter.params.subscribe(params => {
       let id = params['id'];
       this.cargoService.obtener(id)

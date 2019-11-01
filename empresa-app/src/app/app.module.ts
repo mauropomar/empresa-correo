@@ -22,7 +22,7 @@ import {CargosComponent} from './components/cargos/cargos.component';
 import {CargoComponent} from './components/cargos/cargo.component';
 
 //services
-
+import { ConstantesService } from "./services/constantes.service";
 
 @NgModule({
   declarations: [
@@ -47,7 +47,7 @@ import {CargoComponent} from './components/cargos/cargo.component';
     FlexLayoutModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [ConstantesService],
   bootstrap: [AppComponent],
   entryComponents: [
     ConfirmDeleteComponent

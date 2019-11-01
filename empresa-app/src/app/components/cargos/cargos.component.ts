@@ -5,6 +5,7 @@ import { ConfirmDeleteComponent } from '../genericos/dialog/confirm-delete/confi
 import { CargoModel } from "../../models/cargo.model";
 import {MatTableDataSource} from '@angular/material/table';
 import { Router } from '@angular/router'
+import { ConstantesService } from "../../services/constantes.service";
 
 
 @Component({
@@ -18,7 +19,10 @@ export class CargosComponent implements OnInit{
   displayedColumns: string[] = ['nombre', 'descripcion','actions'];
   dataSource : MatTableDataSource<CargoModel>;
 
-  constructor( private router:Router,  private cargosService:CargosService, public dialog: MatDialog) {
+  constructor( private router:Router,
+               private cargosService:CargosService,
+               public dialog: MatDialog,
+               private constantes: ConstantesService) {
         this.cargosService.obtenerTodos()
           .subscribe(data=>{
               this.dataSource = new MatTableDataSource<CargoModel>(data);
@@ -59,9 +63,9 @@ export class CargosComponent implements OnInit{
   }
 
   editarForm(element){
+     this.constantes.editando = true;
      let id = element.id;
      this.router.navigate(['cargo', id]);
-
   }
 
 }
