@@ -1,6 +1,7 @@
 import {Component, OnInit, Output, EventEmitter} from '@angular/core';
 import {ConstantesService} from "../../../services/constantes.service";
 
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -11,7 +12,6 @@ export class HeaderComponent implements OnInit {
 
   constructor(private constantes:ConstantesService) {
     this.sidenavToggle = new EventEmitter();
-    this.constantes.title = 'R.H Plus'
   }
 
   ngOnInit() {

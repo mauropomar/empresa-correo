@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute} from '@angular/router'
 import { CargosService } from '../../services/cargos.service';
 import {MatDialog} from '@angular/material/dialog';
 import { ConfirmDeleteComponent } from '../genericos/dialog/confirm-delete/confirm-delete.component';
@@ -20,6 +21,7 @@ export class CargosComponent implements OnInit{
   dataSource : MatTableDataSource<CargoModel>;
 
   constructor( private router:Router,
+               private activeRoute:ActivatedRoute,
                private cargosService:CargosService,
                public dialog: MatDialog,
                private constantes: ConstantesService) {
@@ -31,6 +33,7 @@ export class CargosComponent implements OnInit{
 
 
   ngOnInit() {
+    this.constantes.title = this.activeRoute.snapshot.data.title;
   }
 
   openDialogDelete(element){
@@ -64,7 +67,6 @@ export class CargosComponent implements OnInit{
 
   editarForm(element){
      this.constantes.editando = true;
-     this.constantes.title = 'Editar Cargo';
      let id = element.id;
      this.router.navigate(['cargo', id]);
   }

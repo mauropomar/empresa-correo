@@ -7,10 +7,10 @@ import { CargoComponent} from './components/cargos/cargo.component';
 
 
 const routes: Routes = [
-    { path: '', component: HomeComponent },
+    { path: '', component: HomeComponent, data:{ title:'Inicio'}  },
     {path : 'login', component : LoginComponent},
-    {path : 'cargos', component : CargosComponent },
-    {path : 'cargo/:id', component : CargoComponent },
+    {path : 'cargos', component : CargosComponent, data:{ title:'Cargos'}  },
+    {path : 'cargo/:id', component : CargoComponent, data:{ title:'Editar Cargo'}  },
 ];
 
 @NgModule({

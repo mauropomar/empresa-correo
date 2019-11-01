@@ -18,11 +18,12 @@ export class CargoComponent implements OnInit {
     activo: 0
   }
 
-  constructor(private activateRouter: ActivatedRoute,
+  constructor(private activateRoute: ActivatedRoute,
               private cargoService: CargosService,
               private constantesService: ConstantesService) {
     this.editando = constantesService.editando;
-    this.activateRouter.params.subscribe(params => {
+  //  this.activateRouter.snapshot.data.title
+    this.activateRoute.params.subscribe(params => {
       let id = params['id'];
       this.cargoService.obtener(id)
         .subscribe(data => this.cargo = data);
@@ -30,6 +31,7 @@ export class CargoComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.constantesService.title = this.activateRoute.snapshot.data.title;
   }
 
 }

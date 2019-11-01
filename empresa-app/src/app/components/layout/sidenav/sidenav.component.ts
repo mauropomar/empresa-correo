@@ -17,11 +17,5 @@ export class SidenavComponent implements OnInit {
     }
 
 
-    seleccionar(opcion){
-       if(opcion === 'cargos'){
-           this.constantes.title = 'Cargos';
-           this.router.navigate(['cargos']);
-       }
-    }
 
 }
