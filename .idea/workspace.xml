@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="662a405a-72ed-48b0-bfb0-83b95f2351a3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/empresa-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/package.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -42,6 +43,9 @@
   <component name="Git.Settings">
     <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="e79e1176-907f-46d0-bf21-f793ee844c0e" />
   </component>
   <component name="PhpDebugGeneral" break_at_first_line="true" ignore_connections_through_unregistered_servers="true" listening_started="true" xdebug_force_break_when_no_path_mapping="false" />
   <component name="PhpServers">
@@ -156,7 +160,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.debug" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
     <property name="ts.external.directory.path" value="D:\Tony\www\empresa-correo\empresa-app\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
@@ -272,6 +276,8 @@
       <workItem from="1572860130525" duration="1741000" />
       <workItem from="1572862645732" duration="624000" />
       <workItem from="1572874156085" duration="790000" />
+      <workItem from="1572876611362" duration="1225000" />
+      <workItem from="1570196342774" duration="840000" />
     </task>
     <task id="LOCAL-00001" summary="Primer commit">
       <created>1570802375227</created>
@@ -609,7 +615,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572841041085</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="Configuracion del crud de cargos">
+      <created>1572876871301</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1572876871301</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TodoView">
