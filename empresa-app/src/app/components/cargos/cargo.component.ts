@@ -28,6 +28,7 @@ export class CargoComponent implements OnInit {
     this.editando = globales.editando;
     this.activateRoute.params.subscribe(params => {
       let id = params['id'];
+      if(!id) return;
       this.cargoService.obtener(id)
         .subscribe(data => this.cargo = data);
     })
