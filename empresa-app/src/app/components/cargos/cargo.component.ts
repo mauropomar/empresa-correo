@@ -4,6 +4,7 @@ import {CargosService} from "../../services/cargos.service";
 import {CargoModel} from "../../models/cargo.model";
 import {GlobalesService} from "../../services/constantes.service";
 import {Router} from '@angular/router'
+import {FormControl, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-cargo',
@@ -20,6 +21,8 @@ export class CargoComponent implements OnInit {
     descripcion: '',
     activo: 0
   }
+
+
 
   constructor(private activateRoute: ActivatedRoute,
               private cargoService: CargosService,
@@ -55,6 +58,10 @@ export class CargoComponent implements OnInit {
 
   cancelar(){
       this.router.navigate(["/cargos"]);
+  }
+
+  getErrorMessage() {
+  //  return this.cargo.nombre.hasError('required') ? 'You must enter a value' :''
   }
 
 }

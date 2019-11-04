@@ -4,7 +4,10 @@ import {HttpClientModule} from '@angular/common/http';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { CommonModule } from '@angular/common';
+import { ToastrModule } from 'ngx-toastr';
 import {MaterialModule} from "./material.module";
+import {EcoFabSpeedDialModule} from '@ecodev/fab-speed-dial'
 //Pipes
 import {NoimagePipe} from './pipes/noimage.pipe';
 import {DomseguroPipe} from './pipes/domseguro.pipe';
@@ -26,6 +29,7 @@ import { GlobalesService } from "./services/constantes.service";
 import { LoadingComponent } from './components/genericos/loading/loading.component';
 import { FavbuttonComponent } from './components/genericos/favbutton/favbutton.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,13 +47,16 @@ import { FavbuttonComponent } from './components/genericos/favbutton/favbutton.c
     FavbuttonComponent
   ],
   imports: [
+    EcoFabSpeedDialModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
     FormsModule,
     FlexLayoutModule,
-    HttpClientModule
+    HttpClientModule,
+    CommonModule,
+    ToastrModule.forRoot()
   ],
   providers: [GlobalesService],
   bootstrap: [AppComponent],

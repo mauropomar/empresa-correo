@@ -7,6 +7,7 @@ import {CargoModel} from "../../models/cargo.model";
 import {MatTableDataSource} from '@angular/material/table';
 import {Router} from '@angular/router'
 import {GlobalesService} from "../../services/constantes.service";
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-cargos',
@@ -26,7 +27,8 @@ export class CargosComponent implements OnInit {
               private activeRoute: ActivatedRoute,
               private cargosService: CargosService,
               public dialog: MatDialog,
-              private globales: GlobalesService) {
+              private globales: GlobalesService,
+              private toastr:ToastrService) {
        this.obtenerTodos(true);
   }
 
@@ -50,7 +52,9 @@ export class CargosComponent implements OnInit {
               this.deleteElement(id);
               this.showLoading = false;
             }
-          })
+          },(error) => {
+            this.toastr.error('Ha ocurrido un error al realizar la operación.', 'Error');
+        })
       }
     });
   }
@@ -61,6 +65,7 @@ export class CargosComponent implements OnInit {
       if (myArray[i].id === id) {
         myArray.splice(i, 1);
         this.cargos = new MatTableDataSource(myArray);
+        this.toastr.success('El cargo fue borrado con éxito.', 'Información');
         break
       }
     }
@@ -77,17 +82,6 @@ export class CargosComponent implements OnInit {
     this.router.navigate(['cargo', id]);
   }
 
-  deleteOfData(id,array){
-    let myArray = array.data;
-    for (let i = 0; i < myArray.length; i++) {
-      if (myArray[i].id === id) {
-        myArray.splice(i, 1);
-        array = new MatTableDataSource(myArray);
-        break
-      }
-    }
-  }
-
   obtenerTodos(activo){
     this.cargosService.obtenerTodos()
       .subscribe(data => {
@@ -95,7 +89,8 @@ export class CargosComponent implements OnInit {
         this.globales.datos = this.cargos;
         this.showLoading = false;
       }, (error) => {
-        console.log(error)
+        this.showLoading = false;
+        this.toastr.error('Ha ocurrido un error al realizar la operación.', 'Error');
       })
   }
 

@@ -3,8 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="662a405a-72ed-48b0-bfb0-83b95f2351a3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/angular.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/empresa-app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/empresa-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/cargos/cargo.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/cargos/cargo.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/cargos/cargos.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/cargos/cargos.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/genericos/favbutton/favbutton.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/genericos/favbutton/favbutton.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/genericos/favbutton/favbutton.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/genericos/favbutton/favbutton.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/material.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/material.module.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,9 +50,6 @@
   <component name="Git.Settings">
     <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="GithubDefaultAccount">
-    <option name="defaultAccountId" value="e79e1176-907f-46d0-bf21-f793ee844c0e" />
   </component>
   <component name="PhpDebugGeneral" break_at_first_line="true" ignore_connections_through_unregistered_servers="true" listening_started="true" xdebug_force_break_when_no_path_mapping="false" />
   <component name="PhpServers">
@@ -148,7 +152,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../siemprevino" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/empresa-app" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -277,7 +281,12 @@
       <workItem from="1572862645732" duration="624000" />
       <workItem from="1572874156085" duration="790000" />
       <workItem from="1572876611362" duration="1225000" />
-      <workItem from="1570196342774" duration="840000" />
+      <workItem from="1570196342774" duration="1631000" />
+      <workItem from="1572882289356" duration="919000" />
+      <workItem from="1572891514714" duration="709000" />
+      <workItem from="1572894269652" duration="621000" />
+      <workItem from="1572896342404" duration="599000" />
+      <workItem from="1572898974841" duration="5938000" />
     </task>
     <task id="LOCAL-00001" summary="Primer commit">
       <created>1570802375227</created>
@@ -566,13 +575,6 @@
       <option name="project" value="LOCAL" />
       <updated>1572576979823</updated>
     </task>
-    <task id="LOCAL-00042" summary="Configuracion del crud de cargos">
-      <created>1569906575016</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1569906575016</updated>
-    </task>
     <task id="LOCAL-00043" summary="Configuracion del crud de cargos">
       <created>1572588588466</created>
       <option name="number" value="00043" />
@@ -622,7 +624,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572876871301</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="Configuracion del crud de cargos">
+      <created>1572879779942</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1572879779943</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TodoView">
