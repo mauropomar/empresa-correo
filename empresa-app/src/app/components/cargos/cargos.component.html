@@ -1,4 +1,4 @@
-<mat-card class="example-card">
+<mat-card class="example-card" #customLoadingTemplate>
   <table mat-table  [dataSource]="cargos">
 
     <!--- Note that these columns can be defined in any order.
@@ -29,7 +29,7 @@
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
-  <app-loading *ngIf="showLoading"  [textoLoading] = "textoLoading"></app-loading>
-  <app-favbutton (showActive) = "obtenerTodos($event)" (mostrarNueva) = "nuevo()" color="primary"></app-favbutton>
+  <ngx-loading [show]="showLoading" [config]="{ backdropBorderRadius: '3px' }" [template]="customLoadingTemplate"></ngx-loading>
+   <app-favbutton (showActive) = "obtenerTodos($event)" (mostrarNueva) = "nuevo()" color="primary"></app-favbutton>
 </mat-card>
 

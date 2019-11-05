@@ -1,12 +1,13 @@
 .example-card {
-  margin-top: 10px;
-  min-height: 100vh;
-  height: 100vh;
+  min-height: 82vh;
+  height: 82vh;
+  overflow: auto;
 }
 
 table {
   width: 100%;
 }
+
 
 .example-container {
   display: flex;

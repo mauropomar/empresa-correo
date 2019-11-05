@@ -5,6 +5,7 @@ import {CargoModel} from "../../models/cargo.model";
 import {GlobalesService} from "../../services/constantes.service";
 import {Router} from '@angular/router'
 import {FormControl, FormBuilder, FormGroup, Validators} from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-cargo',
@@ -20,7 +21,6 @@ export class CargoComponent implements OnInit {
   };
   editando:boolean = false;
   showLoading: boolean = false;
-  textoLoading: string = 'Guardando...'
   cargoForm:FormGroup;
   nombre = new FormControl('', [Validators.required]);
 
@@ -31,13 +31,20 @@ export class CargoComponent implements OnInit {
               private cargoService: CargosService,
               private globales: GlobalesService,
               private router:Router,
-              private formBuilder:FormBuilder) {
+              private formBuilder:FormBuilder,
+              private toastr:ToastrService) {
     this.editando = globales.editando;
     this.activateRoute.params.subscribe(params => {
       let id = params['id'];
       if(!id) return;
+      this.showLoading = true;
       this.cargoService.obtener(id)
-        .subscribe(data => this.cargo = data);
+        .subscribe(data => {
+            this.cargo = data
+             this.showLoading = false;
+        },(error) => {
+          this.toastr.error('Ha ocurrido un error al realizar la operación.', 'Error');
+        });
     })
   }
 
@@ -56,15 +63,16 @@ export class CargoComponent implements OnInit {
   insertar(cerrar){
     this.showLoading = true;
     this.cargoService.crear(this.cargo)
-      .subscribe(data => {
-        this.globales.datos.push(this.cargo);
+      .subscribe((data:any) => {
         this.showLoading = false;
+        this.toastr.success(data.msg, 'Información');
         if(cerrar){
            this.router.navigate(['cargos'])
         }
       }, (error) => {
-        console.log(error)
-      })
+        this.showLoading = false;
+        this.toastr.error('Ha ocurrido un error al realizar la operación.', 'Error');
+      },)
   }
 
   cancelar(){

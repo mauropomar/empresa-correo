@@ -8,6 +8,8 @@ import { CommonModule } from '@angular/common';
 import { ToastrModule } from 'ngx-toastr';
 import {MaterialModule} from "./material.module";
 import {EcoFabSpeedDialModule} from '@ecodev/fab-speed-dial'
+import { NgxLoadingModule } from 'ngx-loading';
+
 //Pipes
 import {NoimagePipe} from './pipes/noimage.pipe';
 import {DomseguroPipe} from './pipes/domseguro.pipe';
@@ -57,7 +59,8 @@ import { FavbuttonComponent } from './components/genericos/favbutton/favbutton.c
     HttpClientModule,
     CommonModule,
     ReactiveFormsModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    NgxLoadingModule.forRoot({})
   ],
   providers: [GlobalesService],
   bootstrap: [AppComponent],

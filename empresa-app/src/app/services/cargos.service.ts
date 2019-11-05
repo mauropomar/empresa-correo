@@ -31,11 +31,10 @@ export class CargosService {
   }
 
   crear(cargo:CargoModel){
-     let body = JSON.stringify(cargo);
      let url = this.getQuery('crear');
-     return this.http.post(url, body)
+     return this.http.post(url, cargo)
        .pipe(map(response=> {
-         console.log(response)
+         return response
        }));
   }
 

@@ -1,6 +1,6 @@
 <mat-card class="example-card">
   <div class="example-container">
-    <form class="example-container" [formGroup]="cargoForm">
+    <form class="example-container" [formGroup]="cargoForm" #customLoadingTemplate>
       <mat-form-field>
         <input matInput placeholder="Nombre" [(ngModel)]="cargo.nombre" formControlName="nombre" maxlength="50" autofocus>
         <mat-error *ngIf="nombre.invalid">{{getErrorMessage()}}</mat-error>
@@ -16,7 +16,7 @@
           <mat-icon>add</mat-icon>
           Agregar
         </button>
-        <button mat-flat-button color="primary" [disabled]="!cargoForm.valid">
+        <button mat-flat-button color="primary" [disabled]="!cargoForm.valid" (click)="insertar(true)">
           <mat-icon>done</mat-icon>
           Aceptar
         </button>
@@ -27,5 +27,6 @@
       </mat-card-actions>
     </form>
   </div>
-  <app-loading *ngIf="showLoading" [textoLoading]="textoLoading"></app-loading>
+  <ngx-loading [show]="showLoading" [config]="{ backdropBorderRadius: '3px' }" [template]="customLoadingTemplate"></ngx-loading>
+
 </mat-card>

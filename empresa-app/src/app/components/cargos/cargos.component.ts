@@ -20,7 +20,6 @@ export class CargosComponent implements OnInit {
   displayedColumns: string[] = ['nombre', 'descripcion', 'actions'];
   cargos: MatTableDataSource<CargoModel>;
   showLoading: boolean = true;
-  textoLoading: string = 'Cargando...'
 
 
   constructor(private router: Router,
@@ -44,7 +43,6 @@ export class CargosComponent implements OnInit {
     dialog.afterClosed().subscribe(result => {
       if (result === true) {   //si voy a eliminar
         let id = element.id;
-        this.textoLoading = 'Eliminando...';
         this.showLoading = true;
         this.cargosService.borrar(id)
           .subscribe((res: any) => {
