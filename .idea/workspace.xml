@@ -3,15 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="662a405a-72ed-48b0-bfb0-83b95f2351a3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-app/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/angular.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/empresa-app/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/cargos/cargo.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/cargos/cargo.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/cargos/cargo.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/cargos/cargo.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/cargos/cargos.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/cargos/cargos.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/genericos/favbutton/favbutton.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/genericos/favbutton/favbutton.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/genericos/favbutton/favbutton.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/genericos/favbutton/favbutton.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/material.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/material.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/cargos/cargos.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/cargos/cargos.component.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -152,7 +147,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/empresa-app" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -286,7 +281,9 @@
       <workItem from="1572891514714" duration="709000" />
       <workItem from="1572894269652" duration="621000" />
       <workItem from="1572896342404" duration="599000" />
-      <workItem from="1572898974841" duration="5938000" />
+      <workItem from="1572898974841" duration="6269000" />
+      <workItem from="1572960842583" duration="706000" />
+      <workItem from="1572977331273" duration="4430000" />
     </task>
     <task id="LOCAL-00001" summary="Primer commit">
       <created>1570802375227</created>
@@ -596,13 +593,6 @@
       <option name="project" value="LOCAL" />
       <updated>1572626676393</updated>
     </task>
-    <task id="LOCAL-00046" summary="Configuracion del crud de cargos">
-      <created>1570068281064</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1570068281064</updated>
-    </task>
     <task id="LOCAL-00047" summary="Configuracion del crud de cargos">
       <created>1570154708401</created>
       <option name="number" value="00047" />
@@ -631,7 +621,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572879779943</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="Configuracion del crud de cargos">
+      <created>1572905748626</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1572905748627</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TodoView">

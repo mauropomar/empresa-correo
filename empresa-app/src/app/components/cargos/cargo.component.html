@@ -1,22 +1,31 @@
 <mat-card class="example-card">
-<div class="example-container">
-  <mat-form-field>
-    <input matInput placeholder="Nombre" [(ngModel)] = "cargo.nombre" autofocus>
-  </mat-form-field>
+  <div class="example-container">
+    <form class="example-container" [formGroup]="cargoForm">
+      <mat-form-field>
+        <input matInput placeholder="Nombre" [(ngModel)]="cargo.nombre" formControlName="nombre" maxlength="50" autofocus>
+        <mat-error *ngIf="nombre.invalid">{{getErrorMessage()}}</mat-error>
+      </mat-form-field>
 
-  <mat-form-field>
-    <textarea matInput placeholder="Descripción" [(ngModel)] = "cargo.descripcion"></textarea>
-  </mat-form-field>
-  <mat-checkbox [(ngModel)] = "cargo.activo" *ngIf = "editando">Activo</mat-checkbox>
+      <mat-form-field>
+        <textarea matInput placeholder="Descripción" [(ngModel)]="cargo.descripcion" formControlName="descripcion"></textarea>
+      </mat-form-field>
+      <mat-checkbox [(ngModel)]="cargo.activo" formControlName="activo" *ngIf="editando">Activo</mat-checkbox>
 
-  <mat-card-actions align="right">
-    <button mat-flat-button color="primary" *ngIf="!editando" (click) = "insertar()">
-      <mat-icon >add</mat-icon>Agregar</button>
-    <button mat-flat-button color="primary">
-    <mat-icon>done</mat-icon>Aceptar</button>
-    <button mat-flat-button color="primary" (click) = "cancelar()">
-      <mat-icon>cancel</mat-icon>Cancelar</button>
-  </mat-card-actions>
-</div>
-  <app-loading *ngIf="showLoading"  [textoLoading] = "textoLoading"></app-loading>
+      <mat-card-actions align="right">
+        <button mat-flat-button color="primary" *ngIf="!editando" (click)="insertar()" [disabled]="!cargoForm.valid">
+          <mat-icon>add</mat-icon>
+          Agregar
+        </button>
+        <button mat-flat-button color="primary" [disabled]="!cargoForm.valid">
+          <mat-icon>done</mat-icon>
+          Aceptar
+        </button>
+        <button mat-flat-button color="primary" (click)="cancelar()">
+          <mat-icon>cancel</mat-icon>
+          Cancelar
+        </button>
+      </mat-card-actions>
+    </form>
+  </div>
+  <app-loading *ngIf="showLoading" [textoLoading]="textoLoading"></app-loading>
 </mat-card>

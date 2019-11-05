@@ -4,7 +4,7 @@ import {CargosService} from "../../services/cargos.service";
 import {CargoModel} from "../../models/cargo.model";
 import {GlobalesService} from "../../services/constantes.service";
 import {Router} from '@angular/router'
-import {FormControl, Validators} from '@angular/forms';
+import {FormControl, FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-cargo',
@@ -12,22 +12,26 @@ import {FormControl, Validators} from '@angular/forms';
   styleUrls: ['./cargos.component.css']
 })
 export class CargoComponent implements OnInit {
+  cargo: CargoModel =  new class implements CargoModel {
+    activo: number;
+    descripcion: string;
+    id: number;
+    nombre: string;
+  };
   editando:boolean = false;
   showLoading: boolean = false;
   textoLoading: string = 'Guardando...'
-  private cargo: CargoModel = {
-    id: 0,
-    nombre: '',
-    descripcion: '',
-    activo: 0
-  }
+  cargoForm:FormGroup;
+  nombre = new FormControl('', [Validators.required]);
+
 
 
 
   constructor(private activateRoute: ActivatedRoute,
               private cargoService: CargosService,
               private globales: GlobalesService,
-              private router:Router) {
+              private router:Router,
+              private formBuilder:FormBuilder) {
     this.editando = globales.editando;
     this.activateRoute.params.subscribe(params => {
       let id = params['id'];
@@ -40,6 +44,13 @@ export class CargoComponent implements OnInit {
   ngOnInit() {
     this.globales.title = this.activateRoute.snapshot.data.title;
     this.editando = (this.globales.title.indexOf('Nuevo') > -1)?false:true;
+    this.cargoForm = this.formBuilder.group({
+        'nombre':[this.cargo.nombre, [
+            Validators.required
+        ]],
+        'descripcion':[this.cargo.descripcion, []],
+         'activo':[this.cargo.activo, []]
+    })
   }
 
   insertar(cerrar){
@@ -61,7 +72,6 @@ export class CargoComponent implements OnInit {
   }
 
   getErrorMessage() {
-  //  return this.cargo.nombre.hasError('required') ? 'You must enter a value' :''
+    return this.nombre.hasError('required') ? 'Debe introducir un nombre':''
   }
-
 }

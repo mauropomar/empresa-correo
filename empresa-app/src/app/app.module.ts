@@ -15,7 +15,7 @@ import {DomseguroPipe} from './pipes/domseguro.pipe';
 
 import {ConfirmDeleteComponent} from './components/genericos/dialog/confirm-delete/confirm-delete.component';
 import {LoginComponent} from './components/login/login.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {HeaderComponent} from './components/layout/header/header.component';
 import {FooterComponent} from './components/layout/footer/footer.component';
@@ -56,6 +56,7 @@ import { FavbuttonComponent } from './components/genericos/favbutton/favbutton.c
     FlexLayoutModule,
     HttpClientModule,
     CommonModule,
+    ReactiveFormsModule,
     ToastrModule.forRoot()
   ],
   providers: [GlobalesService],
