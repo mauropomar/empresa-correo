@@ -21,6 +21,10 @@ class ApModel extends Model
     const CREATED_AT = 'creado';
     const UPDATED_AT = 'modificado';
 
+    protected $attributes = [
+        'creado_por' => 1,
+        'modificado_por' => 1,
+    ];
     /**
      * Whether the model should throw a ValidationException if it
      * fails validation. If not set, it will default to false.

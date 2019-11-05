@@ -24,9 +24,6 @@ export class CargoComponent implements OnInit {
   cargoForm:FormGroup;
   nombre = new FormControl('', [Validators.required]);
 
-
-
-
   constructor(private activateRoute: ActivatedRoute,
               private cargoService: CargosService,
               private globales: GlobalesService,
@@ -66,6 +63,7 @@ export class CargoComponent implements OnInit {
       .subscribe((data:any) => {
         this.showLoading = false;
         this.toastr.success(data.msg, 'Información');
+        this.resetFields();
         if(cerrar){
            this.router.navigate(['cargos'])
         }
@@ -73,6 +71,10 @@ export class CargoComponent implements OnInit {
         this.showLoading = false;
         this.toastr.error('Ha ocurrido un error al realizar la operación.', 'Error');
       },)
+  }
+
+  resetFields(){
+    this.cargoForm.reset();
   }
 
   cancelar(){
