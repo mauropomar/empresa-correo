@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="662a405a-72ed-48b0-bfb0-83b95f2351a3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-api/app/Http/Controllers/CargosController.php" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-api/app/Http/Controllers/CargosController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/empresa-api/app/Models/ApModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-api/app/Models/ApModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/cargos/cargo.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/cargos/cargo.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/cargos/cargos.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/cargos/cargos.component.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -282,14 +281,7 @@
       <workItem from="1572896342404" duration="599000" />
       <workItem from="1572898974841" duration="6269000" />
       <workItem from="1572960842583" duration="706000" />
-      <workItem from="1572977331273" duration="11272000" />
-    </task>
-    <task id="LOCAL-00002" summary="Primer commit">
-      <created>1570803173927</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1570803173927</updated>
+      <workItem from="1572977331273" duration="13449000" />
     </task>
     <task id="LOCAL-00003" summary="Primer commit">
       <created>1570804039122</created>
@@ -627,7 +619,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572987169780</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="Configuracion del crud de cargos">
+      <created>1572989121863</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1572989121863</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TodoView">

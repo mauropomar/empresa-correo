@@ -33,9 +33,8 @@ class CargosController extends Controller
 
     public function obtenerTodas(Request $peticion)
     {
-     //   $activo =  $peticion->get('activo');
         $cantElementos = $peticion->input('limit') ?? Controller::LIMITE_REGISTROS;
-        $cargos = Cargos::activos(true)->get();
+        $cargos = Cargos::activos(false, $cantElementos);
         return $this->json(true, $cargos->toArray());
     }
 
