@@ -1,10 +1,10 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {ActivatedRoute} from '@angular/router'
 import {CargosService} from '../../services/cargos.service';
 import {MatDialog} from '@angular/material/dialog';
 import {ConfirmDeleteComponent} from '../genericos/dialog/confirm-delete/confirm-delete.component';
 import {CargoModel} from "../../models/cargo.model";
-import {MatTableDataSource} from '@angular/material/table';
+import {MatTableDataSource, MatSort, MatPaginator} from '@angular/material';
 import {Router} from '@angular/router'
 import {GlobalesService} from "../../services/constantes.service";
 import { ToastrService } from 'ngx-toastr';
@@ -18,8 +18,11 @@ export class CargosComponent implements OnInit {
 
   message: string = "Esta seguro que desea eliminar el cargo seleccionado.";
   displayedColumns: string[] = ['nombre', 'descripcion', 'actions'];
+  @ViewChild(MatSort, {static:true}) sort:MatSort;
+  @ViewChild(MatPaginator, {static:true}) paginator:MatPaginator;
   cargos: MatTableDataSource<CargoModel>;
   showLoading: boolean = true;
+
 
 
   constructor(private router: Router,
@@ -85,6 +88,8 @@ export class CargosComponent implements OnInit {
       .subscribe(data => {
         this.cargos = new MatTableDataSource<CargoModel>(data);
         this.globales.datos = this.cargos;
+        this.cargos.sort = this.sort;
+        this.cargos.paginator = this.paginator;
         this.showLoading = false;
       }, (error) => {
         this.showLoading = false;
