@@ -21,7 +21,8 @@ export class CargosComponent implements OnInit {
   @ViewChild(MatSort, {static:true}) sort:MatSort;
   @ViewChild(MatPaginator, {static:true}) paginator:MatPaginator;
   cargos: MatTableDataSource<CargoModel>;
-  showLoading: boolean = true;
+  showLoading: boolean = false;
+  searchKey:string = '';
 
 
 
@@ -84,7 +85,8 @@ export class CargosComponent implements OnInit {
   }
 
   obtenerTodos(activo){
-    this.cargosService.obtenerTodos()
+    this.showLoading = true;
+    this.cargosService.obtenerTodos(activo)
       .subscribe(data => {
         this.cargos = new MatTableDataSource<CargoModel>(data);
         this.globales.datos = this.cargos;
@@ -95,6 +97,25 @@ export class CargosComponent implements OnInit {
         this.showLoading = false;
         this.toastr.error('Ha ocurrido un error al realizar la operación.', 'Error');
       })
+  }
+
+  filter(){
+      let searchKey = this.searchKey.trim().toLowerCase();
+      if(searchKey === '')
+        this.reload()
+      let data = [];
+      let cargos = this.cargos.data;
+      for(let i = 0; i < cargos.length; i++){
+        let nombre = cargos[i]['nombre'].trim().toLowerCase();
+        if(nombre.indexOf(searchKey) > -1){
+          data.push(cargos[i]);
+        }
+      }
+    this.cargos = new MatTableDataSource<CargoModel>(data);
+  }
+
+  reload(){
+     this.obtenerTodos(true)
   }
 
 }

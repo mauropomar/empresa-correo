@@ -17,9 +17,9 @@ export class CargosService {
     return url;
   }
 
-  obtenerTodos(){
-     let activo = true;
-     let url = this.getQuery('obtenerTodas');
+  obtenerTodos(activo){
+     activo = (activo)?1:0;
+     let url = this.getQuery('obtenerTodas/'+activo);
      return this.http.get(url)
        .pipe(map(data => data['data']));
   }

@@ -31,10 +31,9 @@ class CargosController extends Controller
      * @return \Illuminate\Http\JsonResponse contiene los datos y estado de la respuesta
      */
 
-    public function obtenerTodas(Request $peticion)
+    public function obtenerTodas($activo)
     {
-        $cantElementos = $peticion->input('limit') ?? Controller::LIMITE_REGISTROS;
-        $cargos = Cargos::activos(false, $cantElementos);
+        $cargos = Cargos::activos($activo , 200);
         return $this->json(true, $cargos->toArray());
     }
 

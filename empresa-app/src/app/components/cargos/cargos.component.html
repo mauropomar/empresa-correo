@@ -1,4 +1,12 @@
 <mat-card class="example-card" #customLoadingTemplate>
+  <div class="search-div">
+    <mat-form-field class="search-form-field">
+      <input class="x-form-input" matInput [(ngModel)]="searchKey" placeholder="Buscar" autocomplete="off" (change)="filter()">
+      <button mat-button *ngIf="searchKey" matSuffix mat-icon-button aria-label="Clear" (click)="reload()">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+  </div>
   <table mat-table  [dataSource]="cargos" matSort>
 
     <!--- Note that these columns can be defined in any order.

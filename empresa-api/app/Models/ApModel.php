@@ -60,10 +60,11 @@ class ApModel extends Model
 
     public function scopeActivos($query, $activo, $cant)
     {
-        if($activo === true)
+        if($activo === 1)
          return $query->where('activo', $activo)->paginate($cant);
-        else
-         return $query->paginate($cant);
+        else {
+            return $query->paginate($cant);
+        }
     }
 
     public function getActivoAttribute()
