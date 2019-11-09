@@ -38,6 +38,15 @@ export class CargosService {
        }));
   }
 
+  modificar(cargo:CargoModel){
+    let id = cargo.id;
+    let url = this.getQuery('editar/'+id);
+    return this.http.put(url, cargo)
+      .pipe(map(response=> {
+        return response
+      }));
+  }
+
   borrar(id){
     let url = this.getQuery('eliminar/' + id);
     return this.http.delete(url)

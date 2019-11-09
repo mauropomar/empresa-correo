@@ -5,7 +5,7 @@ import {CargoModel} from "../../models/cargo.model";
 import {GlobalesService} from "../../services/constantes.service";
 import {Router} from '@angular/router'
 import {FormControl, FormBuilder, FormGroup, Validators} from '@angular/forms';
-import { ToastrService } from 'ngx-toastr';
+import {ToastrService} from 'ngx-toastr';
 
 @Component({
   selector: 'app-cargo',
@@ -13,33 +13,33 @@ import { ToastrService } from 'ngx-toastr';
   styleUrls: ['./cargos.component.css']
 })
 export class CargoComponent implements OnInit {
-  cargo: CargoModel =  new class implements CargoModel {
+  cargo: CargoModel = new class implements CargoModel {
     activo: number;
     descripcion: string;
     id: number;
     nombre: string;
   };
-  editando:boolean = false;
+  editando: boolean = false;
   showLoading: boolean = false;
-  cargoForm:FormGroup;
+  cargoForm: FormGroup;
   nombre = new FormControl('', [Validators.required]);
 
   constructor(private activateRoute: ActivatedRoute,
               private cargoService: CargosService,
               private globales: GlobalesService,
-              private router:Router,
-              private formBuilder:FormBuilder,
-              private toastr:ToastrService) {
+              private router: Router,
+              private formBuilder: FormBuilder,
+              private toastr: ToastrService) {
     this.editando = globales.editando;
     this.activateRoute.params.subscribe(params => {
       let id = params['id'];
-      if(!id) return;
+      if (!id) return;
       this.showLoading = true;
       this.cargoService.obtener(id)
         .subscribe(data => {
-            this.cargo = data
-             this.showLoading = false;
-        },(error) => {
+          this.cargo = data
+          this.showLoading = false;
+        }, (error) => {
           this.toastr.error('Ha ocurrido un error al realizar la operación.', 'Error');
         });
     })
@@ -47,41 +47,62 @@ export class CargoComponent implements OnInit {
 
   ngOnInit() {
     this.globales.title = this.activateRoute.snapshot.data.title;
-    this.editando = (this.globales.title.indexOf('Nuevo') > -1)?false:true;
+    this.editando = (this.globales.title.indexOf('Nuevo') > -1) ? false : true;
     this.cargoForm = this.formBuilder.group({
-        'nombre':[this.cargo.nombre, [
-            Validators.required
-        ]],
-        'descripcion':[this.cargo.descripcion, []],
-         'activo':[this.cargo.activo, []]
+      'nombre': [this.cargo.nombre, [
+        Validators.required
+      ]],
+      'descripcion': [this.cargo.descripcion, []],
+      'activo': [this.cargo.activo, []]
     })
   }
 
-  insertar(cerrar){
-    this.showLoading = true;
-    this.cargoService.crear(this.cargo)
-      .subscribe((data:any) => {
-        this.showLoading = false;
-        this.toastr.success(data.msg, 'Información');
-        this.resetFields();
-        if(cerrar){
-           this.router.navigate(['cargos'])
-        }
-      }, (error) => {
-        this.showLoading = false;
-        this.toastr.error('Ha ocurrido un error al realizar la operación.', 'Error');
-      },)
+insertar(cerrar){
+  if (this.editando === true) {
+    this.modificar();
+    return;
   }
+  this.showLoading = true;
+  this.cargoService.crear(this.cargo)
+    .subscribe((data: any) => {
+      this.showLoading = false;
+      this.toastr.success(data.msg, 'Información');
+      this.resetFields();
+      if (cerrar) {
+        this.router.navigate(['cargos'])
+      }
+    }, (error) => {
+      this.showLoading = false;
+      this.toastr.error('Ha ocurrido un error al realizar la operación.', 'Error');
+    },)
+}
 
-  resetFields(){
-    this.cargoForm.reset();
-  }
+modificar()
+{
+  this.showLoading = true;
+  this.cargoService.modificar(this.cargo)
+    .subscribe((data: any) => {
+      this.showLoading = false;
+      this.toastr.success(data.msg, 'Información');
+      this.router.navigate(['cargos'])
+    }, (error) => {
+      this.showLoading = false;
+      this.toastr.error('Ha ocurrido un error al realizar la operación.', 'Error');
+    },)
+}
 
-  cancelar(){
-      this.router.navigate(["/cargos"]);
-  }
+resetFields()
+{
+  this.cargoForm.reset();
+}
 
-  getErrorMessage() {
-    return this.nombre.hasError('required') ? 'Debe introducir un nombre':''
-  }
+cancelar()
+{
+  this.router.navigate(["/cargos"]);
+}
+
+getErrorMessage()
+{
+  return this.nombre.hasError('required') ? 'Debe introducir un nombre' : ''
+}
 }

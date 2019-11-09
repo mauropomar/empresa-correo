@@ -13,7 +13,7 @@ use Watson\Validating\ValidatingTrait;
  */
 class ApModel extends Model
 {
-   // use ValidatingTrait, UniqueWithInjector;
+    // use ValidatingTrait, UniqueWithInjector;
 
     protected $primaryKey = 'id';
     public $timestamps = true;
@@ -48,7 +48,7 @@ class ApModel extends Model
 
     public function setAttributeFromRelations(...$relations)
     {
-        foreach ($relations as $rel){
+        foreach ($relations as $rel) {
             $this->setAttribute($rel, $this->{$rel});
         }
     }
@@ -60,16 +60,15 @@ class ApModel extends Model
 
     public function scopeActivos($query, $activo, $cant)
     {
-        if($activo === 1)
-         return $query->where('activo', $activo)->paginate($cant);
-        else {
-            return $query->paginate($cant);
-        }
+        if ($activo == 1)
+            return $query->where('activo', $activo)->paginate($cant);
+        else
+           return $query->paginate($cant);
     }
 
     public function getActivoAttribute()
     {
-        if($this->attributes['activo']) {
+        if ($this->attributes['activo']) {
             return 1;
         }
         return 0;
