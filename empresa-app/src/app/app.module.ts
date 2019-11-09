@@ -28,8 +28,10 @@ import {CargoComponent} from './components/cargos/cargo.component';
 
 //services
 import { GlobalesService } from "./services/constantes.service";
+
 import { LoadingComponent } from './components/genericos/loading/loading.component';
 import { FavbuttonComponent } from './components/genericos/favbutton/favbutton.component';
+import { ActividadesComponent } from './components/actividades/actividades.component';
 
 
 @NgModule({
@@ -46,7 +48,8 @@ import { FavbuttonComponent } from './components/genericos/favbutton/favbutton.c
     CargoComponent,
     ConfirmDeleteComponent,
     LoadingComponent,
-    FavbuttonComponent
+    FavbuttonComponent,
+    ActividadesComponent
   ],
   imports: [
     EcoFabSpeedDialModule,

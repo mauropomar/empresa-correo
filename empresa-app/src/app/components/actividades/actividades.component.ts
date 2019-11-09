@@ -1,36 +1,36 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {ActivatedRoute} from '@angular/router'
-import {CargosService} from '../../services/cargos.service';
+import {ActividadesService} from '../../services/actividades.service';
 import {MatDialog} from '@angular/material/dialog';
 import {ConfirmDeleteComponent} from '../genericos/dialog/confirm-delete/confirm-delete.component';
-import {CargoModel} from "../../models/cargo.model";
+import {ActividadModel} from "../../models/actividad.model";
 import {MatTableDataSource, MatSort, MatPaginator} from '@angular/material';
 import {Router} from '@angular/router'
 import {GlobalesService} from "../../services/constantes.service";
 import { ToastrService } from 'ngx-toastr';
 
 @Component({
-  selector: 'app-cargos',
-  templateUrl: './cargos.component.html',
-  styleUrls: ['./cargos.component.css']
+  selector: 'app-actividades',
+  templateUrl: './actividades.component.html',
+  styleUrls: ['./actividades.component.css']
 })
-export class CargosComponent implements OnInit {
+export class ActividadesComponent implements OnInit {
 
-  message: string = "Esta seguro que desea eliminar el cargo seleccionado.";
-  displayedColumns: string[] = ['nombre', 'descripcion', 'actions'];
+  message: string = "Esta seguro que desea eliminar la actividad seleccionada.";
+  displayedColumns: string[] = ['nombre', 'descripcion', 'idcargo' ,'actions'];
   @ViewChild(MatSort, {static:true}) sort:MatSort;
   @ViewChild(MatPaginator, {static:true}) paginator:MatPaginator;
-  cargos: MatTableDataSource<CargoModel>;
+  actividades: MatTableDataSource<ActividadModel>;
   showLoading: boolean = false;
   searchKey:string = '';
 
   constructor(private router: Router,
               private activeRoute: ActivatedRoute,
-              private cargosService: CargosService,
+              private actividadesService: ActividadesService,
               public dialog: MatDialog,
               private globales: GlobalesService,
               private toastr:ToastrService) {
-       this.obtenerTodos(true);
+    this.obtenerTodos(true);
   }
 
   ngOnInit() {
@@ -46,7 +46,7 @@ export class CargosComponent implements OnInit {
       if (result === true) {   //si voy a eliminar
         let id = element.id;
         this.showLoading = true;
-        this.cargosService.borrar(id)
+        this.actividadesService.borrar(id)
           .subscribe((res: any) => {
             if (res.success) {
               this.deleteElement(id);
@@ -54,17 +54,17 @@ export class CargosComponent implements OnInit {
             }
           },(error) => {
             this.toastr.error('Ha ocurrido un error al realizar la operación.', 'Error');
-        })
+          })
       }
     });
   }
 
   deleteElement(id) {
-    let myArray = this.cargos.data;
+    let myArray = this.actividades.data;
     for (let i = 0; i < myArray.length; i++) {
       if (myArray[i].id === id) {
         myArray.splice(i, 1);
-        this.cargos = new MatTableDataSource(myArray);
+        this.actividades = new MatTableDataSource(myArray);
         this.toastr.success('El cargo fue borrado con éxito.', 'Información');
         break
       }
@@ -73,23 +73,23 @@ export class CargosComponent implements OnInit {
 
   nuevo() {
     this.globales.editando = false;
-    this.router.navigate(['cargo/nuevo']);
+    this.router.navigate(['cargo/actividad']);
   }
 
   editar(element) {
     this.globales.editando = true;
     let id = element.id;
-    this.router.navigate(['cargo', id]);
+    this.router.navigate(['actividad', id]);
   }
 
   obtenerTodos(activo){
     this.showLoading = true;
-    this.cargosService.obtenerTodos(activo)
+    this.actividadesService.obtenerTodos(activo)
       .subscribe(data => {
-        this.cargos = new MatTableDataSource<CargoModel>(data);
-        this.globales.datos = this.cargos;
-        this.cargos.sort = this.sort;
-        this.cargos.paginator = this.paginator;
+        this.actividades = new MatTableDataSource<ActividadModel>(data);
+        this.globales.datos = this.actividades;
+        this.actividades.sort = this.sort;
+        this.actividades.paginator = this.paginator;
         this.showLoading = false;
       }, (error) => {
         this.showLoading = false;
@@ -98,25 +98,23 @@ export class CargosComponent implements OnInit {
   }
 
   filter(){
-      let searchKey = this.searchKey.trim().toLowerCase();
-      if(searchKey === '')
-        this.reload()
-      let data = [];
-      let cargos = this.cargos.data;
-      for(let i = 0; i < cargos.length; i++){
-        let nombre = cargos[i]['nombre'].trim().toLowerCase();
-        if(nombre.indexOf(searchKey) > -1){
-          data.push(cargos[i]);
-        }
+    let searchKey = this.searchKey.trim().toLowerCase();
+    if(searchKey === '')
+      this.reload()
+    let data = [];
+    let actividades = this.actividades.data;
+    for(let i = 0; i < actividades.length; i++){
+      let nombre = actividades[i]['nombre'].trim().toLowerCase();
+      if(nombre.indexOf(searchKey) > -1){
+        data.push(actividades[i]);
       }
-    this.cargos = new MatTableDataSource<CargoModel>(data);
+    }
+    this.actividades = new MatTableDataSource<ActividadModel>(data);
   }
 
   reload(){
-     this.obtenerTodos(true)
+    this.obtenerTodos(true)
   }
 
+
 }
-
-
-

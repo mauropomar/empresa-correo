@@ -37,9 +37,26 @@ class CargosController extends Controller
         return $this->json(true, $cargos->toArray());
     }
 
+    public function verificar(Request $peticion, $id){
+        $nombre = $peticion->get('nombre');
+        if(!$id) {
+            $result = Cargos::where('nombre', $nombre)->first();
+        }else{
+            $result = Cargos::where('nombre', $nombre)->where('id', '<>', $id )->first();
+        }
+        if(!is_null($result)){
+          return true;
+        }
+        return false;
+    }
+
     public function crear(Request $peticion)
     {
-        $this->validate($peticion, ['nombre' => 'required']);
+        $result = $this->verificar($peticion);
+        if($result){
+            $mensaje = __('Ya existe un cargo con ese nombre.');
+            return $this->json(false, array(), $mensaje, Estado::CREADO);
+        }
         $cargo = Cargos::create($peticion->all());
         $mensaje = __('El cargo ha sido creado satisfactoriamente');
         return $this->json(true, $cargo, $mensaje, Estado::CREADO);
@@ -47,6 +64,11 @@ class CargosController extends Controller
 
     public function editar(Request $peticion, $id)
     {
+        $result = $this->verificar($peticion, $id);
+        if($result){
+            $mensaje = __('Ya existe un usuario con ese nombre.');
+            return $this->json(false, array(), $mensaje, Estado::CREADO);
+        }
         $this->validate($peticion, ['nombre' => 'required']);
         Cargos::findOrFail($id)->update($peticion->all());
         $datos = $peticion->all();

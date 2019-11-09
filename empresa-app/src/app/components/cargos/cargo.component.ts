@@ -57,52 +57,56 @@ export class CargoComponent implements OnInit {
     })
   }
 
-insertar(cerrar){
-  if (this.editando === true) {
-    this.modificar();
-    return;
+  insertar(cerrar) {
+    if (this.editando === true) {
+      this.modificar();
+      return;
+    }
+    this.showLoading = true;
+    this.cargoService.crear(this.cargo)
+      .subscribe((data: any) => {
+        this.showLoading = false;
+        if (data.success === true) {
+          this.toastr.success(data.msg, 'Información');
+          this.resetFields();
+        } else {
+          this.toastr.warning(data.msg, 'Información');
+        }
+        if (cerrar) {
+          this.router.navigate(['cargos'])
+        }
+      }, (error) => {
+        this.showLoading = false;
+        this.toastr.error('Ha ocurrido un error al realizar la operación.', 'Error');
+      },)
   }
-  this.showLoading = true;
-  this.cargoService.crear(this.cargo)
-    .subscribe((data: any) => {
-      this.showLoading = false;
-      this.toastr.success(data.msg, 'Información');
-      this.resetFields();
-      if (cerrar) {
-        this.router.navigate(['cargos'])
-      }
-    }, (error) => {
-      this.showLoading = false;
-      this.toastr.error('Ha ocurrido un error al realizar la operación.', 'Error');
-    },)
-}
 
-modificar()
-{
-  this.showLoading = true;
-  this.cargoService.modificar(this.cargo)
-    .subscribe((data: any) => {
-      this.showLoading = false;
-      this.toastr.success(data.msg, 'Información');
-      this.router.navigate(['cargos'])
-    }, (error) => {
-      this.showLoading = false;
-      this.toastr.error('Ha ocurrido un error al realizar la operación.', 'Error');
-    },)
-}
+  modificar() {
+    this.showLoading = true;
+    this.cargoService.modificar(this.cargo)
+      .subscribe((data: any) => {
+        this.showLoading = false;
+        if (data.success === true) {
+          this.toastr.success(data.msg, 'Información');
+          this.router.navigate(['cargos'])
+        } else {
+          this.toastr.warning(data.msg, 'Información');
+        }
+      }, (error) => {
+        this.showLoading = false;
+        this.toastr.error('Ha ocurrido un error al realizar la operación.', 'Error');
+      },)
+  }
 
-resetFields()
-{
-  this.cargoForm.reset();
-}
+  resetFields() {
+    this.cargoForm.reset();
+  }
 
-cancelar()
-{
-  this.router.navigate(["/cargos"]);
-}
+  cancelar() {
+    this.router.navigate(["/cargos"]);
+  }
 
-getErrorMessage()
-{
-  return this.nombre.hasError('required') ? 'Debe introducir un nombre' : ''
-}
+  getErrorMessage() {
+    return this.nombre.hasError('required') ? 'Debe introducir un nombre' : ''
+  }
 }
