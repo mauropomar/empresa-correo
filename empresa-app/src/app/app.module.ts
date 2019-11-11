@@ -32,6 +32,7 @@ import { GlobalesService } from "./services/constantes.service";
 import { LoadingComponent } from './components/genericos/loading/loading.component';
 import { FavbuttonComponent } from './components/genericos/favbutton/favbutton.component';
 import { ActividadesComponent } from './components/actividades/actividades.component';
+import { ActividadComponent } from './components/actividades/actividad.component';
 
 
 @NgModule({
@@ -49,7 +50,8 @@ import { ActividadesComponent } from './components/actividades/actividades.compo
     ConfirmDeleteComponent,
     LoadingComponent,
     FavbuttonComponent,
-    ActividadesComponent
+    ActividadesComponent,
+    ActividadComponent
   ],
   imports: [
     EcoFabSpeedDialModule,

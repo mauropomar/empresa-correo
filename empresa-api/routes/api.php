@@ -25,4 +25,11 @@ Route::group(['middleware' => 'cors'], function() {
     Route::get('cargos/obtenerTodas/{activo}', [\App\Http\Controllers\CargosController::class, 'obtenerTodas']);
     Route::delete('cargos/eliminar/{id}', [\App\Http\Controllers\CargosController::class, 'eliminar']);
     Route::post('cargos/eliminarVarios', [\App\Http\Controllers\CargosController::class, 'eliminarVarios']);
+//--------------------------------------actividades------------------------------------------------//
+    Route::post('actividades/crear', [\App\Http\Controllers\ActividadesController::class, 'crear']);
+    Route::put('actividades/editar/{id}', [\App\Http\Controllers\ActividadesController::class, 'editar']);
+    Route::get('actividades/obtener/{id}', [\App\Http\Controllers\ActividadesController::class, 'obtener']);
+    Route::get('actividades/obtenerTodas', [\App\Http\Controllers\ActividadesController::class, 'obtenerTodas']);
+    Route::delete('actividades/eliminar/{id}', [\App\Http\Controllers\ActividadesController::class, 'eliminar']);
+    Route::post('actividades/eliminarVarios', [\App\Http\Controllers\ActividadesController::class, 'eliminarVarios']);
 });

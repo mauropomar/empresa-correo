@@ -1,1 +1,40 @@
-<p>actividades works!</p>
+<mat-card class="example-card" #customLoadingTemplate>
+  <div class="search-div">
+    <mat-form-field class="search-form-field">
+      <input class="x-form-input" matInput [(ngModel)]="searchKey" placeholder="Buscar" autocomplete="off" (change)="filter()">
+      <button mat-button *ngIf="searchKey" matSuffix mat-icon-button aria-label="Clear" (click)="reload()">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+  </div>
+  <table mat-table  [dataSource]="actividades" matSort>
+    <ng-container matColumnDef="nombre">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Nombre </th>
+      <td mat-cell *matCellDef="let element"> {{element.nombre}} </td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="descripcion">
+      <th mat-header-cell  *matHeaderCellDef mat-sort-header> Descripción </th>
+      <td mat-cell *matCellDef="let element"> {{element.descripcion}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef>Acciones</th>
+      <td mat-cell *matCellDef="let element">
+        <button mat-icon-button matTooltip="Editar" class="iconbutton" color="primary" (click) = "editar(element)">
+          <mat-icon aria-label="Edit">launch</mat-icon>
+        </button>
+        <button mat-icon-button matTooltip="Borrar" class="iconbutton" color="warn" (click) = "openDialogDelete(element)">
+          <mat-icon aria-label="Delete">delete_outline</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  <mat-paginator [pageSizeOptions]="[5, 10 , 25, 100]" [pageSize]="10"></mat-paginator>
+  <ngx-loading [show]="showLoading" [config]="{ backdropBorderRadius: '3px' }" [template]="customLoadingTemplate"></ngx-loading>
+  <app-favbutton (showActive) = "obtenerTodos($event)" (mostrarNueva) = "nuevo()" color="primary"></app-favbutton>
+</mat-card>
+

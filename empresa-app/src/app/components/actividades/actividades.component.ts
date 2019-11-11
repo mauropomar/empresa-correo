@@ -73,7 +73,7 @@ export class ActividadesComponent implements OnInit {
 
   nuevo() {
     this.globales.editando = false;
-    this.router.navigate(['cargo/actividad']);
+    this.router.navigate(['actividad/nuevo']);
   }
 
   editar(element) {

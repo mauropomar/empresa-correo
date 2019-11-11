@@ -66,7 +66,7 @@ class CargosController extends Controller
     {
         $result = $this->verificar($peticion, $id);
         if($result){
-            $mensaje = __('Ya existe un usuario con ese nombre.');
+            $mensaje = __('Ya existe un cargo con ese nombre.');
             return $this->json(false, array(), $mensaje, Estado::CREADO);
         }
         $this->validate($peticion, ['nombre' => 'required']);

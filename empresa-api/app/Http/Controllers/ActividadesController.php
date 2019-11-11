@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Actividades;
+use App\Clases\Estado;
+use App\Models\Actividades;
 use Illuminate\Http\Request;
 
 class ActividadesController extends Controller
@@ -18,35 +19,53 @@ class ActividadesController extends Controller
     }
 
     /**
+     * Obtener Actividades
+     *
+     * @param string $id identificador del cargo a obtener
+     *
+     * @return \Illuminate\Http\JsonResponse contiene los datos y estado de la respuesta;
+     */
+    public function obtener($id)
+    {
+        $actividades = Actividades::findOrFail($id, ['nombre', 'id', 'descripcion', 'activo']);
+        return $this->json(true, $actividades, "", Estado::OK);
+    }
+
+    public function obtenerTodas(Request $peticion)
+    {
+        $activo = $peticion->get('activo');
+        $idcargo =  $peticion->get('idcargo');
+        $actividades = Actividades::activos($activo , 200)->where('id_cargo', $idcargo);
+        return $this->json(true, $actividades->toArray());
+    }
+
+    public function verificar(Request $peticion, $id){
+        $nombre = $peticion->get('nombre');
+        if(!$id) {
+            $result = Actividades::where('nombre', $nombre)->first();
+        }else{
+            $result = Actividades::where('nombre', $nombre)->where('id', '<>', $id )->first();
+        }
+        if(!is_null($result)){
+            return true;
+        }
+        return false;
+    }
+    /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $peticion)
     {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Actividades  $actividades
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Actividades $actividades)
-    {
-        //
+        $result = $this->verificar($peticion);
+        if($result){
+            $mensaje = __('Ya existe una actividad con ese nombre.');
+            return $this->json(false, array(), $mensaje, Estado::CREADO);
+        }
+        $actividad = Actividades::create($peticion->all());
+        $mensaje = __('La actividad ha sido creada satisfactoriamente');
+        return $this->json(true, $actividad, $mensaje, Estado::CREADO);
     }
 
     /**
@@ -55,31 +74,29 @@ class ActividadesController extends Controller
      * @param  \App\Actividades  $actividades
      * @return \Illuminate\Http\Response
      */
-    public function edit(Actividades $actividades)
+    public function editar(Request $peticion, $id)
     {
-        //
+        $result = $this->verificar($peticion, $id);
+        if($result){
+            $mensaje = __('Ya existe una actividad con ese nombre.');
+            return $this->json(false, array(), $mensaje, Estado::CREADO);
+        }
+        $this->validate($peticion, ['nombre' => 'required']);
+        Actividades::findOrFail($id)->update($peticion->all());
+        $datos = $peticion->all();
+        $datos['id'] = $id;
+        $mensaje = __('La actividad ha sido modificada satisfactoriamente');
+        return $this->json(true, $datos, $mensaje, Estado::MODIFICADO);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Actividades  $actividades
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Actividades $actividades)
+    public function eliminar($id)
     {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Actividades  $actividades
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Actividades $actividades)
-    {
-        //
+        $actividad = Actividades::find($id);
+        if($actividad) {
+            $actividad->activo = false;
+            $actividad->save();
+        }
+        $mensaje = __('La actividad ha sido borrada satisfactoriamente');
+        return $this->json(true, [], $mensaje, Estado::OK);
     }
 }
