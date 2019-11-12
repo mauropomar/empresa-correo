@@ -1,1 +1,33 @@
-<p>actividad works!</p>
+<mat-card class="example-card">
+  <div class="example-container">
+    <form class="example-container" [formGroup]="actividadForm" #customLoadingTemplate>
+      <mat-form-field>
+        <input matInput placeholder="Nombre" [(ngModel)]="actividad.nombre" formControlName="nombre" maxlength="50" autofocus>
+        <mat-error *ngIf="nombre.invalid">{{getErrorMessage()}}</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <textarea matInput placeholder="Descripción" [(ngModel)]="actividad.descripcion" formControlName="descripcion"></textarea>
+      </mat-form-field>
+      <mat-checkbox [(ngModel)]="actividad.activo" formControlName="activo" *ngIf="editando">Activo</mat-checkbox>
+      <app-combocargos class="x-select-cargos-form" [loadAct]="false" [loadFirts]="false"></app-combocargos>
+
+      <mat-card-actions align="right">
+        <button mat-flat-button color="primary" *ngIf="!editando" (click)="insertar()" [disabled]="!actividadForm.valid">
+          <mat-icon>add</mat-icon>
+          Agregar
+        </button>
+        <button mat-flat-button color="primary" [disabled]="!actividadForm.valid" (click)="insertar(true)">
+          <mat-icon>done</mat-icon>
+          Aceptar
+        </button>
+        <button mat-flat-button color="primary" (click)="cancelar()">
+          <mat-icon>cancel</mat-icon>
+          Cancelar
+        </button>
+      </mat-card-actions>
+    </form>
+  </div>
+  <ngx-loading [show]="showLoading" [config]="{ backdropBorderRadius: '3px' }" [template]="customLoadingTemplate"></ngx-loading>
+
+</mat-card>

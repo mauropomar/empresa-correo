@@ -1,0 +1,8 @@
+<mat-form-field>
+  <mat-label>Cargo</mat-label>
+  <mat-select [(value)]="selected"  (selectionChange)="seleccionar($event.value)">
+    <mat-option *ngFor="let cargo of cargos" [value]="cargo.id">
+      {{cargo.nombre}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
