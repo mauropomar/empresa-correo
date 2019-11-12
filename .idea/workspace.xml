@@ -1,20 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="662a405a-72ed-48b0-bfb0-83b95f2351a3" name="Default Changelist" comment="Configuracion del crud de actividades">
-      <change afterPath="$PROJECT_DIR$/empresa-app/src/app/components/actividades/actividad.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-app/src/app/components/actividades/actividad.component.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-api/app/Http/Controllers/ActividadesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-api/app/Http/Controllers/ActividadesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-api/app/Http/Controllers/CargosController.php" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-api/app/Http/Controllers/CargosController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-api/app/Models/Actividades.php" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-api/app/Models/Actividades.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-api/app/Models/Cargos.php" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-api/app/Models/Cargos.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-api/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-api/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/actividades/actividades.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/actividades/actividades.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/actividades/actividades.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/actividades/actividades.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/actividades/actividades.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/actividades/actividades.component.ts" afterDir="false" />
+    <list default="true" id="662a405a-72ed-48b0-bfb0-83b95f2351a3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/actividades/actividad.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/actividades/actividad.component.spec.ts" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -300,21 +289,7 @@
       <workItem from="1573267843565" duration="5861000" />
       <workItem from="1573302700919" duration="9898000" />
       <workItem from="1573379806609" duration="347000" />
-      <workItem from="1573441424163" duration="6784000" />
-    </task>
-    <task id="LOCAL-00009" summary="Creacion del sidenav">
-      <created>1571151531480</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1571151531480</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Creacion del sidenav">
-      <created>1571343022207</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1571343022207</updated>
+      <workItem from="1573441424163" duration="7065000" />
     </task>
     <task id="LOCAL-00011" summary="Creacion del sidenav">
       <created>1571363346774</created>
@@ -645,7 +620,21 @@
       <option name="project" value="LOCAL" />
       <updated>1573319352129</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="Configuracion del crud de actividades">
+      <created>1573448242679</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1573448242680</updated>
+    </task>
+    <task id="LOCAL-00062" summary="Configuracion del crud de actividades">
+      <created>1573448268298</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1573448268298</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TodoView">
