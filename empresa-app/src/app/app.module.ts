@@ -33,6 +33,7 @@ import { LoadingComponent } from './components/genericos/loading/loading.compone
 import { FavbuttonComponent } from './components/genericos/favbutton/favbutton.component';
 import { ActividadesComponent } from './components/actividades/actividades.component';
 import { ActividadComponent } from './components/actividades/actividad.component';
+import { CombocargosComponent } from './components/genericos/cargos/combocargos/combocargos.component';
 
 
 @NgModule({
@@ -51,7 +52,8 @@ import { ActividadComponent } from './components/actividades/actividad.component
     LoadingComponent,
     FavbuttonComponent,
     ActividadesComponent,
-    ActividadComponent
+    ActividadComponent,
+    CombocargosComponent
   ],
   imports: [
     EcoFabSpeedDialModule,

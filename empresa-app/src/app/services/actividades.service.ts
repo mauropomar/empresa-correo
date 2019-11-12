@@ -17,10 +17,14 @@ export class ActividadesService {
     return url;
   }
 
-  obtenerTodos(activo){
+  obtenerTodos(idcargo, activo){
     activo = (activo)?1:0;
-    let url = this.getQuery('obtenerTodas/'+activo);
-    return this.http.get(url)
+    let params = {
+      "idcargo":idcargo,
+      "activo":activo
+    };
+    let url = this.getQuery('obtenerTodas');
+    return this.http.get(url, {params:params})
       .pipe(map(data => data['data']));
   }
 

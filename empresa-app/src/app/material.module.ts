@@ -20,6 +20,7 @@ import {
   MatGridListModule,
   MatSidenavModule,
   MatDialogModule,
+  MatSelectModule,
   MatPaginatorModule,
   MatSortModule
   } from '@angular/material';
@@ -44,7 +45,8 @@ const modules = [
   MatTableModule,
   MatDialogModule,
   MatPaginatorModule,
-  MatSortModule
+  MatSortModule,
+  MatSelectModule
 ];
 
 @NgModule({

@@ -3,6 +3,7 @@ import {ActivatedRoute} from '@angular/router'
 import {ActividadesService} from '../../services/actividades.service';
 import {MatDialog} from '@angular/material/dialog';
 import {ConfirmDeleteComponent} from '../genericos/dialog/confirm-delete/confirm-delete.component';
+import {CombocargosComponent} from "../genericos/cargos/combocargos/combocargos.component";
 import {ActividadModel} from "../../models/actividad.model";
 import {MatTableDataSource, MatSort, MatPaginator} from '@angular/material';
 import {Router} from '@angular/router'
@@ -17,11 +18,11 @@ import { ToastrService } from 'ngx-toastr';
 export class ActividadesComponent implements OnInit {
 
   message: string = "Esta seguro que desea eliminar la actividad seleccionada.";
-  displayedColumns: string[] = ['nombre', 'descripcion', 'idcargo' ,'actions'];
+  displayedColumns: string[] = ['nombre', 'descripcion', 'actions'];
   @ViewChild(MatSort, {static:true}) sort:MatSort;
   @ViewChild(MatPaginator, {static:true}) paginator:MatPaginator;
   actividades: MatTableDataSource<ActividadModel>;
-  showLoading: boolean = false;
+  showLoading: boolean = true;
   searchKey:string = '';
 
   constructor(private router: Router,
@@ -30,7 +31,7 @@ export class ActividadesComponent implements OnInit {
               public dialog: MatDialog,
               private globales: GlobalesService,
               private toastr:ToastrService) {
-    this.obtenerTodos(true);
+   // this.obtenerTodos(true);
   }
 
   ngOnInit() {
@@ -82,9 +83,10 @@ export class ActividadesComponent implements OnInit {
     this.router.navigate(['actividad', id]);
   }
 
-  obtenerTodos(activo){
+  obtenerTodos(idcargo){
+    let activo = true;
     this.showLoading = true;
-    this.actividadesService.obtenerTodos(activo)
+    this.actividadesService.obtenerTodos(idcargo, activo)
       .subscribe(data => {
         this.actividades = new MatTableDataSource<ActividadModel>(data);
         this.globales.datos = this.actividades;
