@@ -9,7 +9,7 @@
       <mat-form-field>
         <textarea matInput placeholder="Descripción" [(ngModel)]="actividad.descripcion" formControlName="descripcion"></textarea>
       </mat-form-field>
-      <app-combocargos class="x-select-cargos-form" (change)= "actividad.id_cargo=$event" [selected]="actividad.id_cargo" [loadAct]="false" [setfirtsElement]="false" [defaultValue]="true"></app-combocargos>
+      <app-combocargos class="x-select-cargos-form" (change)= "actividad.id_cargo=$event" [selected]="actividad.id_cargo" [loadAct]="false"></app-combocargos>
       <mat-checkbox [(ngModel)]="actividad.activo" formControlName="activo" *ngIf="editando">Activo</mat-checkbox>
 
       <mat-card-actions align="right">

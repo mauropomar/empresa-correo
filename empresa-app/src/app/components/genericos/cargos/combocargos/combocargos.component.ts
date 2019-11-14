@@ -32,12 +32,13 @@ export class CombocargosComponent implements OnInit {
     this.cargosService.obtenerTodos(activo)
       .subscribe(data => {
         this.cargos = data;
-        if(this.defaultValue){
+        if(this.globales.idcargoDefault !== null){
           this.selected = this.globales.idcargoDefault;
-        }
-        if(this.setfirtsElement){
+        }else{
           this.selected = data[0].id;
+          this.globales.idcargoDefault = data[0].id;
         }
+
         if(this.loadAct){
           this.mostrarActividades.emit(this.selected);
         }

@@ -7,7 +7,7 @@
       </button>
     </mat-form-field>
   </div>
-  <app-combocargos class="x-select-cargos-grid" (mostrarActividades) = "obtenerTodos($event)" [loadAct]="true" [setfirtsElement]="true"></app-combocargos>
+  <app-combocargos class="x-select-cargos-grid" (mostrarActividades) = "obtenerTodos($event)" [loadAct]="true"></app-combocargos>
   <table mat-table  [dataSource]="actividades" matSort>
     <ng-container matColumnDef="nombre">
       <th mat-header-cell *matHeaderCellDef mat-sort-header> Nombre </th>

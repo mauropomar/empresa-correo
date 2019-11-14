@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="662a405a-72ed-48b0-bfb0-83b95f2351a3" name="Default Changelist" comment="Configuracion del crud de actividades">
+    <list default="true" id="662a405a-72ed-48b0-bfb0-83b95f2351a3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-api/app/Http/Controllers/ActividadesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-api/app/Http/Controllers/ActividadesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-api/app/Http/Controllers/CargosController.php" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-api/app/Http/Controllers/CargosController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/actividades/actividad.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/actividades/actividad.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/actividades/actividad.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/actividades/actividad.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/actividades/actividades.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/actividades/actividades.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/actividades/actividades.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/actividades/actividades.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/genericos/cargos/combocargos/combocargos.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/genericos/cargos/combocargos/combocargos.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/models/actividad.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/models/actividad.model.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/empresa-app/src/app/services/constantes.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/services/constantes.service.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -302,14 +297,8 @@
       <workItem from="1573584397692" duration="12140000" />
       <workItem from="1573612104668" duration="198000" />
       <workItem from="1573671943396" duration="469000" />
-      <workItem from="1573686041431" duration="11105000" />
-    </task>
-    <task id="LOCAL-00014" summary="Creacion del sidenav">
-      <created>1571541417442</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1571541417442</updated>
+      <workItem from="1573686041431" duration="11245000" />
+      <workItem from="1573725266782" duration="1826000" />
     </task>
     <task id="LOCAL-00015" summary="Creacion del sidenav">
       <created>1571580413941</created>
@@ -647,7 +636,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573596587757</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="Configuracion del crud de actividades">
+      <created>1573698747282</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1573698747283</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TodoView">
@@ -707,7 +703,6 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/empresa-app/src/app/components/genericos/cargos/combocargos/combocargos.component.ts</url>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
