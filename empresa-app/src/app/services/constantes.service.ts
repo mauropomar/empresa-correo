@@ -5,6 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class GlobalesService {
+  idcargoDefault:number=null;
   editando : boolean = true;
   title:string = 'R.H Plus';
   datos:any = new Array();

@@ -39,7 +39,7 @@ class CargosController extends Controller
 
     public function verificar(Request $peticion, $id){
         $nombre = $peticion->get('nombre');
-        if(!$id) {
+        if($id === null) {
             $result = Cargos::where('nombre', $nombre)->first();
         }else{
             $result = Cargos::where('nombre', $nombre)->where('id', '<>', $id )->first();
@@ -52,7 +52,7 @@ class CargosController extends Controller
 
     public function crear(Request $peticion)
     {
-        $result = $this->verificar($peticion);
+        $result = $this->verificar($peticion, null);
         if($result){
             $mensaje = __('Ya existe un cargo con ese nombre.');
             return $this->json(false, array(), $mensaje, Estado::CREADO);

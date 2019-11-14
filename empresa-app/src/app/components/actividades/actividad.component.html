@@ -9,8 +9,8 @@
       <mat-form-field>
         <textarea matInput placeholder="Descripción" [(ngModel)]="actividad.descripcion" formControlName="descripcion"></textarea>
       </mat-form-field>
+      <app-combocargos class="x-select-cargos-form" (change)= "actividad.id_cargo=$event" [selected]="actividad.id_cargo" [loadAct]="false" [setfirtsElement]="false" [defaultValue]="true"></app-combocargos>
       <mat-checkbox [(ngModel)]="actividad.activo" formControlName="activo" *ngIf="editando">Activo</mat-checkbox>
-      <app-combocargos class="x-select-cargos-form" [loadAct]="false" [loadFirts]="false"></app-combocargos>
 
       <mat-card-actions align="right">
         <button mat-flat-button color="primary" *ngIf="!editando" (click)="insertar()" [disabled]="!actividadForm.valid">

@@ -1,4 +1,4 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import {Component, OnInit, ViewChild, Output, EventEmitter} from '@angular/core';
 import {ActivatedRoute} from '@angular/router'
 import {ActividadesService} from '../../services/actividades.service';
 import {MatDialog} from '@angular/material/dialog';
@@ -84,6 +84,7 @@ export class ActividadesComponent implements OnInit {
   }
 
   obtenerTodos(idcargo){
+    this.globales.idcargoDefault = idcargo;
     let activo = true;
     this.showLoading = true;
     this.actividadesService.obtenerTodos(idcargo, activo)

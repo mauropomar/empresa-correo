@@ -18,7 +18,7 @@ export class ActividadComponent implements OnInit {
     descripcion: string;
     id: number;
     nombre: string;
-    idcargo:number
+    id_cargo:number
   };
   editando: boolean = false;
   showLoading: boolean = false;
@@ -48,6 +48,7 @@ export class ActividadComponent implements OnInit {
 
   ngOnInit() {
     this.globales.title = this.activateRoute.snapshot.data.title;
+    this.actividad.id_cargo = this.globales.idcargoDefault;
     this.editando = (this.globales.title.indexOf('Nueva') > -1) ? false : true;
     this.actividadForm = this.formBuilder.group({
       'nombre': [this.actividad.nombre, [
@@ -109,5 +110,9 @@ export class ActividadComponent implements OnInit {
 
   getErrorMessage() {
     return this.nombre.hasError('required') ? 'Debe introducir un nombre' : ''
+  }
+
+  updateModel(id){
+     this.actividad.id_cargo = id;
   }
 }

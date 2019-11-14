@@ -2,6 +2,6 @@ export interface ActividadModel {
   id:number;
   nombre:string;
   descripcion:string;
-  idcargo:number;
+  id_cargo:number;
   activo:number;
 }

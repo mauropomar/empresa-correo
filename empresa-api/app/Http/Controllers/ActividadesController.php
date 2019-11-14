@@ -35,13 +35,13 @@ class ActividadesController extends Controller
     {
         $activo = $peticion->get('activo');
         $idcargo =  $peticion->get('idcargo');
-        $actividades = Actividades::activos($activo , 200)->where('id_cargo', $idcargo);
+        $actividades = Actividades::where('id_cargo', $idcargo)->activos($activo , 200);
         return $this->json(true, $actividades->toArray());
     }
 
     public function verificar(Request $peticion, $id){
         $nombre = $peticion->get('nombre');
-        if(!$id) {
+        if($id === null) {
             $result = Actividades::where('nombre', $nombre)->first();
         }else{
             $result = Actividades::where('nombre', $nombre)->where('id', '<>', $id )->first();
@@ -56,9 +56,9 @@ class ActividadesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(Request $peticion)
+    public function crear(Request $peticion)
     {
-        $result = $this->verificar($peticion);
+        $result = $this->verificar($peticion, null);
         if($result){
             $mensaje = __('Ya existe una actividad con ese nombre.');
             return $this->json(false, array(), $mensaje, Estado::CREADO);
