@@ -1,12 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="662a405a-72ed-48b0-bfb0-83b95f2351a3" name="Default Changelist" comment="">
+    <list default="true" id="662a405a-72ed-48b0-bfb0-83b95f2351a3" name="Default Changelist" comment="Configuracion del crud de actividades">
+      <change afterPath="$PROJECT_DIR$/empresa-api/app/Models/TrabajadoresCargos.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/empresa-app/src/app/components/genericos/search/search.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/empresa-app/src/app/components/genericos/search/search.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/empresa-app/src/app/components/genericos/search/search.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/actividades/actividad.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/actividades/actividad.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-api/app/Http/Controllers/TrabajadoresController.php" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-api/app/Http/Controllers/TrabajadoresController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-api/database/migrations/2019_10_28_013515_create_trabajadores_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-api/database/migrations/2019_10_28_013515_create_trabajadores_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/actividades/actividad.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/actividades/actividad.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/actividades/actividades.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/actividades/actividades.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/actividades/actividades.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/actividades/actividades.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/genericos/cargos/combocargos/combocargos.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/genericos/cargos/combocargos/combocargos.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/services/constantes.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/services/constantes.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/actividades/actividades.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/actividades/actividades.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/cargos/cargos.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/cargos/cargos.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/cargos/cargos.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/cargos/cargos.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/layout/sidenav/sidenav.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/layout/sidenav/sidenav.component.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -147,7 +157,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/empresa-api/app/Models" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -163,16 +173,16 @@
     <property name="ts.external.directory.path" value="D:\Tony\www\empresa-correo\empresa-app\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Tony\www\empresa-correo\empresa-api\vendor" />
-      <recent name="D:\Tony\www\empresa-correo\empresa-api\app\Models" />
-      <recent name="D:\Tony\www\empresa-correo\empresa-app\src\app\components\cargos" />
-      <recent name="D:\Tony\www\empresa-correo\empresa-api\app" />
-      <recent name="D:\Tony\www\empresa-correo\empresa-api\app\Http\Controllers" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Tony\www\empresa-correo\empresa-api\app\Models" />
       <recent name="D:\Tony\www\empresa-correo\empresa-api\app\Provincias.php Municipios.php" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Tony\www\empresa-correo\empresa-api\app\Models" />
+      <recent name="D:\Tony\www\empresa-correo\empresa-api\vendor" />
+      <recent name="D:\Tony\www\empresa-correo\empresa-app\src\app\components\cargos" />
+      <recent name="D:\Tony\www\empresa-correo\empresa-api\app" />
+      <recent name="D:\Tony\www\empresa-correo\empresa-api\app\Http\Controllers" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -298,14 +308,12 @@
       <workItem from="1573612104668" duration="198000" />
       <workItem from="1573671943396" duration="469000" />
       <workItem from="1573686041431" duration="11245000" />
-      <workItem from="1573725266782" duration="1826000" />
-    </task>
-    <task id="LOCAL-00015" summary="Creacion del sidenav">
-      <created>1571580413941</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1571580413941</updated>
+      <workItem from="1573725266782" duration="1837000" />
+      <workItem from="1573745251595" duration="1508000" />
+      <workItem from="1573756146112" duration="8931000" />
+      <workItem from="1573780813044" duration="127000" />
+      <workItem from="1571104212465" duration="24000" />
+      <workItem from="1573963286226" duration="1409000" />
     </task>
     <task id="LOCAL-00016" summary="Creacion del sidenav y el home">
       <created>1571616096550</created>
@@ -643,7 +651,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573698747283</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="Configuracion del crud de actividades">
+      <created>1573730586348</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1573730586349</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TodoView">
@@ -704,11 +719,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/empresa-app/src/app/components/genericos/cargos/combocargos/combocargos.component.ts</url>
           <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/empresa-api/app/Http/Controllers/CargosController.php</url>
-          <line>4</line>
-          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

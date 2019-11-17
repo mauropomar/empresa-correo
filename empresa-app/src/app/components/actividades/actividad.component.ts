@@ -75,7 +75,7 @@ export class ActividadComponent implements OnInit {
           this.toastr.warning(data.msg, 'Información');
         }
         if (cerrar) {
-          this.router.navigate(['cargos'])
+          this.router.navigate(['actividades'])
         }
       }, (error) => {
         this.showLoading = false;
@@ -90,7 +90,7 @@ export class ActividadComponent implements OnInit {
         this.showLoading = false;
         if (data.success === true) {
           this.toastr.success(data.msg, 'Información');
-          this.router.navigate(['actividads'])
+          this.router.navigate(['actividades'])
         } else {
           this.toastr.warning(data.msg, 'Información');
         }

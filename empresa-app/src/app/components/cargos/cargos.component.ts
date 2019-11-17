@@ -22,7 +22,6 @@ export class CargosComponent implements OnInit {
   @ViewChild(MatPaginator, {static:true}) paginator:MatPaginator;
   cargos: MatTableDataSource<CargoModel>;
   showLoading: boolean = false;
-  searchKey:string = '';
 
   constructor(private router: Router,
               private activeRoute: ActivatedRoute,
@@ -97,8 +96,8 @@ export class CargosComponent implements OnInit {
       })
   }
 
-  filter(){
-      let searchKey = this.searchKey.trim().toLowerCase();
+  filter(texto){
+      let searchKey = texto.trim().toLowerCase();
       if(searchKey === '')
         this.reload()
       let data = [];

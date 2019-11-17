@@ -3,7 +3,6 @@ import {ActivatedRoute} from '@angular/router'
 import {ActividadesService} from '../../services/actividades.service';
 import {MatDialog} from '@angular/material/dialog';
 import {ConfirmDeleteComponent} from '../genericos/dialog/confirm-delete/confirm-delete.component';
-import {CombocargosComponent} from "../genericos/cargos/combocargos/combocargos.component";
 import {ActividadModel} from "../../models/actividad.model";
 import {MatTableDataSource, MatSort, MatPaginator} from '@angular/material';
 import {Router} from '@angular/router'
@@ -23,7 +22,6 @@ export class ActividadesComponent implements OnInit {
   @ViewChild(MatPaginator, {static:true}) paginator:MatPaginator;
   actividades: MatTableDataSource<ActividadModel>;
   showLoading: boolean = true;
-  searchKey:string = '';
 
   constructor(private router: Router,
               private activeRoute: ActivatedRoute,
@@ -83,11 +81,9 @@ export class ActividadesComponent implements OnInit {
     this.router.navigate(['actividad', id]);
   }
 
-  obtenerTodos(idcargo){
-    this.globales.idcargoDefault = idcargo;
-    let activo = true;
+  obtenerTodos(activo){
     this.showLoading = true;
-    this.actividadesService.obtenerTodos(idcargo, activo)
+    this.actividadesService.obtenerTodos(this.globales.idcargoDefault, activo)
       .subscribe(data => {
         this.actividades = new MatTableDataSource<ActividadModel>(data);
         this.globales.datos = this.actividades;
@@ -100,8 +96,8 @@ export class ActividadesComponent implements OnInit {
       })
   }
 
-  filter(){
-    let searchKey = this.searchKey.trim().toLowerCase();
+  filter(texto){
+    let searchKey = texto.trim().toLowerCase();
     if(searchKey === '')
       this.reload()
     let data = [];

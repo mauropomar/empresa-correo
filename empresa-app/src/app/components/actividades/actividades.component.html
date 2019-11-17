@@ -1,12 +1,5 @@
 <mat-card class="example-card" #customLoadingTemplate>
-  <div class="search-div">
-    <mat-form-field class="search-form-field">
-      <input class="x-form-input" matInput [(ngModel)]="searchKey" placeholder="Buscar" autocomplete="off" (change)="filter()">
-      <button mat-button *ngIf="searchKey" matSuffix mat-icon-button aria-label="Clear" (click)="reload()">
-        <mat-icon>close</mat-icon>
-      </button>
-    </mat-form-field>
-  </div>
+  <app-search (changeText)="filter($event)" (cleanText)="reload()"></app-search>
   <app-combocargos class="x-select-cargos-grid" (mostrarActividades) = "obtenerTodos($event)" [loadAct]="true"></app-combocargos>
   <table mat-table  [dataSource]="actividades" matSort>
     <ng-container matColumnDef="nombre">

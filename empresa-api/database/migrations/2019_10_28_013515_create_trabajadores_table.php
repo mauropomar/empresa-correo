@@ -20,8 +20,6 @@ class CreateTrabajadoresTable extends Migration
             $table->string('apellidos', 80);
             $table->string('sexo', 10);
             $table->integer('edad');
-            $table->integer('id_cargo');
-            $table->integer('id_actividad');
             $table->timestamp('creado')->nullable();
             $table->timestamp('modificado')->nullable();
             $table->integer('creado_por')->nullable();

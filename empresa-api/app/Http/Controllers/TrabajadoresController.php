@@ -7,14 +7,19 @@ use Illuminate\Http\Request;
 
 class TrabajadoresController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+
+    public function obtener($id)
     {
-        //
+        $trabajadores = Trabajadores::findOrFail($id, ['id', 'codigo', 'nombre', 'apellidos', 'sexo', 'edad', 'activo']);
+        return $this->json(true, $trabajadores, "", Estado::OK);
+    }
+
+
+    public function obtenerTodas(Request $peticion)
+    {
+        $activo = $peticion->get('activo');
+        $trabajadores = Trabajadores::activos($activo , 200);
+        return $this->json(true, $trabajadores->toArray());
     }
 
     /**
@@ -22,64 +27,47 @@ class TrabajadoresController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function crear(Request $peticion)
     {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Trabajadores  $trabajadores
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Trabajadores $trabajadores)
-    {
-        //
+        $result = $this->verificar($peticion, null);
+        if($result){
+            $mensaje = __('Ya existe un trabajador con ese nombre.');
+            return $this->json(false, array(), $mensaje, Estado::CREADO);
+        }
+        $actividad = Actividades::create($peticion->all());
+        $mensaje = __('La actividad ha sido creada satisfactoriamente');
+        return $this->json(true, $actividad, $mensaje, Estado::CREADO);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Trabajadores  $trabajadores
+     * @param  \App\Actividades  $actividades
      * @return \Illuminate\Http\Response
      */
-    public function edit(Trabajadores $trabajadores)
+    public function editar(Request $peticion, $id)
     {
-        //
+        $result = $this->verificar($peticion, $id);
+        if($result){
+            $mensaje = __('Ya existe una actividad con ese nombre.');
+            return $this->json(false, array(), $mensaje, Estado::CREADO);
+        }
+        $this->validate($peticion, ['nombre' => 'required']);
+        Actividades::findOrFail($id)->update($peticion->all());
+        $datos = $peticion->all();
+        $datos['id'] = $id;
+        $mensaje = __('La actividad ha sido modificada satisfactoriamente');
+        return $this->json(true, $datos, $mensaje, Estado::MODIFICADO);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Trabajadores  $trabajadores
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Trabajadores $trabajadores)
+    public function eliminar($id)
     {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Trabajadores  $trabajadores
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Trabajadores $trabajadores)
-    {
-        //
+        $actividad = Actividades::find($id);
+        if($actividad) {
+            $actividad->activo = false;
+            $actividad->save();
+        }
+        $mensaje = __('La actividad ha sido borrada satisfactoriamente');
+        return $this->json(true, [], $mensaje, Estado::OK);
     }
 }
