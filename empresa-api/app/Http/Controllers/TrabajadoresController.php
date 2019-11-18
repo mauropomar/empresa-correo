@@ -35,7 +35,7 @@ class TrabajadoresController extends Controller
             return $this->json(false, array(), $mensaje, Estado::CREADO);
         }
         $actividad = Actividades::create($peticion->all());
-        $mensaje = __('La actividad ha sido creada satisfactoriamente');
+        $mensaje = __('El trabajador ha sido creado satisfactoriamente');
         return $this->json(true, $actividad, $mensaje, Estado::CREADO);
     }
 
@@ -53,21 +53,21 @@ class TrabajadoresController extends Controller
             return $this->json(false, array(), $mensaje, Estado::CREADO);
         }
         $this->validate($peticion, ['nombre' => 'required']);
-        Actividades::findOrFail($id)->update($peticion->all());
+        Trabajadores::findOrFail($id)->update($peticion->all());
         $datos = $peticion->all();
         $datos['id'] = $id;
-        $mensaje = __('La actividad ha sido modificada satisfactoriamente');
+        $mensaje = __('El trabajador ha sido modificado satisfactoriamente');
         return $this->json(true, $datos, $mensaje, Estado::MODIFICADO);
     }
 
     public function eliminar($id)
     {
-        $actividad = Actividades::find($id);
-        if($actividad) {
-            $actividad->activo = false;
-            $actividad->save();
+        $trabajador = Trabajadores::find($id);
+        if($trabajador) {
+            $trabajador->activo = false;
+            $trabajador->save();
         }
-        $mensaje = __('La actividad ha sido borrada satisfactoriamente');
+        $mensaje = __('El trabajador ha sido borrado satisfactoriamente');
         return $this->json(true, [], $mensaje, Estado::OK);
     }
 }
