@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Cargos;
 use App\Models\Trabajadores;
 use Illuminate\Http\Request;
 
@@ -19,6 +20,11 @@ class TrabajadoresController extends Controller
     {
         $activo = $peticion->get('activo');
         $trabajadores = Trabajadores::activos($activo , 200);
+       foreach ($trabajadores as $p) {
+            $idcargo =  $p->id_cargo;
+            $cargo = Cargos::where('id', $idcargo)->first();
+            $p['cargo'] = $cargo->nombre;
+        }
         return $this->json(true, $trabajadores->toArray());
     }
 
