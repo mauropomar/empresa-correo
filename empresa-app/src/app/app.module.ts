@@ -36,6 +36,7 @@ import { ActividadComponent } from './components/actividades/actividad.component
 import { CombocargosComponent } from './components/genericos/cargos/combocargos/combocargos.component';
 import { SearchComponent } from './components/genericos/search/search.component';
 import { TrabajadoresComponent } from './components/trabajadores/trabajadores.component';
+import { TrabajadorComponent } from './components/trabajadores/trabajador.component';
 
 
 @NgModule({
@@ -57,7 +58,8 @@ import { TrabajadoresComponent } from './components/trabajadores/trabajadores.co
     ActividadComponent,
     CombocargosComponent,
     SearchComponent,
-    TrabajadoresComponent
+    TrabajadoresComponent,
+    TrabajadorComponent
   ],
   imports: [
     EcoFabSpeedDialModule,

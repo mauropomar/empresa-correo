@@ -9,11 +9,11 @@
       <button color="primary" mat-icon-button aria-label="Example icon-button with a heart icon">
         <mat-icon>launch</mat-icon>
       </button>
-      <button color="warn" mat-icon-button aria-label="Example icon-button with a heart icon">
+      <button color="warn" mat-icon-button aria-label="Example icon-button with a heart icon" (click)="openDialogDelete(trabajador)">
         <mat-icon>delete_outline</mat-icon>
       </button>
   </mat-card-actions>
 </mat-card>
   <ngx-loading [show]="showLoading" [config]="{ backdropBorderRadius: '3px' }" [template]="customLoadingTemplate"></ngx-loading>
-
+  <app-favbutton (showActive) = "obtenerTodos($event)" (mostrarNueva) = "nuevo()" color="primary"></app-favbutton>
 </div>

@@ -44,4 +44,43 @@ export class TrabajadoresComponent implements OnInit {
         this.toastr.error('Ha ocurrido un error al realizar la operación.', 'Error');
       })
   }
+
+  openDialogDelete(element) {
+    let dialog = this.dialog.open(ConfirmDeleteComponent, {  //muestro la ventana y le paso el mensaje a mostrar
+      width: '440px',
+      data: {message: this.message}
+    })
+    dialog.afterClosed().subscribe(result => {
+      if (result === true) {   //si voy a eliminar
+        let id = element.id;
+        this.showLoading = true;
+        this.trabajadorService.borrar(id)
+          .subscribe((res: any) => {
+            if (res.success) {
+              this.deleteElement(id);
+              this.showLoading = false;
+            }
+          },(error) => {
+            this.toastr.error('Ha ocurrido un error al realizar la operación.', 'Error');
+          })
+      }
+    });
+  }
+
+  deleteElement(id) {
+    debugger
+    let myArray = this.trabajadores;
+    for (let i = 0; i < myArray.length; i++) {
+      if (myArray[i].id === id) {
+        myArray.splice(i, 1);
+        this.toastr.success('El trabajador fue borrado con éxito.', 'Información');
+        break
+      }
+    }
+  }
+
+  nuevo(){
+    this.globales.editando = false;
+    this.router.navigate(['trabajadores/nuevo']);
+  }
 }

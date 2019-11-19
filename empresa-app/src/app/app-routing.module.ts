@@ -7,6 +7,7 @@ import {CargoComponent} from './components/cargos/cargo.component';
 import {ActividadesComponent} from "./components/actividades/actividades.component";
 import {ActividadComponent} from "./components/actividades/actividad.component";
 import {TrabajadoresComponent} from "./components/trabajadores/trabajadores.component";
+import {TrabajadorComponent} from "./components/trabajadores/trabajador.component";
 
 
 const routes: Routes = [
@@ -18,7 +19,9 @@ const routes: Routes = [
   {path: 'actividades', component: ActividadesComponent, data: {title: 'Actividades'}},
   {path: 'actividad/nuevo', component: ActividadComponent, data: {title: 'Nueva Actividad'}},
   {path: 'actividad/:id', component: ActividadComponent, data: {title: 'Editar Actividad'}},
-  {path: 'trabajadores', component: TrabajadoresComponent, data: {title: 'Trabajadores'}}
+  {path: 'trabajadores', component: TrabajadoresComponent, data: {title: 'Trabajadores'}},
+  {path: 'trabajadores/nuevo', component: TrabajadorComponent, data: {title: 'Nuevo Trabajador'}},
+  {path: 'trabajadores/:id', component: TrabajadorComponent, data: {title: 'Editar Trabajador'}}
 
 ];
 

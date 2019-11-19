@@ -21,6 +21,7 @@ class CreateTrabajadoresTable extends Migration
             $table->integer('id_cargo');
             $table->string('sexo', 10);
             $table->integer('edad');
+            $table->longText('imagen')->nullable();
             $table->timestamp('creado')->nullable();
             $table->timestamp('modificado')->nullable();
             $table->integer('creado_por')->nullable();

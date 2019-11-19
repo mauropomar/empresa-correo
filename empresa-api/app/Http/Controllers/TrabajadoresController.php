@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Cargos;
+use App\Clases\Estado;
 use App\Models\Trabajadores;
 use Illuminate\Http\Request;
 
@@ -16,9 +17,8 @@ class TrabajadoresController extends Controller
     }
 
 
-    public function obtenerTodas(Request $peticion)
+    public function obtenerTodas($activo)
     {
-        $activo = $peticion->get('activo');
         $trabajadores = Trabajadores::activos($activo , 200);
        foreach ($trabajadores as $p) {
             $idcargo =  $p->id_cargo;

@@ -1,6 +1,7 @@
 .example-card {
   margin:20px;
   max-width: 200px;
+  background-color: #FAFAFA;
   max-height: 300px;
 }
 
@@ -12,7 +13,7 @@
 
 .example-card:hover {
   background-color: #fafafa;
-  border: 1px solid #1d68a7;
+  border: 2px solid #1d68a7;
   cursor: pointer;
 }
 
@@ -20,4 +21,17 @@
 .example-header-image {
   background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
   background-size: cover;
+}
+
+mat-grid-tile {
+  background: lightblue;
+}
+
+.example-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.example-container > * {
+  width: 80%;
 }
