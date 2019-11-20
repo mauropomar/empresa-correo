@@ -1,21 +1,44 @@
 <mat-card class="example-card">
   <div class="example-container">
     <form class="example-container" [formGroup]="trabajadorForm" #customLoadingTemplate>
-      <mat-grid-list cols="2" rowHeight="2:1">
+      <mat-grid-list cols="2" rowHeight="40px">
         <mat-grid-tile>
           <mat-form-field>
-            <input matInput placeholder="Nombre" [(ngModel)]="trabajador.nombre" formControlName="nombre" maxlength="50" autofocus>
-            <mat-error *ngIf="nombre.invalid">{{getErrorNombre()}}</mat-error>
+            <input matInput required placeholder="C&oacute;digo" [(ngModel)]="trabajador.codigo" formControlName="codigo" maxlength="15" autofocus>
+            <mat-error *ngIf="codigo.invalid">{{getErrorCodigo()}}</mat-error>
           </mat-form-field>
-
         </mat-grid-tile>
         <mat-grid-tile>
           <mat-form-field>
-            <input matInput placeholder="Apellidos" [(ngModel)]="trabajador.apellidos" formControlName="apellidos" maxlength="50" autofocus>
-            <mat-error *ngIf="nombre.invalid">{{getErrorApellidos()}}</mat-error>
+            <input matInput required placeholder="Nombre" [(ngModel)]="trabajador.nombre" formControlName="nombre" maxlength="50" autofocus>
+            <mat-error *ngIf="nombre.invalid">{{getErrorNombre()}}</mat-error>
           </mat-form-field>
         </mat-grid-tile>
       </mat-grid-list>
+
+      <mat-grid-list cols="2" rowHeight="40px" >
+         <mat-grid-tile>
+           <mat-form-field>
+             <input matInput required placeholder="Apellidos" [(ngModel)]="trabajador.apellidos" formControlName="apellidos" maxlength="50">
+             <mat-error *ngIf="nombre.invalid">{{getErrorApellidos()}}</mat-error>
+           </mat-form-field>
+         </mat-grid-tile>
+         <mat-grid-tile>
+           <app-combocargos class="x-select-form" [loadAct]="false"></app-combocargos>
+         </mat-grid-tile>
+      </mat-grid-list>
+
+      <mat-grid-list cols="2" rowHeight="40px" >
+        <mat-grid-tile>
+          <app-combosexo class="x-select-form"></app-combosexo>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <mat-form-field>
+            <input matInput type="number" placeholder="Edad" [(ngModel)]="trabajador.edad" formControlName="edad" onKeyPress="if(this.value.length==3) return false;" >
+          </mat-form-field>
+        </mat-grid-tile>
+      </mat-grid-list>
+
       <mat-card-actions align="right">
         <button mat-flat-button color="primary" *ngIf="!editando" (click)="insertar()" [disabled]="!trabajadorForm.valid">
           <mat-icon>add</mat-icon>

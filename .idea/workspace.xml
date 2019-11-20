@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="662a405a-72ed-48b0-bfb0-83b95f2351a3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/empresa-app/src/app/components/trabajadores/trabajador.component.css" afterDir="false" />
+    <list default="true" id="662a405a-72ed-48b0-bfb0-83b95f2351a3" name="Default Changelist" comment="Configuracion del crud de trabajadores">
+      <change afterPath="$PROJECT_DIR$/empresa-app/src/app/components/genericos/combosexo/combosexo.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/empresa-app/src/app/components/genericos/combosexo/combosexo.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/empresa-app/src/app/components/genericos/combosexo/combosexo.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-api/app/Http/Controllers/TrabajadoresController.php" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-api/app/Http/Controllers/TrabajadoresController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-api/database/migrations/2019_10_28_013515_create_trabajadores_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-api/database/migrations/2019_10_28_013515_create_trabajadores_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/app-routing.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/empresa-app/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/trabajadores/trabajadores.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/trabajadores/trabajadores.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/trabajadores/trabajadores.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/trabajadores/trabajadores.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/trabajadores/trabajadores.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/trabajadores/trabajadores.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/models/trabajador.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/models/trabajador.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/trabajadores/trabajador.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/trabajadores/trabajador.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/trabajadores/trabajador.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/trabajadores/trabajador.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/trabajadores/trabajador.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/trabajadores/trabajador.component.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -152,7 +150,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../MasterSol" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -314,14 +312,10 @@
       <workItem from="1574083214102" duration="1008000" />
       <workItem from="1574100619293" duration="12083000" />
       <workItem from="1574123186114" duration="1339000" />
-      <workItem from="1574188405820" duration="10596000" />
-    </task>
-    <task id="LOCAL-00020" summary="Creacion del sidenav y el home">
-      <created>1571653415512</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1571653415512</updated>
+      <workItem from="1574188405820" duration="11778000" />
+      <workItem from="1574211524755" duration="1324000" />
+      <workItem from="1574255869026" duration="2441000" />
+      <workItem from="1574272996674" duration="9341000" />
     </task>
     <task id="LOCAL-00021" summary="Creacion del sidenav y el home">
       <created>1571681145606</created>
@@ -659,7 +653,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574115725484</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="Configuracion del crud de trabajadores">
+      <created>1574199912926</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1574199912926</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="TodoView">

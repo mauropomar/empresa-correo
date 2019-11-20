@@ -28,6 +28,7 @@ export class TrabajadorComponent implements OnInit {
   editando: boolean = false;
   showLoading: boolean = false;
   trabajadorForm: FormGroup;
+  codigo = new FormControl('', [Validators.required]);
   nombre = new FormControl('', [Validators.required]);
   apellidos = new FormControl('', [Validators.required]);
 
@@ -122,6 +123,9 @@ export class TrabajadorComponent implements OnInit {
 
   cancelar() {
     this.router.navigate(["/trabajador"]);
+  }
+  getErrorCodigo() {
+    return this.codigo.hasError('required') ? 'Debe introducir un código' : ''
   }
 
   getErrorNombre() {

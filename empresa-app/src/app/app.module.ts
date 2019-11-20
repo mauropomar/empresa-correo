@@ -13,6 +13,9 @@ import { NgxLoadingModule } from 'ngx-loading';
 //Pipes
 import {NoimagePipe} from './pipes/noimage.pipe';
 import {DomseguroPipe} from './pipes/domseguro.pipe';
+
+//services
+import { GlobalesService } from "./services/constantes.service";
 //components
 
 import {ConfirmDeleteComponent} from './components/genericos/dialog/confirm-delete/confirm-delete.component';
@@ -25,15 +28,12 @@ import {HomeComponent} from './components/layout/home/home.component';
 import {SidenavComponent} from './components/layout/sidenav/sidenav.component';
 import {CargosComponent} from './components/cargos/cargos.component';
 import {CargoComponent} from './components/cargos/cargo.component';
-
-//services
-import { GlobalesService } from "./services/constantes.service";
-
 import { LoadingComponent } from './components/genericos/loading/loading.component';
 import { FavbuttonComponent } from './components/genericos/favbutton/favbutton.component';
 import { ActividadesComponent } from './components/actividades/actividades.component';
 import { ActividadComponent } from './components/actividades/actividad.component';
 import { CombocargosComponent } from './components/genericos/cargos/combocargos/combocargos.component';
+import { CombosexoComponent } from './components/genericos/combosexo/combosexo.component';
 import { SearchComponent } from './components/genericos/search/search.component';
 import { TrabajadoresComponent } from './components/trabajadores/trabajadores.component';
 import { TrabajadorComponent } from './components/trabajadores/trabajador.component';
@@ -57,6 +57,7 @@ import { TrabajadorComponent } from './components/trabajadores/trabajador.compon
     ActividadesComponent,
     ActividadComponent,
     CombocargosComponent,
+    CombosexoComponent,
     SearchComponent,
     TrabajadoresComponent,
     TrabajadorComponent
@@ -82,4 +83,7 @@ import { TrabajadorComponent } from './components/trabajadores/trabajador.compon
   ]
 })
 export class AppModule {
+
 }
+
+
