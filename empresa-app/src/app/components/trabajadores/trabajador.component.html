@@ -40,7 +40,7 @@
           </mat-form-field>
         </mat-grid-tile>
       </mat-grid-list>
-
+      <mat-checkbox [(ngModel)]="trabajador.activo" formControlName="activo" *ngIf="editando">Activo</mat-checkbox>
       <mat-card-actions align="right">
         <button mat-flat-button color="primary" *ngIf="!editando" (click)="insertar()" [disabled]="!trabajadorForm.valid">
           <mat-icon>add</mat-icon>
