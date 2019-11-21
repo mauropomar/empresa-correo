@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="662a405a-72ed-48b0-bfb0-83b95f2351a3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/trabajadores/trabajador.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/trabajadores/trabajador.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/trabajadores/trabajador.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/trabajadores/trabajador.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/trabajadores/trabajadores.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/trabajadores/trabajadores.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/trabajadores/trabajador.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/trabajadores/trabajador.component.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -311,21 +312,8 @@
       <workItem from="1574211524755" duration="1324000" />
       <workItem from="1574255869026" duration="2441000" />
       <workItem from="1574272996674" duration="13025000" />
-      <workItem from="1574307683095" duration="494000" />
-    </task>
-    <task id="LOCAL-00023" summary="Creacion del sidenav y el home">
-      <created>1571774744408</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1571774744408</updated>
-    </task>
-    <task id="LOCAL-00024" summary="Configuracion del crud de cargos">
-      <created>1571804161325</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1571804161325</updated>
+      <workItem from="1574307683095" duration="631000" />
+      <workItem from="1574360469470" duration="4888000" />
     </task>
     <task id="LOCAL-00025" summary="Configuracion del crud de cargos">
       <created>1571842452523</created>
@@ -656,7 +644,21 @@
       <option name="project" value="LOCAL" />
       <updated>1574288624597</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="Configuracion del crud de trabajadores">
+      <created>1574308263129</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1574308263129</updated>
+    </task>
+    <task id="LOCAL-00076" summary="Configuracion del crud de trabajadores">
+      <created>1574308302956</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1574308302956</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="TodoView">

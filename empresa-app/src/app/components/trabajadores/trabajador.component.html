@@ -1,6 +1,6 @@
 <mat-card class="example-card">
 
-  <div class="x-image"><img mat-card-image src="../../../assets/images/empty_usuario.png" alt="Photo of a Shiba Inu"></div>
+  <div class="x-image"><img mat-card-image [src]="trabajador.imagen" alt="Photo of a Shiba Inu"></div>
   <div class="example-container">
       <form class="example-container" [formGroup]="trabajadorForm" #customLoadingTemplate>
       <mat-grid-list cols="2" rowHeight="40px">
@@ -40,6 +40,15 @@
           </mat-form-field>
         </mat-grid-tile>
       </mat-grid-list>
+
+        <mat-grid-list cols="2" rowHeight="40px" >
+          <mat-grid-tile>
+              <input type="file" (change)="onFileSelected($event)">
+          </mat-grid-tile>
+          <mat-grid-tile>
+
+          </mat-grid-tile>
+        </mat-grid-list>
       <mat-checkbox [(ngModel)]="trabajador.activo" formControlName="activo" *ngIf="editando">Activo</mat-checkbox>
       <mat-card-actions align="right">
         <button mat-flat-button color="primary" *ngIf="!editando" (click)="insertar()" [disabled]="!trabajadorForm.valid">

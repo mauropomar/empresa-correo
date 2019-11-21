@@ -13,7 +13,7 @@ import {ToastrService} from 'ngx-toastr';
   styleUrls: ['./trabajador.component.css']
 })
 export class TrabajadorComponent implements OnInit {
-
+   selectedFiles = null;
   trabajador: TrabajadorModel = new class implements TrabajadorModel {
     id: number;
     codigo: string;
@@ -23,7 +23,7 @@ export class TrabajadorComponent implements OnInit {
     activo: number;
     sexo:string;
     edad:number;
-    imagen:string;
+    imagen:string = '../../../assets/images/empty_usuario.png';
   };
   editando: boolean = false;
   showLoading: boolean = false;
@@ -31,6 +31,7 @@ export class TrabajadorComponent implements OnInit {
   codigo = new FormControl('', [Validators.required]);
   nombre = new FormControl('', [Validators.required]);
   apellidos = new FormControl('', [Validators.required]);
+  imageUrl;
 
   constructor(private activateRoute: ActivatedRoute,
               private trabajadorService: TrabajadoresService,
@@ -74,6 +75,17 @@ export class TrabajadorComponent implements OnInit {
       'imagen': [this.trabajador.imagen, []],
       'activo': [this.trabajador.activo, []]
     })
+  }
+
+  onFileSelected(event){
+    this.selectedFiles = event.target.files[0];
+    var reader = new FileReader();
+    let imagen;
+    reader.readAsDataURL(this.selectedFiles);
+    reader.onload = (_event) => {
+      this.imageUrl  = reader.result;
+      this.trabajador.imagen = this.imageUrl;
+    }
   }
 
   insertar(cerrar) {
