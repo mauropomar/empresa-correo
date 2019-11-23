@@ -1,6 +1,6 @@
 <mat-form-field>
   <mat-label>Sexo</mat-label>
-  <mat-select value="M">
+  <mat-select value="M" (selectionChange)="seleccionar($event.value)">
     <mat-option *ngFor="let sex of sexo" [value]="sex.value">
       {{sex.nombre}}
     </mat-option>

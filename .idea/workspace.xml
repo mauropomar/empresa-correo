@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="662a405a-72ed-48b0-bfb0-83b95f2351a3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/trabajadores/trabajador.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/trabajadores/trabajador.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-api/app/Http/Controllers/TrabajadoresController.php" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-api/app/Http/Controllers/TrabajadoresController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-api/app/Models/Trabajadores.php" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-api/app/Models/Trabajadores.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/genericos/combosexo/combosexo.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/genericos/combosexo/combosexo.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/genericos/combosexo/combosexo.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/genericos/combosexo/combosexo.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/trabajadores/trabajador.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/trabajadores/trabajador.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/trabajadores/trabajador.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/trabajadores/trabajador.component.ts" afterDir="false" />
     </list>
@@ -313,14 +316,9 @@
       <workItem from="1574255869026" duration="2441000" />
       <workItem from="1574272996674" duration="13025000" />
       <workItem from="1574307683095" duration="631000" />
-      <workItem from="1574360469470" duration="4888000" />
-    </task>
-    <task id="LOCAL-00025" summary="Configuracion del crud de cargos">
-      <created>1571842452523</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1571842452523</updated>
+      <workItem from="1574360469470" duration="5731000" />
+      <workItem from="1574381237116" duration="1226000" />
+      <workItem from="1574476914879" duration="5327000" />
     </task>
     <task id="LOCAL-00026" summary="Configuracion del crud de cargos">
       <created>1571859647601</created>
@@ -658,7 +656,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574308302956</updated>
     </task>
-    <option name="localTasksCounter" value="77" />
+    <task id="LOCAL-00077" summary="Configuracion del crud de trabajadores">
+      <created>1574365733288</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1574365733289</updated>
+    </task>
+    <option name="localTasksCounter" value="78" />
     <servers />
   </component>
   <component name="TodoView">

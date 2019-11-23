@@ -28,6 +28,19 @@ class TrabajadoresController extends Controller
         return $this->json(true, $trabajadores->toArray());
     }
 
+    public function verificar(Request $peticion, $id){
+        $nombre = $peticion->get('nombre');
+        $apellidos = $peticion->get('apellidos');
+        if($id === null) {
+            $result = Trabajadores::where('nombre', $nombre)->where('apellidos', $apellidos)->first();
+        }else{
+            $result = Trabajadores::where('nombre', $nombre)->where('apellidos', $apellidos)->where('id', '<>', $id )->first();
+        }
+        if(!is_null($result)){
+            return true;
+        }
+        return false;
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -40,7 +53,7 @@ class TrabajadoresController extends Controller
             $mensaje = __('Ya existe un trabajador con ese nombre.');
             return $this->json(false, array(), $mensaje, Estado::CREADO);
         }
-        $actividad = Actividades::create($peticion->all());
+        $actividad = Trabajadores::create($peticion->all());
         $mensaje = __('El trabajador ha sido creado satisfactoriamente');
         return $this->json(true, $actividad, $mensaje, Estado::CREADO);
     }

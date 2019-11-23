@@ -13,17 +13,17 @@ import {ToastrService} from 'ngx-toastr';
   styleUrls: ['./trabajador.component.css']
 })
 export class TrabajadorComponent implements OnInit {
-   selectedFiles = null;
+  selectedFiles = null;
   trabajador: TrabajadorModel = new class implements TrabajadorModel {
     id: number;
     codigo: string;
     nombre: string;
     apellidos: string;
-    id_cargo:number;
+    id_cargo: number;
     activo: number;
-    sexo:string;
-    edad:number;
-    imagen:string = '../../../assets/images/empty_usuario.png';
+    sexo: string = 'M';
+    edad: number = 23;
+    imagen: string = '../../../assets/images/empty_usuario.png';
   };
   editando: boolean = false;
   showLoading: boolean = false;
@@ -61,29 +61,23 @@ export class TrabajadorComponent implements OnInit {
       'codigo': [this.trabajador.codigo, [
         Validators.required
       ]],
-      'nombre': [this.trabajador.nombre, [
+      'nombre':  [this.trabajador.nombre, [
         Validators.required
       ]],
-      'apellidos': [this.trabajador.apellidos, [
+      'apellidos':  [this.trabajador.apellidos, [
         Validators.required
       ]],
-      'id_cargo': [this.trabajador.id_cargo, [
-        Validators.required
-      ]],
-      'sexo': [this.trabajador.sexo, []],
-      'edad':[this.trabajador.edad, []],
-      'imagen': [this.trabajador.imagen, []],
-      'activo': [this.trabajador.activo, []]
+      'edad':  [this.trabajador.edad, []]
     })
   }
 
-  onFileSelected(event){
+  onFileSelected(event) {
     this.selectedFiles = event.target.files[0];
     var reader = new FileReader();
     let imagen;
     reader.readAsDataURL(this.selectedFiles);
     reader.onload = (_event) => {
-      this.imageUrl  = reader.result;
+      this.imageUrl = reader.result;
       this.trabajador.imagen = this.imageUrl;
     }
   }
@@ -136,6 +130,7 @@ export class TrabajadorComponent implements OnInit {
   cancelar() {
     this.router.navigate(["/trabajador"]);
   }
+
   getErrorCodigo() {
     return this.codigo.hasError('required') ? 'Debe introducir un código' : ''
   }
