@@ -30,7 +30,7 @@ export class TrabajadoresComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.globales.title = this.activeRoute.snapshot.data.title;
+     this.globales.title = this.activeRoute.snapshot.data.title;
   }
 
   obtenerTodos(activo){
