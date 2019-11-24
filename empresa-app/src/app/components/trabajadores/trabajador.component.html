@@ -1,9 +1,9 @@
 <mat-card class="example-card">
 
-  <div class="x-image"><img mat-card-image [src]="trabajador.imagen" alt="Photo of a Shiba Inu"></div>
+  <div class="x-image"><img mat-card-image [src]="trabajador.imagen | noimage" alt="Photo of a Shiba Inu"></div>
   <div class="example-container">
       <form class="example-container" [formGroup]="trabajadorForm" #customLoadingTemplate>
-      <mat-grid-list cols="2" rowHeight="60px">
+      <mat-grid-list cols="2" rowHeight="65px">
         <mat-grid-tile>
           <mat-form-field>
             <input matInput required placeholder="C&oacute;digo" [(ngModel)]="trabajador.codigo" formControlName="codigo" maxlength="15" autofocus>
@@ -18,7 +18,7 @@
         </mat-grid-tile>
       </mat-grid-list>
 
-      <mat-grid-list cols="2" rowHeight="60px" >
+      <mat-grid-list cols="2" rowHeight="65px" >
          <mat-grid-tile>
            <mat-form-field>
              <input matInput required placeholder="Apellidos" [(ngModel)]="trabajador.apellidos" formControlName="apellidos" maxlength="50">
@@ -30,7 +30,7 @@
          </mat-grid-tile>
       </mat-grid-list>
 
-      <mat-grid-list cols="2" rowHeight="60px">
+      <mat-grid-list cols="2" rowHeight="65px">
         <mat-grid-tile>
           <app-combosexo class="x-select-form" (change)= "trabajador.sexo=$event" [selected]="trabajador.sexo"></app-combosexo>
         </mat-grid-tile>
@@ -46,10 +46,9 @@
               <input type="file" (change)="onFileSelected($event)">
           </mat-grid-tile>
           <mat-grid-tile>
-
-          </mat-grid-tile>
+            <mat-checkbox [(ngModel)]="trabajador.activo" formControlName="activo" *ngIf="editando">Activo</mat-checkbox>
+         </mat-grid-tile>
         </mat-grid-list>
-      <mat-checkbox [(ngModel)]="trabajador.activo" formControlName="activo" *ngIf="editando">Activo</mat-checkbox>
       <mat-card-actions align="right">
         <button mat-flat-button color="primary" *ngIf="!editando" (click)="insertar()" [disabled]="!trabajadorForm.valid">
           <mat-icon>add</mat-icon>

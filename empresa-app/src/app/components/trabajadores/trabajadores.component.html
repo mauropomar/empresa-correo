@@ -1,19 +1,25 @@
-<div fxLayout="row" fxFlex.md="70" fxLayoutWrap #customLoadingTemplate class="example-div">
-<mat-card fxFlex class="example-card" *ngFor="let trabajador of trabajadores">
-  <mat-card-header>
-    <mat-card-title style="margin-left: -20px">{{trabajador.nombre}}</mat-card-title>
-    <mat-card-subtitle style="margin-left: -20px">{{trabajador.cargo}}</mat-card-subtitle>
-  </mat-card-header>
-  <img mat-card-image src="../../../assets/images/empty_usuario.png" height="160" alt="Photo of a Shiba Inu">
+<div class="search_field">
+  <app-search (changeText)="filter($event)" (cleanText)="reload()"></app-search>
+</div>
+<div fxLayout="row" fxFlex.md="30" fxLayoutWrap #customLoadingTemplate class="example-div">
+  <mat-card fxFlex class="example-card" *ngFor="let trabajador of trabajadores">
+    <mat-card-header>
+      <mat-card-title style="margin-left: -20px">{{trabajador.nombre}}</mat-card-title>
+      <mat-card-subtitle style="margin-left: -20px">{{trabajador.cargo}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image [src]="trabajador.imagen | noimage" height="160" alt="Photo of a Shiba Inu">
     <mat-card-actions align="right">
-      <button color="primary" mat-icon-button aria-label="Example icon-button with a heart icon">
+      <button color="primary" mat-icon-button aria-label="Example icon-button with a heart icon"
+              (click)="editar(trabajador)">
         <mat-icon>launch</mat-icon>
       </button>
-      <button color="warn" mat-icon-button aria-label="Example icon-button with a heart icon" (click)="openDialogDelete(trabajador)">
+      <button color="warn" mat-icon-button aria-label="Example icon-button with a heart icon"
+              (click)="openDialogDelete(trabajador)">
         <mat-icon>delete_outline</mat-icon>
       </button>
-  </mat-card-actions>
-</mat-card>
-  <ngx-loading [show]="showLoading" [config]="{ backdropBorderRadius: '3px' }" [template]="customLoadingTemplate"></ngx-loading>
-  <app-favbutton (showActive) = "obtenerTodos($event)" (mostrarNueva) = "nuevo()" color="primary"></app-favbutton>
+    </mat-card-actions>
+  </mat-card>
+  <ngx-loading [show]="showLoading" [config]="{ backdropBorderRadius: '3px' }"
+               [template]="customLoadingTemplate"></ngx-loading>
+  <app-favbutton (showActive)="obtenerTodos($event)" (mostrarNueva)="nuevo()" color="primary"></app-favbutton>
 </div>

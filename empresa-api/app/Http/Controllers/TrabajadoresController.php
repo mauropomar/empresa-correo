@@ -12,8 +12,9 @@ class TrabajadoresController extends Controller
 
     public function obtener($id)
     {
-        $trabajadores = Trabajadores::findOrFail($id, ['id', 'codigo', 'nombre', 'apellidos', 'sexo', 'edad', 'activo']);
-        return $this->json(true, $trabajadores, "", Estado::OK);
+        $trabajador = Trabajadores::findOrFail($id, ['id', 'codigo', 'id_cargo' ,'nombre', 'apellidos', 'imagen','sexo', 'edad', 'activo']);
+        $trabajador['imagen'] = json_decode($trabajador['imagen']);
+        return $this->json(true, $trabajador, "", Estado::OK);
     }
 
 
@@ -21,6 +22,7 @@ class TrabajadoresController extends Controller
     {
         $trabajadores = Trabajadores::activos($activo , 200);
        foreach ($trabajadores as $p) {
+            $p['imagen'] = json_decode($p['imagen']);
             $idcargo =  $p->id_cargo;
             $cargo = Cargos::where('id', $idcargo)->first();
             $p['cargo'] = $cargo->nombre;
@@ -28,13 +30,20 @@ class TrabajadoresController extends Controller
         return $this->json(true, $trabajadores->toArray());
     }
 
+    public function encodeImage($file)
+    {
+      //  $imagen = $file.strpos('empty');
+
+        $imagen = json_encode($file);
+        return $imagen;
+    }
+
     public function verificar(Request $peticion, $id){
-        $nombre = $peticion->get('nombre');
-        $apellidos = $peticion->get('apellidos');
+        $codigo = $peticion->get('codigo');
         if($id === null) {
-            $result = Trabajadores::where('nombre', $nombre)->where('apellidos', $apellidos)->first();
+            $result = Trabajadores::where('codigo', $codigo)->first();
         }else{
-            $result = Trabajadores::where('nombre', $nombre)->where('apellidos', $apellidos)->where('id', '<>', $id )->first();
+            $result = Trabajadores::where('codigo', $codigo)->where('id', '<>', $id )->first();
         }
         if(!is_null($result)){
             return true;
@@ -50,12 +59,13 @@ class TrabajadoresController extends Controller
     {
         $result = $this->verificar($peticion, null);
         if($result){
-            $mensaje = __('Ya existe un trabajador con ese nombre.');
+            $mensaje = __('Ya existe un trabajador con ese código.');
             return $this->json(false, array(), $mensaje, Estado::CREADO);
         }
-        $actividad = Trabajadores::create($peticion->all());
+        $peticion['imagen'] = $this->encodeImage($peticion->get('imagen'));
+        $trabajador = Trabajadores::create($peticion->all());
         $mensaje = __('El trabajador ha sido creado satisfactoriamente');
-        return $this->json(true, $actividad, $mensaje, Estado::CREADO);
+        return $this->json(true, $trabajador, $mensaje, Estado::CREADO);
     }
 
     /**
@@ -68,7 +78,7 @@ class TrabajadoresController extends Controller
     {
         $result = $this->verificar($peticion, $id);
         if($result){
-            $mensaje = __('Ya existe una actividad con ese nombre.');
+            $mensaje = __('Ya existe un trabajador con ese código.');
             return $this->json(false, array(), $mensaje, Estado::CREADO);
         }
         $this->validate($peticion, ['nombre' => 'required']);

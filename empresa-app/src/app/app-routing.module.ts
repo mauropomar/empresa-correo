@@ -20,8 +20,8 @@ const routes: Routes = [
   {path: 'actividad/nuevo', component: ActividadComponent, data: {title: 'Nueva Actividad'}},
   {path: 'actividad/:id', component: ActividadComponent, data: {title: 'Editar Actividad'}},
   {path: 'trabajadores', component: TrabajadoresComponent, data: {title: 'Trabajadores'}},
-  {path: 'trabajadores/nuevo', component: TrabajadorComponent, data: {title: 'Nuevo Trabajador'}},
-  {path: 'trabajadores/:id', component: TrabajadorComponent, data: {title: 'Editar Trabajador'}}
+  {path: 'trabajador/nuevo', component: TrabajadorComponent, data: {title: 'Nuevo Trabajador'}},
+  {path: 'trabajador/:id', component: TrabajadorComponent, data: {title: 'Editar Trabajador'}}
 
 ];
 

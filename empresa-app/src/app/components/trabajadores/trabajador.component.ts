@@ -20,7 +20,7 @@ export class TrabajadorComponent implements OnInit {
     nombre: string;
     apellidos: string;
     id_cargo: number;
-    activo: number;
+    activo: number = 1;
     sexo: string = 'M';
     edad: number = 23;
     imagen: string = '../../../assets/images/empty_usuario.png';
@@ -67,6 +67,7 @@ export class TrabajadorComponent implements OnInit {
       'apellidos':  [this.trabajador.apellidos, [
         Validators.required
       ]],
+      'activo':  [this.trabajador.activo, []],
       'edad':  [this.trabajador.edad, []]
     })
   }
@@ -128,7 +129,7 @@ export class TrabajadorComponent implements OnInit {
   }
 
   cancelar() {
-    this.router.navigate(["/trabajador"]);
+    this.router.navigate(["/trabajadores"]);
   }
 
   getErrorCodigo() {

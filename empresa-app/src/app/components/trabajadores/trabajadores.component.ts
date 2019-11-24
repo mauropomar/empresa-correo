@@ -30,6 +30,7 @@ export class TrabajadoresComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.globales.title = this.activeRoute.snapshot.data.title;
   }
 
   obtenerTodos(activo){
@@ -68,7 +69,6 @@ export class TrabajadoresComponent implements OnInit {
   }
 
   deleteElement(id) {
-    debugger
     let myArray = this.trabajadores;
     for (let i = 0; i < myArray.length; i++) {
       if (myArray[i].id === id) {
@@ -81,6 +81,20 @@ export class TrabajadoresComponent implements OnInit {
 
   nuevo(){
     this.globales.editando = false;
-    this.router.navigate(['trabajadores/nuevo']);
+    this.router.navigate(['trabajador/nuevo']);
+  }
+
+  editar(element) {
+    this.globales.editando = true;
+    let id = element.id;
+    this.router.navigate(['trabajador', id]);
+  }
+
+  filter(texto){
+
+  }
+
+  reload(){
+    this.obtenerTodos(true)
   }
 }

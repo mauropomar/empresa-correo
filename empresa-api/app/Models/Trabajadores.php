@@ -8,6 +8,6 @@ class Trabajadores extends ApModel
 {
     protected $table = 'trabajadores';
 
-    protected $fillable = ['id', 'codigo', 'nombre', 'apellidos', 'id_cargo', 'sexo', 'edad', 'activo',  'creado_por', 'modificado_por', 'creado', 'modificado'];
+    protected $fillable = ['id', 'codigo', 'nombre', 'apellidos', 'id_cargo', 'sexo', 'imagen', 'edad', 'activo',  'creado_por', 'modificado_por', 'creado', 'modificado'];
 
 }
