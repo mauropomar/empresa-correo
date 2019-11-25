@@ -5,10 +5,11 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class NoimagePipe implements PipeTransform {
 
-  transform(images: any[]): string {
-    if(!images){
-      return 'assets/images/noimage.png'
+  transform(value:string): string {
+    if(value == null || value.indexOf('empty') > -1){
+      return 'assets/images/empty_usuario.png'
     }
+    return value;
   }
 
 }

@@ -35,3 +35,8 @@ mat-grid-tile {
 .example-container > * {
   width: 80%;
 }
+
+.search_field{
+  margin-left: 10px;
+  margin-top:10px;
+}
