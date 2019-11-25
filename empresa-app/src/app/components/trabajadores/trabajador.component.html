@@ -3,6 +3,8 @@
   <div class="x-image"><img mat-card-image [src]="trabajador.imagen | noimage" alt="Photo of a Shiba Inu"></div>
   <div class="example-container">
       <form class="example-container" [formGroup]="trabajadorForm" #customLoadingTemplate>
+        <mat-tab-group>
+          <mat-tab label="First">
       <mat-grid-list cols="2" rowHeight="65px">
         <mat-grid-tile>
           <mat-form-field>
@@ -49,21 +51,25 @@
             <mat-checkbox [(ngModel)]="trabajador.activo" formControlName="activo" *ngIf="editando">Activo</mat-checkbox>
          </mat-grid-tile>
         </mat-grid-list>
-      <mat-card-actions align="right">
-        <button mat-flat-button color="primary" *ngIf="!editando" (click)="insertar()" [disabled]="!trabajadorForm.valid">
-          <mat-icon>add</mat-icon>
-          Agregar
-        </button>
-        <button mat-flat-button color="primary" [disabled]="!trabajadorForm.valid" (click)="insertar(true)">
-          <mat-icon>done</mat-icon>
-          Aceptar
-        </button>
-        <button mat-flat-button color="primary" (click)="cancelar()">
-          <mat-icon>cancel</mat-icon>
-          Cancelar
-        </button>
-      </mat-card-actions>
-    </form>
+      </mat-tab>
+          <mat-tab label="Second"> Content 2 </mat-tab>
+        </mat-tab-group>
+        <mat-card-actions align="right">
+          <button mat-flat-button color="primary" *ngIf="!editando" (click)="insertar()" [disabled]="!trabajadorForm.valid">
+            <mat-icon>add</mat-icon>
+            Agregar
+          </button>
+          <button mat-flat-button color="primary" [disabled]="!trabajadorForm.valid" (click)="insertar(true)">
+            <mat-icon>done</mat-icon>
+            Aceptar
+          </button>
+          <button mat-flat-button color="primary" (click)="cancelar()">
+            <mat-icon>cancel</mat-icon>
+            Cancelar
+          </button>
+        </mat-card-actions>
+
+      </form>
   </div>
   <ngx-loading [show]="showLoading" [config]="{ backdropBorderRadius: '3px' }" [template]="customLoadingTemplate"></ngx-loading>
 

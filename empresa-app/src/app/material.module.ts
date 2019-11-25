@@ -23,7 +23,8 @@ import {
   MatDialogModule,
   MatSelectModule,
   MatPaginatorModule,
-  MatSortModule
+  MatSortModule,
+  MatTabsModule
   } from '@angular/material';
 
 
@@ -47,7 +48,8 @@ const modules = [
   MatDialogModule,
   MatPaginatorModule,
   MatSortModule,
-  MatSelectModule
+  MatSelectModule,
+  MatTabsModule
 ];
 
 @NgModule({

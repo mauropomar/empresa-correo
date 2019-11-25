@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="662a405a-72ed-48b0-bfb0-83b95f2351a3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/trabajadores/trabajadores.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/trabajadores/trabajadores.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/pipes/noimage.pipe.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/pipes/noimage.pipe.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/trabajadores/trabajador.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/trabajadores/trabajador.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/material.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/material.module.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,6 +45,9 @@
     <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="65d3af33-925c-466e-993f-d1e242abc974" />
   </component>
   <component name="PhpDebugGeneral" ignore_connections_through_unregistered_servers="true" listening_started="true" />
   <component name="PhpServers">
@@ -319,14 +322,7 @@
       <workItem from="1574476914879" duration="5552000" />
       <workItem from="1574507850178" duration="8322000" />
       <workItem from="1574546337647" duration="9162000" />
-      <workItem from="1574689118768" duration="236000" />
-    </task>
-    <task id="LOCAL-00029" summary="Configuracion del crud de cargos">
-      <created>1571928237288</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1571928237288</updated>
+      <workItem from="1574689118768" duration="2576000" />
     </task>
     <task id="LOCAL-00030" summary="Configuracion del crud de cargos">
       <created>1572077885633</created>
@@ -664,7 +660,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574557172142</updated>
     </task>
-    <option name="localTasksCounter" value="81" />
+    <task id="LOCAL-00081" summary="Configuracion del crud de trabajadores">
+      <created>1574689403880</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1574689403881</updated>
+    </task>
+    <option name="localTasksCounter" value="82" />
     <servers />
   </component>
   <component name="TodoView">
