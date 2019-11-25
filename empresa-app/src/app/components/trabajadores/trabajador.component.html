@@ -1,77 +1,78 @@
 <mat-card class="example-card">
-
   <div class="x-image"><img mat-card-image [src]="trabajador.imagen | noimage" alt="Photo of a Shiba Inu"></div>
   <div class="example-container">
-      <form class="example-container" [formGroup]="trabajadorForm" #customLoadingTemplate>
-        <mat-tab-group>
-          <mat-tab label="First">
-      <mat-grid-list cols="2" rowHeight="65px">
-        <mat-grid-tile>
-          <mat-form-field>
-            <input matInput required placeholder="C&oacute;digo" [(ngModel)]="trabajador.codigo" formControlName="codigo" maxlength="15" autofocus>
-            <mat-error *ngIf="codigo.invalid">{{getErrorCodigo()}}</mat-error>
-          </mat-form-field>
-        </mat-grid-tile>
-        <mat-grid-tile>
-          <mat-form-field>
-            <input matInput required placeholder="Nombre" [(ngModel)]="trabajador.nombre" formControlName="nombre" maxlength="50" autofocus>
-            <mat-error *ngIf="nombre.invalid">{{getErrorNombre()}}</mat-error>
-          </mat-form-field>
-        </mat-grid-tile>
-      </mat-grid-list>
+    <form class="example-container" [formGroup]="trabajadorForm" #customLoadingTemplate>
+      <mat-tab-group>
+        <mat-tab label="Generales">
+          <mat-grid-list cols="2" rowHeight="65px">
+            <mat-grid-tile>
+              <mat-form-field>
+                <input matInput required placeholder="C&oacute;digo" [(ngModel)]="trabajador.codigo"
+                       formControlName="codigo" maxlength="15" autofocus>
+                <mat-error *ngIf="codigo.invalid">{{getErrorCodigo()}}</mat-error>
+              </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+              <mat-form-field>
+                <input matInput required placeholder="Nombre" [(ngModel)]="trabajador.nombre" formControlName="nombre"
+                       maxlength="50" autofocus>
+                <mat-error *ngIf="nombre.invalid">{{getErrorNombre()}}</mat-error>
+              </mat-form-field>
+            </mat-grid-tile>
+          </mat-grid-list>
 
-      <mat-grid-list cols="2" rowHeight="65px" >
-         <mat-grid-tile>
-           <mat-form-field>
-             <input matInput required placeholder="Apellidos" [(ngModel)]="trabajador.apellidos" formControlName="apellidos" maxlength="50">
-             <mat-error *ngIf="apellidos.invalid">{{getErrorApellidos()}}</mat-error>
-           </mat-form-field>
-         </mat-grid-tile>
-         <mat-grid-tile>
-           <app-combocargos class="x-select-form" (change)= "trabajador.id_cargo=$event" [selected]="trabajador.id_cargo" [loadAct]="false"></app-combocargos>
-         </mat-grid-tile>
-      </mat-grid-list>
+          <mat-grid-list cols="2" rowHeight="65px">
+            <mat-grid-tile>
+              <mat-form-field>
+                <input matInput required placeholder="Apellidos" [(ngModel)]="trabajador.apellidos"
+                       formControlName="apellidos" maxlength="50">
+                <mat-error *ngIf="apellidos.invalid">{{getErrorApellidos()}}</mat-error>
+              </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+              <app-combosexo class="x-select-sexo" (change)="trabajador.sexo=$event"
+                             [selected]="trabajador.sexo"></app-combosexo>
+            </mat-grid-tile>
+          </mat-grid-list>
 
-      <mat-grid-list cols="2" rowHeight="65px">
-        <mat-grid-tile>
-          <app-combosexo class="x-select-form" (change)= "trabajador.sexo=$event" [selected]="trabajador.sexo"></app-combosexo>
-        </mat-grid-tile>
-        <mat-grid-tile>
-          <mat-form-field>
-            <input matInput type="number" placeholder="Edad" [(ngModel)]="trabajador.edad" formControlName="edad" onKeyPress="if(this.value.length==3) return false;" >
-          </mat-form-field>
-        </mat-grid-tile>
-      </mat-grid-list>
+          <mat-grid-list cols="2" rowHeight="65px">
+            <mat-grid-tile>
+              <mat-form-field>
+                <input matInput type="number" placeholder="Edad" [(ngModel)]="trabajador.edad" formControlName="edad"
+                       onKeyPress="if(this.value.length==3) return false;">
+              </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+              <input style="margin-left:-60px"  type="file" (change)="onFileSelected($event)">
+            </mat-grid-tile>
+          </mat-grid-list>
+          <mat-checkbox [(ngModel)]="trabajador.activo" formControlName="activo" *ngIf="editando">Activo</mat-checkbox>
+         </mat-tab>
+        <mat-tab label="Cargo y actividades">
+              <app-combocargos class="x-select-cargo" (change)="trabajador.id_cargo=$event" [selected]="trabajador.id_cargo"
+                           [loadAct]="false"></app-combocargos>
+        </mat-tab>
+      </mat-tab-group>
+      <mat-card-actions align="right">
+        <button mat-flat-button color="primary" *ngIf="!editando" (click)="insertar()"
+                [disabled]="!trabajadorForm.valid">
+          <mat-icon>add</mat-icon>
+          Agregar
+        </button>
+        <button mat-flat-button color="primary" [disabled]="!trabajadorForm.valid" (click)="insertar(true)">
+          <mat-icon>done</mat-icon>
+          Aceptar
+        </button>
+        <button mat-flat-button color="primary" (click)="cancelar()">
+          <mat-icon>cancel</mat-icon>
+          Cancelar
+        </button>
+      </mat-card-actions>
 
-        <mat-grid-list cols="2" rowHeight="40px" >
-          <mat-grid-tile>
-              <input type="file" (change)="onFileSelected($event)">
-          </mat-grid-tile>
-          <mat-grid-tile>
-            <mat-checkbox [(ngModel)]="trabajador.activo" formControlName="activo" *ngIf="editando">Activo</mat-checkbox>
-         </mat-grid-tile>
-        </mat-grid-list>
-      </mat-tab>
-          <mat-tab label="Second"> Content 2 </mat-tab>
-        </mat-tab-group>
-        <mat-card-actions align="right">
-          <button mat-flat-button color="primary" *ngIf="!editando" (click)="insertar()" [disabled]="!trabajadorForm.valid">
-            <mat-icon>add</mat-icon>
-            Agregar
-          </button>
-          <button mat-flat-button color="primary" [disabled]="!trabajadorForm.valid" (click)="insertar(true)">
-            <mat-icon>done</mat-icon>
-            Aceptar
-          </button>
-          <button mat-flat-button color="primary" (click)="cancelar()">
-            <mat-icon>cancel</mat-icon>
-            Cancelar
-          </button>
-        </mat-card-actions>
-
-      </form>
+    </form>
   </div>
-  <ngx-loading [show]="showLoading" [config]="{ backdropBorderRadius: '3px' }" [template]="customLoadingTemplate"></ngx-loading>
+  <ngx-loading [show]="showLoading" [config]="{ backdropBorderRadius: '3px' }"
+               [template]="customLoadingTemplate"></ngx-loading>
 
 </mat-card>
 

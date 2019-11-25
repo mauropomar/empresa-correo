@@ -10,7 +10,8 @@
 }
 
 .example-container > * {
-  width: 80%;
+  width: 100%;
+  height: 100%;
 }
 
 mat-card-actions > button {
@@ -26,10 +27,18 @@ mat-grid-list{
   margin-top: 40px;
 }
 
-.x-select-form{
+
+.x-select-sexo{
   display: flex;
   flex-direction: column;
   width: 90%;
+}
+
+.x-select-cargo{
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin-top:30px;
 }
 
 .x-image{
@@ -38,6 +47,23 @@ mat-grid-list{
   border-radius: 5px;
   padding-top: 20px;
   margin-left: 30%;
+}
+
+mat-checkbox {
+  margin-left: 20px;
+  margin-top: 40px;
+}
+
+mat-tab-group{
+  width: 100%;
+}
+
+.x-select-cargos{
+  margin-top: 20px;
+}
+
+x-field-cargos{
+
 }
 
 
