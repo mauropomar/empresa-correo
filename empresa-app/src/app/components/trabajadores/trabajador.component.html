@@ -3,7 +3,11 @@
   <div class="example-container">
     <form class="example-container" [formGroup]="trabajadorForm" #customLoadingTemplate>
       <mat-tab-group>
-        <mat-tab label="Generales">
+        <mat-tab>
+          <ng-template mat-tab-label>
+            <mat-icon style="margin-right: 10px" class="example-tab-icon">assignment</mat-icon>
+            Generales
+          </ng-template>
           <mat-grid-list cols="2" rowHeight="65px">
             <mat-grid-tile>
               <mat-form-field>
@@ -48,9 +52,14 @@
           </mat-grid-list>
           <mat-checkbox [(ngModel)]="trabajador.activo" formControlName="activo" *ngIf="editando">Activo</mat-checkbox>
          </mat-tab>
-        <mat-tab label="Cargo y actividades">
+        <mat-tab>
+          <ng-template mat-tab-label>
+            <mat-icon style="margin-right: 10px" class="example-tab-icon">supervisor_account</mat-icon>
+            Cargo y actividades
+          </ng-template>
               <app-combocargos class="x-select-cargo" (change)="trabajador.id_cargo=$event" [selected]="trabajador.id_cargo"
                            [loadAct]="false"></app-combocargos>
+          <app-tabla-actividades></app-tabla-actividades>
         </mat-tab>
       </mat-tab-group>
       <mat-card-actions align="right">
