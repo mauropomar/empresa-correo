@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, OnChanges, SimpleChanges} from '@angular/core';
 import {SelectionModel} from '@angular/cdk/collections';
 import {MatTableDataSource} from '@angular/material/table';
 import {ActividadModel} from "../../models/actividad.model";
@@ -12,9 +12,9 @@ import {GlobalesService} from "../../services/constantes.service";
   templateUrl: './tabla-actividades.component.html',
   styleUrls: ['./tabla-actividades.component.css']
 })
-export class TablaActividadesComponent implements OnInit {
+export class TablaActividadesComponent implements OnInit, OnChanges {
 
-  displayedColumns: string[] = ['nombre', 'descripcion'];
+  displayedColumns: string[] = ['select', 'nombre', 'descripcion'];
   @Input() actividadesCargo;
   actividades = new MatTableDataSource<ActividadModel>();
   selection = new SelectionModel<ActividadModel>(true, []);
@@ -26,6 +26,12 @@ export class TablaActividadesComponent implements OnInit {
   }
 
   ngOnInit() {
+
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    let data = changes['actividadesCargo'].currentValue;
+    this.actividades = new MatTableDataSource<ActividadModel>(data);
 
   }
 

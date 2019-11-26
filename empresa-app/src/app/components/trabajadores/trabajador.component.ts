@@ -130,7 +130,6 @@ export class TrabajadorComponent implements OnInit {
   }
 
   selectCargo(idcargo){
-    debugger
     this.showLoading = true;
     let activo = true;
     this.actividadesService.obtenerTodos(idcargo, activo)
