@@ -3,9 +3,12 @@ import {ActivatedRoute} from '@angular/router';
 import {TrabajadoresService} from "../../services/trabajadores.service";
 import {TrabajadorModel} from "../../models/trabajador.model";
 import {GlobalesService} from "../../services/constantes.service";
+import {ActividadesService} from "../../services/actividades.service";
 import {Router} from '@angular/router';
 import {FormControl, FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {ToastrService} from 'ngx-toastr';
+import {MatTableDataSource} from "@angular/material/table";
+import {ActividadModel} from "../../models/actividad.model";
 
 @Component({
   selector: 'app-trabajador',
@@ -31,10 +34,12 @@ export class TrabajadorComponent implements OnInit {
   codigo = new FormControl('', [Validators.required]);
   nombre = new FormControl('', [Validators.required]);
   apellidos = new FormControl('', [Validators.required]);
+  actividades:any = [];
   imageUrl;
 
   constructor(private activateRoute: ActivatedRoute,
               private trabajadorService: TrabajadoresService,
+              private actividadesService: ActividadesService,
               private globales: GlobalesService,
               private router: Router,
               private formBuilder: FormBuilder,
@@ -121,6 +126,19 @@ export class TrabajadorComponent implements OnInit {
       }, (error) => {
         this.showLoading = false;
         this.toastr.error('Ha ocurrido un error al realizar la operación.', 'Error');
+      })
+  }
+
+  selectCargo(idcargo){
+    debugger
+    this.showLoading = true;
+    let activo = true;
+    this.actividadesService.obtenerTodos(idcargo, activo)
+      .subscribe(data => {
+        this.actividades = data;
+        this.showLoading = false;
+      }, (error) => {
+        this.showLoading = false;
       })
   }
 

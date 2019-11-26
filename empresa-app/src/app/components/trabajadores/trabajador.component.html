@@ -57,9 +57,9 @@
             <mat-icon style="margin-right: 10px" class="example-tab-icon">supervisor_account</mat-icon>
             Cargo y actividades
           </ng-template>
-              <app-combocargos class="x-select-cargo" (change)="trabajador.id_cargo=$event" [selected]="trabajador.id_cargo"
+              <app-combocargos class="x-select-cargo" (change)="selectCargo($event)" [selected]="trabajador.id_cargo"
                            [loadAct]="false"></app-combocargos>
-          <app-tabla-actividades></app-tabla-actividades>
+          <app-tabla-actividades  [actividadesCargo] = "actividades"></app-tabla-actividades>
         </mat-tab>
       </mat-tab-group>
       <mat-card-actions align="right">
