@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Cargos;
 use App\Clases\Estado;
 use App\Models\Trabajadores;
+use App\Models\TrabajadoresCargos;
 use Illuminate\Http\Request;
 
 class TrabajadoresController extends Controller
@@ -22,6 +23,18 @@ class TrabajadoresController extends Controller
     {
         $trabajadores = Trabajadores::activos($activo , 200);
        foreach ($trabajadores as $p) {
+            $p['imagen'] = json_decode($p['imagen']);
+            $idcargo =  $p->id_cargo;
+            $cargo = Cargos::where('id', $idcargo)->first();
+            $p['cargo'] = $cargo->nombre;
+        }
+        return $this->json(true, $trabajadores->toArray());
+    }
+
+    public function obtenerPorTrabajadores($activo)
+    {
+        $trabajadores = Trabajadores::activos($activo , 200);
+        foreach ($trabajadores as $p) {
             $p['imagen'] = json_decode($p['imagen']);
             $idcargo =  $p->id_cargo;
             $cargo = Cargos::where('id', $idcargo)->first();
@@ -64,6 +77,23 @@ class TrabajadoresController extends Controller
         }
         $peticion['imagen'] = $this->encodeImage($peticion->get('imagen'));
         $trabajador = Trabajadores::create($peticion->all());
+        $actividades = $peticion->get('actividades');
+        $idtrabajador = $trabajador['id'];
+        $idcargo = $trabajador['id_cargo'];
+        foreach ($actividades as $act) {
+            $existe = TrabajadoresCargos::where('id_trabajador', $idtrabajador)->where('id_cargo', $act['id'])->exists();
+            if (!$existe) {
+                $trabcargo = new TrabajadoresCargos();
+                $trabcargo->fill([
+                    'id_trabajador' => $idtrabajador,
+                    'id_cargo'=> $idcargo,
+                    'id_actividad' => $act['id'],
+                    'creado_por' => 1,
+                    'modificado_por' => 1
+                ]);
+                $trabcargo->save();
+            }
+        }
         $mensaje = __('El trabajador ha sido creado satisfactoriamente');
         return $this->json(true, $trabajador, $mensaje, Estado::CREADO);
     }

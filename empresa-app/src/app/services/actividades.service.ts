@@ -28,6 +28,16 @@ export class ActividadesService {
       .pipe(map(data => data['data']));
   }
 
+  obtenerPorTrabajador(idtrabajador, idcargo){
+    let params = {
+      "idtrabajador":idtrabajador,
+      "idcargo":idcargo
+    };
+    let url = this.getQuery('obtenerPorTrabajador');
+    return this.http.get(url, {params:params})
+      .pipe(map(data => data['data']));
+  }
+
   obtener(id){
     let url = this.getQuery('obtener/'+id);
     return this.http.get(url)

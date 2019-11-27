@@ -95,6 +95,8 @@ export class TrabajadorComponent implements OnInit {
       return;
     }
     this.showLoading = true;
+    debugger
+    this.trabajador['actividades'] = this.actividadesSeleccionadas;
     this.trabajadorService.crear(this.trabajador)
       .subscribe((data: any) => {
         this.showLoading = false;
@@ -131,9 +133,30 @@ export class TrabajadorComponent implements OnInit {
   }
 
   selectCargo(idcargo){
-    this.showLoading = true;
     let activo = true;
+    this.trabajador.id_cargo = idcargo;
+    debugger
+    if(this.globales.title.indexOf("Nuevo") > -1)
+       this.obtenerActividades(idcargo, activo);
+    else
+       this.obtenerActividadesPorTrabajador(idcargo);
+  }
+
+  obtenerActividades(idcargo, activo){
+    this.showLoading = true;
     this.actividadesService.obtenerTodos(idcargo, activo)
+      .subscribe(data => {
+        this.actividades = data;
+        this.showLoading = false;
+      }, (error) => {
+        this.showLoading = false;
+      })
+  }
+
+  obtenerActividadesPorTrabajador(idcargo){
+    let idtrabajador = this.trabajador.id;
+    this.showLoading = true;
+    this.actividadesService.obtenerPorTrabajador(idtrabajador, idcargo)
       .subscribe(data => {
         this.actividades = data;
         this.showLoading = false;

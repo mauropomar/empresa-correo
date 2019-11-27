@@ -3,10 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="662a405a-72ed-48b0-bfb0-83b95f2351a3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/trabajadores/tabla-actividades.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/trabajadores/tabla-actividades.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/trabajadores/tabla-actividades.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/trabajadores/tabla-actividades.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-api/app/Http/Controllers/TrabajadoresController.php" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-api/app/Http/Controllers/TrabajadoresController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-api/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-api/routes/api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/trabajadores/trabajador.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/trabajadores/trabajador.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/trabajadores/trabajador.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/trabajadores/trabajador.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/services/actividades.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/services/actividades.service.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -152,7 +153,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../MasterSol" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../siemprevino" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -330,14 +331,9 @@
       <workItem from="1574774137774" duration="975000" />
       <workItem from="1574792595837" duration="4876000" />
       <workItem from="1574818708571" duration="710000" />
-      <workItem from="1574860597728" duration="6253000" />
-    </task>
-    <task id="LOCAL-00035" summary="Configuracion del crud de cargos">
-      <created>1572226892005</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1572226892005</updated>
+      <workItem from="1574860597728" duration="6288000" />
+      <workItem from="1574878390595" duration="10153000" />
+      <workItem from="1574893630620" duration="10000" />
     </task>
     <task id="LOCAL-00036" summary="Configuracion del crud de cargos">
       <created>1572226911415</created>
@@ -675,7 +671,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574802734378</updated>
     </task>
-    <option name="localTasksCounter" value="87" />
+    <task id="LOCAL-00087" summary="Configuracion del crud de trabajadores">
+      <created>1574870269252</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1574870269252</updated>
+    </task>
+    <option name="localTasksCounter" value="88" />
     <servers />
   </component>
   <component name="TodoView">
@@ -738,18 +741,12 @@
           <url>file://$PROJECT_DIR$/empresa-app/src/app/components/genericos/cargos/combocargos/combocargos.component.ts</url>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/empresa-api/app/Http/Controllers/TrabajadoresController.php</url>
+          <line>72</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-    <watches-manager>
-      <configuration name="index.php">
-        <watch expression="$peticion-&gt;get('nombre')" />
-        <watch expression=" $peticion-&gt;get('id')" />
-        <watch expression="$peticion-&gt;getContent()" />
-        <watch expression="$peticion-&gt;getContent()['nombre']" />
-        <watch expression="$peticion-&gt;request['nombre']" />
-        <watch expression="$cargo-&gt;getNombre()" />
-        <watch expression="$cargo-&gt;nombre" />
-      </configuration>
-    </watches-manager>
   </component>
 </project>
