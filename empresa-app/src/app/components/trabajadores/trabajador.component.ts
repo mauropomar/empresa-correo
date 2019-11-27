@@ -35,6 +35,7 @@ export class TrabajadorComponent implements OnInit {
   nombre = new FormControl('', [Validators.required]);
   apellidos = new FormControl('', [Validators.required]);
   actividades:any = [];
+  actividadesSeleccionadas:any = [];
   imageUrl;
 
   constructor(private activateRoute: ActivatedRoute,

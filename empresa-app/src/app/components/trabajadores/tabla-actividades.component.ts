@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, OnInit, OnChanges, SimpleChanges} from '@angular/core';
+import {Component, EventEmitter, Input, Output, OnInit, OnChanges, SimpleChanges} from '@angular/core';
 import {SelectionModel} from '@angular/cdk/collections';
 import {MatTableDataSource} from '@angular/material/table';
 import {ActividadModel} from "../../models/actividad.model";
@@ -16,13 +16,13 @@ export class TablaActividadesComponent implements OnInit, OnChanges {
 
   displayedColumns: string[] = ['select', 'nombre', 'descripcion'];
   @Input() actividadesCargo;
+  @Output() seleccionados = new EventEmitter();
   actividades = new MatTableDataSource<ActividadModel>();
   selection = new SelectionModel<ActividadModel>(true, []);
   showLoading: boolean = false;
 
   constructor(private actividadService: ActividadesService,
               private globales: GlobalesService) {
-
   }
 
   ngOnInit() {
@@ -32,7 +32,6 @@ export class TablaActividadesComponent implements OnInit, OnChanges {
   ngOnChanges(changes: SimpleChanges): void {
     let data = changes['actividadesCargo'].currentValue;
     this.actividades = new MatTableDataSource<ActividadModel>(data);
-
   }
 
   /** Whether the number of selected elements matches the total number of rows. */
@@ -56,4 +55,9 @@ export class TablaActividadesComponent implements OnInit, OnChanges {
     }
     return `${this.selection.isSelected(row) ? 'deselect' : 'select'} row ${row.id + 1}`;
   }
+
+  changeSelect(selection){
+     this.seleccionados.emit(this.selection.selected);
+  }
 }
+
