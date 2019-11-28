@@ -5,9 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/empresa-api/app/Http/Controllers/TrabajadoresController.php" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-api/app/Http/Controllers/TrabajadoresController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/empresa-api/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-api/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/trabajadores/trabajador.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/trabajadores/trabajador.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/trabajadores/trabajador.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/trabajadores/trabajador.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/services/actividades.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/services/actividades.service.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -153,7 +151,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../siemprevino" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../MasterSol" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -333,14 +331,8 @@
       <workItem from="1574818708571" duration="710000" />
       <workItem from="1574860597728" duration="6288000" />
       <workItem from="1574878390595" duration="10153000" />
-      <workItem from="1574893630620" duration="10000" />
-    </task>
-    <task id="LOCAL-00036" summary="Configuracion del crud de cargos">
-      <created>1572226911415</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1572226911415</updated>
+      <workItem from="1574893630620" duration="171000" />
+      <workItem from="1574910565683" duration="5602000" />
     </task>
     <task id="LOCAL-00037" summary="Configuracion del crud de cargos">
       <created>1572251263912</created>
@@ -678,7 +670,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574870269252</updated>
     </task>
-    <option name="localTasksCounter" value="88" />
+    <task id="LOCAL-00088" summary="Configuracion del crud de trabajadores">
+      <created>1574893746449</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1574893746450</updated>
+    </task>
+    <option name="localTasksCounter" value="89" />
     <servers />
   </component>
   <component name="TodoView">
@@ -743,7 +742,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/empresa-api/app/Http/Controllers/TrabajadoresController.php</url>
-          <line>72</line>
+          <line>73</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>

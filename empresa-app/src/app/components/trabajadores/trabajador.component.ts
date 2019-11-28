@@ -135,7 +135,6 @@ export class TrabajadorComponent implements OnInit {
   selectCargo(idcargo){
     let activo = true;
     this.trabajador.id_cargo = idcargo;
-    debugger
     if(this.globales.title.indexOf("Nuevo") > -1)
        this.obtenerActividades(idcargo, activo);
     else

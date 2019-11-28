@@ -30,7 +30,7 @@ Route::group(['middleware' => 'cors'], function() {
     Route::put('actividades/editar/{id}', [\App\Http\Controllers\ActividadesController::class, 'editar']);
     Route::get('actividades/obtener/{id}', [\App\Http\Controllers\ActividadesController::class, 'obtener']);
     Route::get('actividades/obtenerTodas', [\App\Http\Controllers\ActividadesController::class, 'obtenerTodas']);
-    Route::get('actividades/obtenerTodas', [\App\Http\Controllers\ActividadesController::class, 'obtenerPorTrabajador']);
+    Route::get('actividades/obtenerPorTrabajador', [\App\Http\Controllers\TrabajadoresController::class, 'obtenerPorTrabajador']);
     Route::delete('actividades/eliminar/{id}', [\App\Http\Controllers\ActividadesController::class, 'eliminar']);
     Route::post('actividades/eliminarVarios', [\App\Http\Controllers\ActividadesController::class, 'eliminarVarios']);
 //--------------------------------------trabajadores------------------------------------------------//

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Cargos;
 use App\Clases\Estado;
+use App\Models\Actividades;
 use App\Models\Trabajadores;
 use App\Models\TrabajadoresCargos;
 use Illuminate\Http\Request;
@@ -31,16 +32,16 @@ class TrabajadoresController extends Controller
         return $this->json(true, $trabajadores->toArray());
     }
 
-    public function obtenerPorTrabajadores($activo)
+    public function obtenerPorTrabajador(Request $peticion)
     {
-        $trabajadores = Trabajadores::activos($activo , 200);
-        foreach ($trabajadores as $p) {
-            $p['imagen'] = json_decode($p['imagen']);
-            $idcargo =  $p->id_cargo;
-            $cargo = Cargos::where('id', $idcargo)->first();
-            $p['cargo'] = $cargo->nombre;
+        $idtrabajador = $peticion->get("idtrabajador");
+        $idcargo = $peticion->get("idcargo");
+        $actividades = Actividades::where('id_cargo', $idcargo)->get();
+        foreach ($actividades as $p) {
+            $existe = TrabajadoresCargos::where('id_trabajador', $idtrabajador)->where('id_cargo', $idcargo)->exists();
+            $p['select'] = $existe;
         }
-        return $this->json(true, $trabajadores->toArray());
+        return $this->json(true, $actividades->toArray());
     }
 
     public function encodeImage($file)
