@@ -38,7 +38,7 @@ class TrabajadoresController extends Controller
         $idcargo = $peticion->get("idcargo");
         $actividades = Actividades::where('id_cargo', $idcargo)->get();
         foreach ($actividades as $p) {
-            $existe = TrabajadoresCargos::where('id_trabajador', $idtrabajador)->where('id_cargo', $idcargo)->exists();
+            $existe = TrabajadoresCargos::where('id_trabajador', $idtrabajador)->where('id_cargo', $idcargo)->where('id_actividad', $p['id'])->exists();
             $p['select'] = $existe;
         }
         return $this->json(true, $actividades->toArray());
