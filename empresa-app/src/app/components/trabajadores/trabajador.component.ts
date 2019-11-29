@@ -37,6 +37,7 @@ export class TrabajadorComponent implements OnInit {
   actividades:any = [];
   actividadesSeleccionadas:any = [];
   imageUrl;
+  id_trabajador = null;
 
   constructor(private activateRoute: ActivatedRoute,
               private trabajadorService: TrabajadoresService,
@@ -47,10 +48,11 @@ export class TrabajadorComponent implements OnInit {
               private toastr: ToastrService) {
     this.editando = globales.editando;
     this.activateRoute.params.subscribe(params => {
-      let id = params['id'];
-      if (!id) return;
+
+      this.id_trabajador = params['id'];
+      if (!this.id_trabajador) return;
       this.showLoading = true;
-      this.trabajadorService.obtener(id)
+      this.trabajadorService.obtener(this.id_trabajador)
         .subscribe(data => {
           this.trabajador = data
           this.showLoading = false;
@@ -153,7 +155,7 @@ export class TrabajadorComponent implements OnInit {
   }
 
   obtenerActividadesPorTrabajador(idcargo){
-    let idtrabajador = this.trabajador.id;
+    let idtrabajador = this.id_trabajador;
     this.showLoading = true;
     this.actividadesService.obtenerPorTrabajador(idtrabajador, idcargo)
       .subscribe(data => {

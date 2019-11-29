@@ -5,7 +5,12 @@ import {ActividadModel} from "../../models/actividad.model";
 import {ActividadesService} from '../../services/actividades.service';
 import {CargoModel} from "../../models/cargo.model";
 import {GlobalesService} from "../../services/constantes.service";
-
+export interface ElementModel {
+  select: boolean;
+  id: number;
+  nombre: string;
+  descripcion: string;
+}
 
 @Component({
   selector: 'app-tabla-actividades',
@@ -14,11 +19,10 @@ import {GlobalesService} from "../../services/constantes.service";
 })
 export class TablaActividadesComponent implements OnInit, OnChanges {
 
-  displayedColumns: string[] = ['select', 'nombre', 'descripcion'];
+  displayedColumns = ['select' ,'nombre', 'descripcion'];
   @Input() actividadesCargo;
   @Output() seleccionados = new EventEmitter();
-  actividades = new MatTableDataSource<ActividadModel>();
-  selection = new SelectionModel<ActividadModel>(true, []);
+  actividades = new MatTableDataSource<ElementModel>();
   showLoading: boolean = false;
 
   constructor(private actividadService: ActividadesService,
@@ -31,55 +35,10 @@ export class TablaActividadesComponent implements OnInit, OnChanges {
 
   ngOnChanges(changes: SimpleChanges): void {
     let data = changes['actividadesCargo'].currentValue;
-    this.actividades = new MatTableDataSource<ActividadModel>(data);
-    this.selection = new SelectionModel<ActividadModel>(data);
+    this.actividades = new MatTableDataSource<ElementModel>(data);
+  //  this.selection = new SelectionModel<ActividadModel>(data);
   }
 
-  /** Whether the number of selected elements matches the total number of rows. */
-  isAllSelected() {
-    const numSelected = this.countSelect();
-    const numRows = this.actividades.data.length;
-    return numSelected === numRows;
-  }
 
-  countSelect(){
-    let array = this.actividades.data;
-    let count = 0;
-    for(let i = 0; i < array.length; i++){
-      if(array[i]['select'] === true)
-        count ++;
-    }
-    return count;
-  }
-
-  /** Selects all rows if they are not all selected; otherwise clear selection. */
-  masterToggle() {
-    this.isAllSelected() ?
-      this.selection.clear() :
-      this.actividades.data.forEach(row => this.selection.select(row));
-  }
-
-  /** The label for the checkbox on the passed row */
-  checkboxLabel(row: ActividadModel): string {
-    if (!row) {
-      return `${this.isAllSelected() ? 'select' : 'deselect'} all`;
-    }
-    return `${this.selection.isSelected(row) ? 'deselect' : 'select'} row ${row.id + 1}`;
-  }
-
-  changeSelect(selection){
-     this.seleccionados.emit(this.selection.selected);
-  }
-
-  hasSelected(){
-    let array = this.actividades.data;
-    let count = 0;
-    for(let i = 0; i < array.length; i++){
-      if(array[i]['select'] === true)
-        count ++;
-        break
-    }
-    return (count > 0)?true:false;
-  }
 }
 

@@ -12,7 +12,9 @@ mat-footer-row{
   width: 100%;
 }
 
-
+md-checkbox .md-icon {
+  background: green;
+}
 
 
 
