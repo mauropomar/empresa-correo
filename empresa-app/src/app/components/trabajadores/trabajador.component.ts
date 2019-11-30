@@ -35,7 +35,7 @@ export class TrabajadorComponent implements OnInit {
   nombre = new FormControl('', [Validators.required]);
   apellidos = new FormControl('', [Validators.required]);
   actividades:any = [];
-  actividadesSeleccionadas:any = [];
+  seleccionadas:any = [];
   imageUrl;
   id_trabajador = null;
 
@@ -90,13 +90,23 @@ export class TrabajadorComponent implements OnInit {
     }
   }
 
+  getSelecionadas(seleccionados){
+     let array = [];
+     for( let i = 0; i < seleccionados.length; i++){
+        if(seleccionados[i]['select']){
+          array.push(seleccionados[i])
+        }
+     }
+     return array;
+  }
+
   insertar(cerrar) {
     if (this.editando === true) {
       this.modificar();
       return;
     }
     this.showLoading = true;
-    this.trabajador['actividades'] = this.actividadesSeleccionadas;
+    this.trabajador['actividades'] = this.getSelecionadas(this.seleccionadas);
     this.trabajadorService.crear(this.trabajador)
       .subscribe((data: any) => {
         this.showLoading = false;
@@ -117,7 +127,7 @@ export class TrabajadorComponent implements OnInit {
 
   modificar() {
     this.showLoading = true;
-    this.trabajador['actividades'] = this.actividadesSeleccionadas.data;
+    this.trabajador['actividades'] = this.getSelecionadas(this.seleccionadas);
     this.trabajadorService.modificar(this.trabajador)
       .subscribe((data: any) => {
         this.showLoading = false;

@@ -82,24 +82,7 @@ class TrabajadoresController extends Controller
         $trabajador = Trabajadores::create($peticion->all());
         $actividades = $peticion->get('actividades');
         $idtrabajador = $trabajador['id'];
-        $idcargo = $trabajador['id_cargo'];
-        foreach ($actividades as $act) {
-            $existe = TrabajadoresCargos::where('id_trabajador', $idtrabajador)
-                ->where('id_actividad', $act['id'])
-                ->where('id_cargo', $idcargo)
-                ->exists();
-            if (!$existe) {
-                $trabcargo = new TrabajadoresCargos();
-                $trabcargo->fill([
-                    'id_trabajador' => $idtrabajador,
-                    'id_cargo' => $idcargo,
-                    'id_actividad' => $act['id'],
-                    'creado_por' => 1,
-                    'modificado_por' => 1
-                ]);
-                $trabcargo->save();
-            }
-        }
+        $this->updateTrabajadorCargo($peticion, $idtrabajador);
         $mensaje = __('El trabajador ha sido creado satisfactoriamente');
         return $this->json(true, $trabajador, $mensaje, Estado::CREADO);
     }
@@ -118,26 +101,33 @@ class TrabajadoresController extends Controller
             return $this->json(false, array(), $mensaje, Estado::CREADO);
         }
         $this->validate($peticion, ['nombre' => 'required']);
+        $peticion['imagen'] = $this->encodeImage($peticion->get('imagen'));
         Trabajadores::findOrFail($id)->update($peticion->all());
         $datos = $peticion->all();
-        $actividades = $peticion->get('actividades');
-        $idcargo = $peticion->get("id_cargo");
-        foreach ($actividades as $act) {
-            $trabcargo = TrabajadoresCargos::where('id_trabajador', $id)->where('id_cargo', $idcargo)->first();
-            $trabcargo->remove();
-            $trabcargo = new TrabajadoresCargos();
-            $trabcargo->fill([
-                'id_trabajador' => $id,
-                'id_cargo' => $idcargo,
-                'id_actividad' => $act['id'],
-                'creado_por' => 1,
-                'modificado_por' => 1
-            ]);
-            $trabcargo->save();
-        }
+        $this->updateTrabajadorCargo($peticion, $id);
         $mensaje = __('El trabajador ha sido modificado satisfactoriamente');
         return $this->json(true, $datos, $mensaje, Estado::MODIFICADO);
     }
+
+    public function updateTrabajadorCargo($peticion, $id){
+        $actividades = $peticion->get('actividades');
+        $idcargo = $peticion->get("id_cargo");
+        $trabcargo = TrabajadoresCargos::where('id_trabajador', $id)->where('id_cargo', $idcargo)->delete();
+        foreach ($actividades as $act) {
+            $trabcargo = new TrabajadoresCargos();
+            if($act['select'] === true) {
+                $trabcargo->fill([
+                    'id_trabajador' => $id,
+                    'id_cargo' => $idcargo,
+                    'id_actividad' => $act['id'],
+                    'creado_por' => 1,
+                    'modificado_por' => 1
+                ]);
+                $trabcargo->save();
+            }
+        }
+    }
+
 
     public function eliminar($id)
     {
@@ -149,4 +139,6 @@ class TrabajadoresController extends Controller
         $mensaje = __('El trabajador ha sido borrado satisfactoriamente');
         return $this->json(true, [], $mensaje, Estado::OK);
     }
+
+
 }

@@ -36,10 +36,11 @@ export class TablaActividadesComponent implements OnInit, OnChanges {
   ngOnChanges(changes: SimpleChanges): void {
     let data = changes['actividadesCargo'].currentValue;
     this.actividades = new MatTableDataSource<ElementModel>(data);
+    this.seleccionados.emit(this.actividades.data);
   }
 
   changeSelect(){
-     this.seleccionados.emit(this.actividades);
+     this.seleccionados.emit(this.actividades.data);
   }
 }
 
