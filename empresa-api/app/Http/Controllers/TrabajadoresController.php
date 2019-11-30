@@ -56,9 +56,9 @@ class TrabajadoresController extends Controller
     {
         $codigo = $peticion->get('codigo');
         if ($id === null) {
-            $result = Trabajadores::where('codigo', $codigo)->first();
+            $result = Trabajadores::whereRaw('LOWERCASE(`codigo`)', [trim(strtolower($codigo))])->first();
         } else {
-            $result = Trabajadores::where('codigo', $codigo)->where('id', '<>', $id)->first();
+            $result = Trabajadores::whereRaw('LOWERCASE(`codigo`)', [trim(strtolower($codigo))])->where('id', '<>', $id)->first();
         }
         if (!is_null($result)) {
             return true;
