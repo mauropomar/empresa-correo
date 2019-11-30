@@ -1,6 +1,6 @@
 <mat-card class="example-card" #customLoadingTemplate>
   <app-search (changeText)="filter($event)" (cleanText)="reload()"></app-search>
-  <app-combocargos class="x-select-cargos-grid" (mostrarActividades) = "obtenerTodos($event)" [loadAct]="true"></app-combocargos>
+  <app-combocargos class="x-select-cargos-grid" (mostrarActividades) = "obtenerTodos($event)" [loadAct]="true" [loadfirtsElement]="true"></app-combocargos>
   <table mat-table  [dataSource]="actividades" matSort>
     <ng-container matColumnDef="nombre">
       <th mat-header-cell *matHeaderCellDef mat-sort-header> Nombre </th>

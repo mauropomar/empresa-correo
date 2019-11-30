@@ -1,9 +1,10 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output, OnChanges, SimpleChanges} from '@angular/core';
 import {CargosService} from "../../../../services/cargos.service";
 import {MatTableDataSource} from "@angular/material/table";
 import {CargoModel} from "../../../../models/cargo.model";
 import { ToastrService } from 'ngx-toastr';
 import {GlobalesService} from "../../../../services/constantes.service";
+import {ElementModel} from "../../../trabajadores/tabla-actividades.component";
 
 
 @Component({
@@ -17,7 +18,7 @@ export class CombocargosComponent implements OnInit {
   @Output() change: EventEmitter<number>;
   @Output() mostrarActividades: EventEmitter<number>;
   @Input() loadAct: boolean;
-  @Input() setfirtsElement: boolean;
+  @Input() loadfirtsElement;
   @Input() defaultValue: number;
   constructor(private cargosService:CargosService, private toastr:ToastrService, private globales: GlobalesService) {
     this.obtenerTodos(true);
@@ -28,15 +29,23 @@ export class CombocargosComponent implements OnInit {
   ngOnInit() {
   }
 
+  ngOnChanges(changes: SimpleChanges): void {
+    let select = changes['selected'].currentValue;
+    if(select)
+       this.change.emit(select);
+  }
+
   obtenerTodos(activo){
     this.cargosService.obtenerTodos(activo)
       .subscribe(data => {
         this.cargos = data;
         if(this.globales.idcargoDefault !== null){
           this.selected = this.globales.idcargoDefault;
-        }else{
-          this.selected = data[0].id;
-          this.globales.idcargoDefault = data[0].id;
+        }else {
+          if (this.loadfirtsElement) {
+            this.selected = data[0].id;
+            this.globales.idcargoDefault = data[0].id;
+          }
         }
 
         if(this.loadAct){

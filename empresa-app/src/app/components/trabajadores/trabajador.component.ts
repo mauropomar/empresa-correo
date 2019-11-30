@@ -48,7 +48,6 @@ export class TrabajadorComponent implements OnInit {
               private toastr: ToastrService) {
     this.editando = globales.editando;
     this.activateRoute.params.subscribe(params => {
-
       this.id_trabajador = params['id'];
       if (!this.id_trabajador) return;
       this.showLoading = true;
@@ -97,7 +96,6 @@ export class TrabajadorComponent implements OnInit {
       return;
     }
     this.showLoading = true;
-    debugger
     this.trabajador['actividades'] = this.actividadesSeleccionadas;
     this.trabajadorService.crear(this.trabajador)
       .subscribe((data: any) => {
@@ -119,6 +117,7 @@ export class TrabajadorComponent implements OnInit {
 
   modificar() {
     this.showLoading = true;
+    this.trabajador['actividades'] = this.actividadesSeleccionadas.data;
     this.trabajadorService.modificar(this.trabajador)
       .subscribe((data: any) => {
         this.showLoading = false;

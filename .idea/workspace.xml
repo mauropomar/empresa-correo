@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="662a405a-72ed-48b0-bfb0-83b95f2351a3" name="Default Changelist" comment="">
+    <list default="true" id="662a405a-72ed-48b0-bfb0-83b95f2351a3" name="Default Changelist" comment="Configuracion del crud de trabajadores">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/actividades/actividad.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/actividades/actividad.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/layout/sidenav/sidenav.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/layout/sidenav/sidenav.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/trabajadores/tabla-actividades.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/trabajadores/tabla-actividades.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-api/app/Http/Controllers/TrabajadoresController.php" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-api/app/Http/Controllers/TrabajadoresController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/actividades/actividades.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/actividades/actividades.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/genericos/cargos/combocargos/combocargos.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/genericos/cargos/combocargos/combocargos.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/trabajadores/tabla-actividades.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/trabajadores/tabla-actividades.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/trabajadores/tabla-actividades.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/trabajadores/tabla-actividades.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/trabajadores/trabajador.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/trabajadores/trabajador.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/trabajadores/trabajador.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/trabajadores/trabajador.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-app/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/styles.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -340,14 +340,8 @@
       <workItem from="1574948133256" duration="1722000" />
       <workItem from="1574993822110" duration="5579000" />
       <workItem from="1575034286050" duration="3402000" />
-      <workItem from="1575051091627" duration="9780000" />
-    </task>
-    <task id="LOCAL-00039" summary="Configuracion del crud de cargos">
-      <created>1572498678986</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1572498678986</updated>
+      <workItem from="1575051091627" duration="10039000" />
+      <workItem from="1575081769994" duration="7666000" />
     </task>
     <task id="LOCAL-00040" summary="Configuracion del crud de cargos">
       <created>1572556894549</created>
@@ -685,7 +679,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574999403576</updated>
     </task>
-    <option name="localTasksCounter" value="91" />
+    <task id="LOCAL-00091" summary="Configuracion del crud de trabajadores">
+      <created>1575065319561</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1575065319564</updated>
+    </task>
+    <option name="localTasksCounter" value="92" />
     <servers />
   </component>
   <component name="TodoView">
@@ -750,8 +751,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/empresa-api/app/Http/Controllers/TrabajadoresController.php</url>
-          <line>73</line>
-          <option name="timeStamp" value="7" />
+          <line>125</line>
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

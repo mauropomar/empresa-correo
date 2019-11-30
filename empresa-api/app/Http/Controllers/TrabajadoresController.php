@@ -14,7 +14,7 @@ class TrabajadoresController extends Controller
 
     public function obtener($id)
     {
-        $trabajador = Trabajadores::findOrFail($id, ['id', 'codigo', 'id_cargo' ,'nombre', 'apellidos', 'imagen','sexo', 'edad', 'activo']);
+        $trabajador = Trabajadores::findOrFail($id, ['id', 'codigo', 'id_cargo', 'nombre', 'apellidos', 'imagen', 'sexo', 'edad', 'activo']);
         $trabajador['imagen'] = json_decode($trabajador['imagen']);
         return $this->json(true, $trabajador, "", Estado::OK);
     }
@@ -22,10 +22,10 @@ class TrabajadoresController extends Controller
 
     public function obtenerTodas($activo)
     {
-        $trabajadores = Trabajadores::activos($activo , 200);
-       foreach ($trabajadores as $p) {
+        $trabajadores = Trabajadores::activos($activo, 200);
+        foreach ($trabajadores as $p) {
             $p['imagen'] = json_decode($p['imagen']);
-            $idcargo =  $p->id_cargo;
+            $idcargo = $p->id_cargo;
             $cargo = Cargos::where('id', $idcargo)->first();
             $p['cargo'] = $cargo->nombre;
         }
@@ -46,24 +46,26 @@ class TrabajadoresController extends Controller
 
     public function encodeImage($file)
     {
-      //  $imagen = $file.strpos('empty');
+        //  $imagen = $file.strpos('empty');
 
         $imagen = json_encode($file);
         return $imagen;
     }
 
-    public function verificar(Request $peticion, $id){
+    public function verificar(Request $peticion, $id)
+    {
         $codigo = $peticion->get('codigo');
-        if($id === null) {
+        if ($id === null) {
             $result = Trabajadores::where('codigo', $codigo)->first();
-        }else{
-            $result = Trabajadores::where('codigo', $codigo)->where('id', '<>', $id )->first();
+        } else {
+            $result = Trabajadores::where('codigo', $codigo)->where('id', '<>', $id)->first();
         }
-        if(!is_null($result)){
+        if (!is_null($result)) {
             return true;
         }
         return false;
     }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -72,7 +74,7 @@ class TrabajadoresController extends Controller
     public function crear(Request $peticion)
     {
         $result = $this->verificar($peticion, null);
-        if($result){
+        if ($result) {
             $mensaje = __('Ya existe un trabajador con ese código.');
             return $this->json(false, array(), $mensaje, Estado::CREADO);
         }
@@ -82,12 +84,15 @@ class TrabajadoresController extends Controller
         $idtrabajador = $trabajador['id'];
         $idcargo = $trabajador['id_cargo'];
         foreach ($actividades as $act) {
-            $existe = TrabajadoresCargos::where('id_trabajador', $idtrabajador)->where('id_cargo', $act['id'])->exists();
+            $existe = TrabajadoresCargos::where('id_trabajador', $idtrabajador)
+                ->where('id_actividad', $act['id'])
+                ->where('id_cargo', $idcargo)
+                ->exists();
             if (!$existe) {
                 $trabcargo = new TrabajadoresCargos();
                 $trabcargo->fill([
                     'id_trabajador' => $idtrabajador,
-                    'id_cargo'=> $idcargo,
+                    'id_cargo' => $idcargo,
                     'id_actividad' => $act['id'],
                     'creado_por' => 1,
                     'modificado_por' => 1
@@ -102,20 +107,34 @@ class TrabajadoresController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Actividades  $actividades
+     * @param \App\Actividades $actividades
      * @return \Illuminate\Http\Response
      */
     public function editar(Request $peticion, $id)
     {
         $result = $this->verificar($peticion, $id);
-        if($result){
+        if ($result) {
             $mensaje = __('Ya existe un trabajador con ese código.');
             return $this->json(false, array(), $mensaje, Estado::CREADO);
         }
         $this->validate($peticion, ['nombre' => 'required']);
         Trabajadores::findOrFail($id)->update($peticion->all());
         $datos = $peticion->all();
-        $datos['id'] = $id;
+        $actividades = $peticion->get('actividades');
+        $idcargo = $peticion->get("id_cargo");
+        foreach ($actividades as $act) {
+            $trabcargo = TrabajadoresCargos::where('id_trabajador', $id)->where('id_cargo', $idcargo)->first();
+            $trabcargo->remove();
+            $trabcargo = new TrabajadoresCargos();
+            $trabcargo->fill([
+                'id_trabajador' => $id,
+                'id_cargo' => $idcargo,
+                'id_actividad' => $act['id'],
+                'creado_por' => 1,
+                'modificado_por' => 1
+            ]);
+            $trabcargo->save();
+        }
         $mensaje = __('El trabajador ha sido modificado satisfactoriamente');
         return $this->json(true, $datos, $mensaje, Estado::MODIFICADO);
     }
@@ -123,7 +142,7 @@ class TrabajadoresController extends Controller
     public function eliminar($id)
     {
         $trabajador = Trabajadores::find($id);
-        if($trabajador) {
+        if ($trabajador) {
             $trabajador->activo = false;
             $trabajador->save();
         }

@@ -57,7 +57,7 @@
             Cargo y actividades
           </ng-template>
               <app-combocargos class="x-select-cargo" (change)="selectCargo($event)" [selected]="trabajador.id_cargo"
-                           [loadAct]="false"></app-combocargos>
+                           [loadAct]="false" [loadfirtsElement]="false"></app-combocargos>
           <app-tabla-actividades  [actividadesCargo] = "actividades" (seleccionados)="actividadesSeleccionadas=$event" ></app-tabla-actividades>
         </mat-tab>
       </mat-tab-group>
