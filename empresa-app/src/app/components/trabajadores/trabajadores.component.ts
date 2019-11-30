@@ -91,7 +91,16 @@ export class TrabajadoresComponent implements OnInit {
   }
 
   filter(texto){
-
+    this.showLoading = true;
+    this.trabajadorService.filtrar(texto)
+      .subscribe(data => {
+        this.trabajadores = data;
+        this.globales.datos = this.trabajadores;
+        this.showLoading = false;
+      }, (error) => {
+        this.showLoading = false;
+        this.toastr.error('Ha ocurrido un error al realizar la operación.', 'Error');
+      })
   }
 
   reload(){

@@ -52,4 +52,10 @@ export class TrabajadoresService {
     return this.http.delete(url)
       .pipe(map(response => response));
   }
+
+  filtrar(texto){
+    let url = this.getQuery('buscar/'+texto);
+    return this.http.get(url)
+      .pipe(map(data => data['data']));
+  }
 }

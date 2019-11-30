@@ -36,7 +36,7 @@ class TrabajadoresController extends Controller
     {
         $idtrabajador = $peticion->get("idtrabajador");
         $idcargo = $peticion->get("idcargo");
-        $actividades = Actividades::where('id_cargo', $idcargo)->get();
+        $actividades = Actividades::where('id_cargo', $idcargo)->where('activo', 1)->get();
         foreach ($actividades as $p) {
             $existe = TrabajadoresCargos::where('id_trabajador', $idtrabajador)->where('id_cargo', $idcargo)->where('id_actividad', $p['id'])->exists();
             $p['select'] = $existe;
@@ -56,9 +56,9 @@ class TrabajadoresController extends Controller
     {
         $codigo = $peticion->get('codigo');
         if ($id === null) {
-            $result = Trabajadores::whereRaw('LOWERCASE(`codigo`)', [trim(strtolower($codigo))])->first();
+            $result = Trabajadores::where('codigo', $codigo)->first();
         } else {
-            $result = Trabajadores::whereRaw('LOWERCASE(`codigo`)', [trim(strtolower($codigo))])->where('id', '<>', $id)->first();
+            $result = Trabajadores::where('codigo', $codigo)->where('id', '<>', $id)->first();
         }
         if (!is_null($result)) {
             return true;
@@ -112,7 +112,7 @@ class TrabajadoresController extends Controller
     public function updateTrabajadorCargo($peticion, $id){
         $actividades = $peticion->get('actividades');
         $idcargo = $peticion->get("id_cargo");
-        $trabcargo = TrabajadoresCargos::where('id_trabajador', $id)->where('id_cargo', $idcargo)->delete();
+        $trabcargo = TrabajadoresCargos::where('id_trabajador', $id)->delete();
         foreach ($actividades as $act) {
             $trabcargo = new TrabajadoresCargos();
             if($act['select'] === true) {
