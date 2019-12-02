@@ -47,7 +47,7 @@ class TrabajadoresController extends Controller
     public function buscar($texto)
     {
         $activo = true;
-        $trabajadores = Trabajadores::where('nombre', 'like', '%'.$texto.'%')->activos($activo, 200);
+        $trabajadores = Trabajadores::whereRaw('LOWER(nombre) like ?', [ "%" . strtolower($texto) . "%"])->activos($activo , 200);
         foreach ($trabajadores as $p) {
             $p['imagen'] = json_decode($p['imagen']);
             $idcargo = $p->id_cargo;
