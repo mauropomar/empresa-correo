@@ -44,6 +44,19 @@ class TrabajadoresController extends Controller
         return $this->json(true, $actividades->toArray());
     }
 
+    public function buscar($texto)
+    {
+        $activo = true;
+        $trabajadores = Trabajadores::where('nombre', 'like', '%'.$texto.'%')->activos($activo, 200);
+        foreach ($trabajadores as $p) {
+            $p['imagen'] = json_decode($p['imagen']);
+            $idcargo = $p->id_cargo;
+            $cargo = Cargos::where('id', $idcargo)->first();
+            $p['cargo'] = $cargo->nombre;
+        }
+        return $this->json(true, $trabajadores->toArray());
+    }
+
     public function encodeImage($file)
     {
         //  $imagen = $file.strpos('empty');
@@ -51,6 +64,7 @@ class TrabajadoresController extends Controller
         $imagen = json_encode($file);
         return $imagen;
     }
+
 
     public function verificar(Request $peticion, $id)
     {
