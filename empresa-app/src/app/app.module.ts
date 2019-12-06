@@ -9,6 +9,8 @@ import { ToastrModule } from 'ngx-toastr';
 import {MaterialModule} from "./material.module";
 import {EcoFabSpeedDialModule} from '@ecodev/fab-speed-dial'
 import { NgxLoadingModule } from 'ngx-loading';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { NgxSpinnerModule } from "ngx-spinner";
 
 //Pipes
 import {NoimagePipe} from './pipes/noimage.pipe';
@@ -38,6 +40,7 @@ import { SearchComponent } from './components/genericos/search/search.component'
 import { TrabajadoresComponent } from './components/trabajadores/trabajadores.component';
 import { TrabajadorComponent } from './components/trabajadores/trabajador.component';
 import { TablaActividadesComponent } from './components/trabajadores/tabla-actividades.component';
+import { ScrollContainerComponent } from './components/genericos/scroll-container/scroll-container.component';
 
 
 @NgModule({
@@ -62,7 +65,8 @@ import { TablaActividadesComponent } from './components/trabajadores/tabla-activ
     SearchComponent,
     TrabajadoresComponent,
     TrabajadorComponent,
-    TablaActividadesComponent
+    TablaActividadesComponent,
+    ScrollContainerComponent
   ],
   imports: [
     EcoFabSpeedDialModule,
@@ -76,7 +80,10 @@ import { TablaActividadesComponent } from './components/trabajadores/tabla-activ
     CommonModule,
     ReactiveFormsModule,
     ToastrModule.forRoot(),
-    NgxLoadingModule.forRoot({})
+    NgxLoadingModule.forRoot({}),
+    InfiniteScrollModule,
+    NgxSpinnerModule
+
   ],
   providers: [GlobalesService],
   bootstrap: [AppComponent],

@@ -3,12 +3,11 @@ import {ActivatedRoute} from '@angular/router'
 import {TrabajadoresService} from '../../services/trabajadores.service';
 import {MatDialog} from '@angular/material/dialog';
 import {ConfirmDeleteComponent} from '../genericos/dialog/confirm-delete/confirm-delete.component';
-import {TrabajadorModel} from "../../models/trabajador.model";
 import {Router} from '@angular/router'
 import {GlobalesService} from "../../services/constantes.service";
 import { ToastrService } from 'ngx-toastr';
-import {MatTableDataSource} from "@angular/material/table";
-import {CargoModel} from "../../models/cargo.model";
+import {BehaviorSubject, Observable, Subscription} from 'rxjs';
+import { noop as _noop } from 'lodash-es';
 
 @Component({
   selector: 'app-trabajadores',
@@ -19,7 +18,8 @@ export class TrabajadoresComponent implements OnInit {
   trabajadores:any = [];
   message: string = "Esta seguro que desea eliminar el trabajador seleccionado.";
   showLoading: boolean = false;
-
+  limit: number = 1000;
+  full: boolean = true;
   constructor(private router: Router,
               private activeRoute: ActivatedRoute,
               private trabajadorService: TrabajadoresService,
@@ -32,6 +32,13 @@ export class TrabajadoresComponent implements OnInit {
   ngOnInit() {
      this.globales.title = this.activeRoute.snapshot.data.title;
   }
+
+  handleScroll = (scrolled: boolean) => {
+    console.timeEnd('lastScrolled');
+    scrolled ? this.obtenerTodos(true) : _noop();
+    console.time('lastScrolled');
+  }
+  hasMore = () => !this.trabajadores || this.trabajadores.length < this.limit;
 
   obtenerTodos(activo){
     this.showLoading = true;
@@ -106,4 +113,5 @@ export class TrabajadoresComponent implements OnInit {
   reload(){
     this.obtenerTodos(true)
   }
+
 }

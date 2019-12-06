@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import {map} from 'rxjs/operators';
+import {map, mergeMap, throttleTime, scan, tap} from 'rxjs/operators';
 import { TrabajadorModel } from "../models/trabajador.model";
 
 @Injectable({

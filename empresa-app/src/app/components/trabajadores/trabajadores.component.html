@@ -1,24 +1,35 @@
 <div class="search_field">
   <app-search (changeText)="filter($event)" (cleanText)="reload()"></app-search>
 </div>
-<div fxLayout="row" fxFlex.md="30" fxLayoutWrap #customLoadingTemplate class="example-div">
-  <mat-card fxFlex class="example-card" *ngFor="let trabajador of trabajadores">
-    <mat-card-header>
-      <mat-card-title style="margin-left: -20px">{{trabajador.nombre}}</mat-card-title>
-      <mat-card-subtitle style="margin-left: -20px">{{trabajador.cargo}}</mat-card-subtitle>
-    </mat-card-header>
-    <img mat-card-image [src]="trabajador.imagen | noimage" height="160" alt="Photo of a Shiba Inu">
-    <mat-card-actions align="right">
-      <button color="primary" mat-icon-button aria-label="Example icon-button with a heart icon"
-              (click)="editar(trabajador)">
-        <mat-icon>launch</mat-icon>
-      </button>
-      <button color="warn" mat-icon-button aria-label="Example icon-button with a heart icon"
-              (click)="openDialogDelete(trabajador)">
-        <mat-icon>delete_outline</mat-icon>
-      </button>
-    </mat-card-actions>
-  </mat-card>
+<div  #customLoadingTemplate class="example-div">
+  <mat-grid-list cols="4" rowHeight="1:1">
+    <app-scroll-container [more]="hasMore()"
+                          [scrollOffset]="2500"
+                          [scrollDelay]="3000"
+                          (scrolled)="handleScroll($event)"
+                          [class.full]="full"
+                          [class.part]="!full">
+    <mat-grid-tile *ngFor="let trabajador of trabajadores">
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title style="margin-left: -20px">{{trabajador.nombre}}</mat-card-title>
+          <mat-card-subtitle style="margin-left: -20px">{{trabajador.cargo}}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image [src]="trabajador.imagen | noimage" height="160" alt="Photo of a Shiba Inu">
+        <mat-card-actions align="right">
+          <button color="primary" mat-icon-button aria-label="Example icon-button with a heart icon"
+                  (click)="editar(trabajador)">
+            <mat-icon>launch</mat-icon>
+          </button>
+          <button color="warn" mat-icon-button aria-label="Example icon-button with a heart icon"
+                  (click)="openDialogDelete(trabajador)">
+            <mat-icon>delete_outline</mat-icon>
+          </button>
+        </mat-card-actions>
+      </mat-card>
+    </mat-grid-tile>
+    </app-scroll-container>
+  </mat-grid-list>
   <ngx-loading [show]="showLoading" [config]="{ backdropBorderRadius: '3px' }"
                [template]="customLoadingTemplate"></ngx-loading>
   <app-favbutton (showActive)="obtenerTodos($event)" (mostrarNueva)="nuevo()" color="primary"></app-favbutton>

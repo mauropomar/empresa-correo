@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="662a405a-72ed-48b0-bfb0-83b95f2351a3" name="Default Changelist" comment="">
+    <list default="true" id="662a405a-72ed-48b0-bfb0-83b95f2351a3" name="Default Changelist" comment="Configuracion del crud de trabajadores">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-api/app/Http/Controllers/TrabajadoresController.php" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-api/app/Http/Controllers/TrabajadoresController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/trabajadores/trabajadores.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/trabajadores/trabajadores.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/trabajadores/trabajadores.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/trabajadores/trabajadores.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/trabajadores/trabajadores.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/trabajadores/trabajadores.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/services/trabajadores.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/services/trabajadores.service.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -341,14 +347,16 @@
       <workItem from="1575212145480" duration="829000" />
       <workItem from="1575220466612" duration="591000" />
       <workItem from="1575281515458" duration="1791000" />
-      <workItem from="1575292132010" duration="5358000" />
-    </task>
-    <task id="LOCAL-00048" summary="Configuracion del crud de cargos">
-      <created>1572841041085</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1572841041085</updated>
+      <workItem from="1575292132010" duration="5384000" />
+      <workItem from="1575379061001" duration="1214000" />
+      <workItem from="1575396281046" duration="5739000" />
+      <workItem from="1575426552348" duration="261000" />
+      <workItem from="1575485122140" duration="2321000" />
+      <workItem from="1575508646285" duration="679000" />
+      <workItem from="1575557823131" duration="2288000" />
+      <workItem from="1575589975147" duration="3067000" />
+      <workItem from="1575639835660" duration="6819000" />
+      <workItem from="1575657255248" duration="8357000" />
     </task>
     <task id="LOCAL-00049" summary="Configuracion del crud de cargos">
       <created>1572876871301</created>
@@ -686,7 +694,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575292198247</updated>
     </task>
-    <option name="localTasksCounter" value="97" />
+    <task id="LOCAL-00097" summary="Configuracion del crud de trabajadores">
+      <created>1575302052186</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1575302052186</updated>
+    </task>
+    <option name="localTasksCounter" value="98" />
     <servers />
   </component>
   <component name="TodoView">

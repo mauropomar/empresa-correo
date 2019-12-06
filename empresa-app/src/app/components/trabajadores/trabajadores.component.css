@@ -1,13 +1,13 @@
 .example-card {
-  margin:20px;
+  margin:10px;
   max-width: 200px;
   background-color: #FAFAFA;
-  max-height: 300px;
+  max-height: 250px;
 }
 
 .example-div {
-  min-height: 82vh;
-  height: 82vh;
+  min-height: 75vh;
+  height: 75vh;
   overflow: auto;
 }
 
@@ -23,10 +23,6 @@
   background-size: cover;
 }
 
-mat-grid-tile {
-  background: lightblue;
-}
-
 .example-container {
   display: flex;
   flex-direction: column;
@@ -40,3 +36,21 @@ mat-grid-tile {
   margin-left: 10px;
   margin-top:10px;
 }
+
+mat-card-actions{
+  margin-top: -20px;
+}
+
+app-scroll-container {
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+app-scroll-container.full {
+  flex-basis: auto;
+}
+
+app-scroll-container.part {
+  flex-basis: 200px;
+}
+
