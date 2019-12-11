@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="662a405a-72ed-48b0-bfb0-83b95f2351a3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/genericos/paginated/paginated.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/genericos/paginated/paginated.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/genericos/paginated/paginated.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/genericos/paginated/paginated.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/trabajadores/trabajadores.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/trabajadores/trabajadores.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/genericos/paginated/paginated.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/genericos/paginated/paginated.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/trabajadores/trabajador.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/trabajadores/trabajador.component.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -362,14 +362,8 @@
       <workItem from="1575952574851" duration="770000" />
       <workItem from="1576012074682" duration="3822000" />
       <workItem from="1576025962749" duration="6918000" />
-      <workItem from="1576048612075" duration="2013000" />
-    </task>
-    <task id="LOCAL-00051" summary="Configuracion del crud de cargos">
-      <created>1572905748626</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1572905748627</updated>
+      <workItem from="1576048612075" duration="2084000" />
+      <workItem from="1576079562910" duration="2788000" />
     </task>
     <task id="LOCAL-00052" summary="Configuracion del crud de cargos">
       <created>1572982028732</created>
@@ -707,7 +701,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576033171300</updated>
     </task>
-    <option name="localTasksCounter" value="100" />
+    <task id="LOCAL-00100" summary="Configuracion del crud de trabajadores  el paginador">
+      <created>1576050896665</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1576050896666</updated>
+    </task>
+    <option name="localTasksCounter" value="101" />
     <servers />
   </component>
   <component name="TodoView">
@@ -757,7 +758,8 @@
     <MESSAGE value="Configuracion del crud de cargos" />
     <MESSAGE value="Configuracion del crud de actividades" />
     <MESSAGE value="Configuracion del crud de trabajadores" />
-    <option name="LAST_COMMIT_MESSAGE" value="Configuracion del crud de trabajadores" />
+    <MESSAGE value="Configuracion del crud de trabajadores  el paginador" />
+    <option name="LAST_COMMIT_MESSAGE" value="Configuracion del crud de trabajadores  el paginador" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -1,4 +1,5 @@
 <div class="example-button-row">
+  <form class="example-container" [formGroup]="pageForm">
   <div class="div_container">
   <button mat-icon-button color="primary">
     <mat-icon>fast_rewind</mat-icon>
@@ -7,10 +8,10 @@
     <mat-icon>keyboard_arrow_left</mat-icon>
   </button>
   <mat-form-field class="x-input">
-    <input  matInput placeholder="Page" maxlength="5" autofocus type="number">
+    <input matInput placeholder="Page" maxlength="5" autofocus type="number" [(ngModel)]="page" formControlName="page">
   </mat-form-field>
   <mat-form-field class="x-text">
-    de 1
+    <label formControlName="totalpages"> de 1</label>
   </mat-form-field>
   <button mat-icon-button color="primary" style="margin-left: -20px">
     <mat-icon>keyboard_arrow_right</mat-icon>
@@ -25,4 +26,5 @@
     Registros 1 - 10 de 10
   </mat-form-field>
   </div>
+  </form>
 </div>

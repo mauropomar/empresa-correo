@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {FormControl, FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-paginated',
@@ -6,10 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./paginated.component.css']
 })
 export class PaginatedComponent implements OnInit {
-
-  constructor() { }
+  totalpages:number = 0;
+  pageForm: FormGroup;
+  page = new FormControl('', [Validators.required]);
+  constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit() {
+    this.pageForm = this.formBuilder.group({
+      'page': [this.page, [
+        Validators.required
+      ]],
+      'totalpages': [this.totalpages, []]
+    })
   }
 
 }
