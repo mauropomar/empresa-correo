@@ -15,5 +15,10 @@
   margin-left: 10px;
 }
 
+mat-form-field{
+  font-weight: bold;
+  font-size: 12px;
+}
+
 
 
