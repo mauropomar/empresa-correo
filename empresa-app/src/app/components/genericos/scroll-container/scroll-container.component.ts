@@ -16,6 +16,7 @@ enum ScrollListener {
   templateUrl: './scroll-container.component.html',
   styleUrls: ['./scroll-container.component.css']
 })
+
 export class ScrollContainerComponent implements OnInit {
   private _element: Element;
   private _window: Element;
@@ -52,6 +53,7 @@ export class ScrollContainerComponent implements OnInit {
   getScrollDirection = (st: number) => this.scrollTop <= st ? ScrollDirection.DOWN : ScrollDirection.UP;
 
   canScroll(e: Element): boolean {
+    debugger
     const scrolled = this.more
       && this.getScrollDirection(e.scrollTop) === ScrollDirection.DOWN
       && this.roundTo(e.clientHeight) === this.roundTo(e.scrollHeight - e.scrollTop);

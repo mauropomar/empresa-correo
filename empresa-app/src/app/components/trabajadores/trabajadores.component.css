@@ -41,16 +41,6 @@ mat-card-actions{
   margin-top: -20px;
 }
 
-app-scroll-container {
-  flex-grow: 0;
-  flex-shrink: 0;
+.mat-grid{
+  margin-top: 20px;
 }
-
-app-scroll-container.full {
-  flex-basis: auto;
-}
-
-app-scroll-container.part {
-  flex-basis: 200px;
-}
-

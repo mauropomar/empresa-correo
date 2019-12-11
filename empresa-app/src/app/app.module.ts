@@ -41,6 +41,7 @@ import { TrabajadoresComponent } from './components/trabajadores/trabajadores.co
 import { TrabajadorComponent } from './components/trabajadores/trabajador.component';
 import { TablaActividadesComponent } from './components/trabajadores/tabla-actividades.component';
 import { ScrollContainerComponent } from './components/genericos/scroll-container/scroll-container.component';
+import { PaginatedComponent } from './components/genericos/paginated/paginated.component';
 
 
 @NgModule({
@@ -66,7 +67,8 @@ import { ScrollContainerComponent } from './components/genericos/scroll-containe
     TrabajadoresComponent,
     TrabajadorComponent,
     TablaActividadesComponent,
-    ScrollContainerComponent
+    ScrollContainerComponent,
+    PaginatedComponent
   ],
   imports: [
     EcoFabSpeedDialModule,

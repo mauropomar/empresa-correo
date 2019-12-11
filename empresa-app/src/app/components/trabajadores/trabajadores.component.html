@@ -2,13 +2,8 @@
   <app-search (changeText)="filter($event)" (cleanText)="reload()"></app-search>
 </div>
 <div  #customLoadingTemplate class="example-div">
+  <app-paginated></app-paginated>
   <mat-grid-list cols="4" rowHeight="1:1">
-    <app-scroll-container [more]="hasMore()"
-                          [scrollOffset]="2500"
-                          [scrollDelay]="3000"
-                          (scrolled)="handleScroll($event)"
-                          [class.full]="full"
-                          [class.part]="!full">
     <mat-grid-tile *ngFor="let trabajador of trabajadores">
       <mat-card class="example-card">
         <mat-card-header>
@@ -28,7 +23,6 @@
         </mat-card-actions>
       </mat-card>
     </mat-grid-tile>
-    </app-scroll-container>
   </mat-grid-list>
   <ngx-loading [show]="showLoading" [config]="{ backdropBorderRadius: '3px' }"
                [template]="customLoadingTemplate"></ngx-loading>
