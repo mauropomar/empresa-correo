@@ -1,7 +1,11 @@
-<div class="search_field">
-  <app-search (changeText)="filter($event)" (cleanText)="reload()"></app-search>
-</div>
-<app-paginated></app-paginated>
+<mat-grid-list style="padding-top:25px; margin-bottom: 10px" cols="2" rowHeight="60px">
+  <mat-grid-tile>
+      <app-search style="width: 100%; margin-left: 20px" (changeText)="filter($event)" (cleanText)="reload()"></app-search>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <app-paginated [limit] = "30" ></app-paginated>
+  </mat-grid-tile>
+</mat-grid-list>
 <div  #customLoadingTemplate class="example-div">
   <mat-grid-list cols="4" rowHeight="1:1">
     <mat-grid-tile *ngFor="let trabajador of trabajadores">

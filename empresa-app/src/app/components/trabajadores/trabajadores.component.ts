@@ -18,8 +18,6 @@ export class TrabajadoresComponent implements OnInit {
   trabajadores:any = [];
   message: string = "Esta seguro que desea eliminar el trabajador seleccionado.";
   showLoading: boolean = false;
-  limit: number = 1000;
-  full: boolean = true;
   constructor(private router: Router,
               private activeRoute: ActivatedRoute,
               private trabajadorService: TrabajadoresService,
@@ -32,13 +30,6 @@ export class TrabajadoresComponent implements OnInit {
   ngOnInit() {
      this.globales.title = this.activeRoute.snapshot.data.title;
   }
-
-  handleScroll = (scrolled: boolean) => {
-    console.timeEnd('lastScrolled');
-    scrolled ? this.obtenerTodos(true) : _noop();
-    console.time('lastScrolled');
-  }
-  hasMore = () => !this.trabajadores || this.trabajadores.length < this.limit;
 
   obtenerTodos(activo){
     this.showLoading = true;

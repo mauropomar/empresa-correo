@@ -6,8 +6,18 @@
   margin-right: 8px;
 }
 
+mat-toolbar{
+  background-color: transparent;
+}
+
 .x-input{
   width: 70px;
+  margin-right: 10px;
+}
+
+.x-input mat-placeholder{
+  font-weight: bold;
+  font-size: 12px;
 }
 
 .x-text{
@@ -15,7 +25,7 @@
   margin-left: 10px;
 }
 
-mat-form-field{
+span{
   font-weight: bold;
   font-size: 12px;
 }
