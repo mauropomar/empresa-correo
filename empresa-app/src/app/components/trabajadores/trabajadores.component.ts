@@ -18,24 +18,45 @@ export class TrabajadoresComponent implements OnInit {
   trabajadores:any = [];
   message: string = "Esta seguro que desea eliminar el trabajador seleccionado.";
   showLoading: boolean = false;
+  totalPages:number = 0;
+  totalRecords:number = 0;
+  numberRecords:number = 0;
+  numberTo:number = 0;
+  numberFrom:number = 0;
+  currentPage:number = 0;
+  isNextPage:boolean = false;
+  isLastPage:boolean = false;
+
   constructor(private router: Router,
               private activeRoute: ActivatedRoute,
               private trabajadorService: TrabajadoresService,
               public dialog: MatDialog,
               private globales: GlobalesService,
               private toastr:ToastrService) {
-            this.obtenerTodos(true);
+            this.obtenerTodos(true, 1);
   }
 
   ngOnInit() {
      this.globales.title = this.activeRoute.snapshot.data.title;
   }
 
-  obtenerTodos(activo){
+  nextPage(page){
+      this.currentPage = page;
+      this.obtenerTodos(true, this.currentPage);
+  }
+
+  obtenerTodos(activo, page){
     this.showLoading = true;
-    this.trabajadorService.obtenerTodos(activo)
+    this.trabajadorService.obtenerTodos(activo, page)
       .subscribe(data => {
-        this.trabajadores = data;
+        this.trabajadores = data['data'];
+        this.currentPage = data['current_page'];
+        this.totalRecords = data['total'];
+        this.totalPages = data['last_page'];
+        this.numberTo = data['to'];
+        this.numberFrom = data['from'];
+        this.isNextPage = (data['next_page_url'] != null);
+        this.isLastPage = (this.currentPage !== 1);
         this.globales.datos = this.trabajadores;
         this.showLoading = false;
       }, (error) => {
@@ -102,7 +123,7 @@ export class TrabajadoresComponent implements OnInit {
   }
 
   reload(){
-    this.obtenerTodos(true)
+    this.obtenerTodos(true, this.currentPage)
   }
 
 }

@@ -17,11 +17,11 @@ export class TrabajadoresService {
     return url;
   }
 
-  obtenerTodos(activo){
+  obtenerTodos(activo, page){
     activo = (activo)?1:0;
-    let url = this.getQuery('obtenerTodas/'+activo);
+    let url = this.getQuery('obtenerTodas/'+activo+'?page='+page+'');
     return this.http.get(url)
-      .pipe(map(data => data['data']));
+      .pipe(map(data => data));
   }
 
   obtener(id){

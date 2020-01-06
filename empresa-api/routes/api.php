@@ -42,5 +42,17 @@ Route::group(['middleware' => 'cors'], function() {
     Route::get('trabajadores/obtenerTodas/{activo}', [\App\Http\Controllers\TrabajadoresController::class, 'obtenerTodas']);
     Route::delete('trabajadores/eliminar/{id}', [\App\Http\Controllers\TrabajadoresController::class, 'eliminar']);
     Route::post('trabajadores/eliminarVarios', [\App\Http\Controllers\TrabajadoresController::class, 'eliminarVarios']);
+    //--------------------------------------accidentes------------------------------------------------//
+    Route::post('accidentes/crear', [\App\Http\Controllers\AccidentesController::class, 'crear']);
+    Route::put('accidentes/editar/{id}', [\App\Http\Controllers\AccidentesController::class, 'editar']);
+    Route::get('accidentes/obtener/{id}', [\App\Http\Controllers\AccidentesController::class, 'obtener']);
+    Route::get('accidentes/buscar/{texto}', [\App\Http\Controllers\AccidentesController::class, 'buscar']);
+    Route::get('accidentes/obtenerTodas/{activo}', [\App\Http\Controllers\AccidentesController::class, 'obtenerTodas']);
+    Route::delete('accidentes/eliminar/{id}', [\App\Http\Controllers\AccidentesController::class, 'eliminar']);
+    Route::post('accidentes/eliminarVarios', [\App\Http\Controllers\AccidentesController::class, 'eliminarVarios']);
 
+    //--------------------------------------Tipos Accidentes-------------------------------------------------------//
+    Route::get('tipos_accidentes/obtenerTodas', [\App\Http\Controllers\TiposAccidentesController::class, 'obtenerTodas']);
+    //--------------------------------------Causas-------------------------------------------------------//
+    Route::get('causas/obtenerTodas', [\App\Http\Controllers\CausasController::class, 'obtenerTodas']);
 });

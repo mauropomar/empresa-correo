@@ -7,14 +7,51 @@ import { Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 })
 export class PaginatedComponent implements OnInit {
   @Input() limit :number;
-  numberPage: number = 0;
-  totalPages:number = 0;
-  numberRecord:number = 0;
-  totalRecords:number = 0;
-  constructor() { }
+  @Input() numberPage: number;
+  @Input() numberTo: number;
+  @Input() numberFrom: number;
+  @Input() totalPages:number;
+  @Input() totalRecords:number;
+  @Input() disabledFastLeft:boolean;
+  @Input() disabledLeft:boolean;
+  @Input() disabledFastRight:boolean;
+  @Input() disabledRight:boolean;
+  @Output() next: EventEmitter<number>;
+
+  constructor() {
+    this.next = new EventEmitter();
+  }
 
   ngOnInit() {
 
+  }
+
+  changePage(){
+    this.next.emit(this.numberPage);
+  }
+
+  nextPage(){
+    this.numberPage = this.numberPage + 1;
+    this.next.emit(this.numberPage);
+  }
+
+  lastPage(){
+    this.numberPage = this.totalPages;
+    this.next.emit(this.numberPage);
+  }
+
+  previousPage(){
+    this.numberPage = this.numberPage - 1;
+    this.next.emit(this.numberPage);
+  }
+
+  firthPage(){
+    this.numberPage = 1;
+    this.next.emit(this.numberPage);
+  }
+
+  refreshPage(){
+    this.next.emit(this.numberPage);
   }
 
 }

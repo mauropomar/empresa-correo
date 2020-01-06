@@ -22,7 +22,7 @@ class TrabajadoresController extends Controller
 
     public function obtenerTodas($activo)
     {
-        $trabajadores = Trabajadores::activos($activo, 200);
+        $trabajadores = Trabajadores::activos($activo, 10);
         foreach ($trabajadores as $p) {
             $p['imagen'] = json_decode($p['imagen']);
             $idcargo = $p->id_cargo;

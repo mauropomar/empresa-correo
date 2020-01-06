@@ -1,10 +1,7 @@
 import {Component, EventEmitter, Input, OnInit, Output, OnChanges, SimpleChanges} from '@angular/core';
 import {CargosService} from "../../../../services/cargos.service";
-import {MatTableDataSource} from "@angular/material/table";
-import {CargoModel} from "../../../../models/cargo.model";
 import { ToastrService } from 'ngx-toastr';
 import {GlobalesService} from "../../../../services/constantes.service";
-import {ElementModel} from "../../../trabajadores/tabla-actividades.component";
 
 
 @Component({

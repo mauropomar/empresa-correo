@@ -1,9 +1,6 @@
 import {Component, EventEmitter, Input, Output, OnInit, OnChanges, SimpleChanges} from '@angular/core';
-import {SelectionModel} from '@angular/cdk/collections';
 import {MatTableDataSource} from '@angular/material/table';
-import {ActividadModel} from "../../models/actividad.model";
 import {ActividadesService} from '../../services/actividades.service';
-import {CargoModel} from "../../models/cargo.model";
 import {GlobalesService} from "../../services/constantes.service";
 export interface ElementModel {
   select: boolean;
@@ -25,8 +22,7 @@ export class TablaActividadesComponent implements OnInit, OnChanges {
   actividades = new MatTableDataSource<ElementModel>();
   showLoading: boolean = false;
 
-  constructor(private actividadService: ActividadesService,
-              private globales: GlobalesService) {
+  constructor() {
   }
 
   ngOnInit() {

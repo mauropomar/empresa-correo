@@ -1,22 +1,22 @@
 <mat-toolbar>
   <mat-toolbar-row>
-    <button mat-icon-button color="primary">
+    <button mat-icon-button color="primary" [disabled]="disabledFastLeft" (click)="firthPage()">
       <mat-icon>fast_rewind</mat-icon>
     </button>
-    <button mat-icon-button color="primary">
-      <mat-icon>keyboard_arrow_left</mat-icon>
+    <button mat-icon-button color="primary" [disabled]="disabledLeft" (click)="previousPage()">
+      <mat-icon>arrow_left</mat-icon>
     </button>
-    <input class="x-input" matInput placeholder="Page" maxlength="5" autofocus type="number" [(ngModel)]="page" formControlName="page">
-    <span style="margin-right: 20px"> de 1</span>
-    <button mat-icon-button color="primary" style="margin-left: -20px">
-      <mat-icon>keyboard_arrow_right</mat-icon>
+    <input class="x-input" matInput placeholder="Page" maxlength="5" autofocus type="number" [(ngModel)]="numberPage" (change)="changePage()">
+    <span style="margin-right: 20px"> de {{totalPages}}</span>
+    <button mat-icon-button color="primary" style="margin-left: -20px" [disabled]="disabledRight" (click)="nextPage()">
+      <mat-icon>arrow_right</mat-icon>
     </button>
-    <button mat-icon-button disabled>
+    <button mat-icon-button [disabled]="disabledFastRight" (click)="lastPage()">
       <mat-icon>fast_forward</mat-icon>
     </button>
-    <button mat-icon-button color="primary">
+    <button mat-icon-button color="primary" (click)="refreshPage()">
       <mat-icon>refresh</mat-icon>
     </button>
-    <span class=""> Mostrando registros 1 - 10 de 10</span>
+    <span class=""> Mostrando registros {{numberFrom}} - {{numberTo}} de {{totalRecords}}</span>
   </mat-toolbar-row>
 </mat-toolbar>

@@ -8,6 +8,8 @@ import {ActividadesComponent} from "./components/actividades/actividades.compone
 import {ActividadComponent} from "./components/actividades/actividad.component";
 import {TrabajadoresComponent} from "./components/trabajadores/trabajadores.component";
 import {TrabajadorComponent} from "./components/trabajadores/trabajador.component";
+import {AccidentesComponent} from "./components/accidentes/accidentes.component";
+import {AccidenteComponent} from "./components/accidentes/accidente.component";
 
 
 const routes: Routes = [
@@ -21,8 +23,10 @@ const routes: Routes = [
   {path: 'actividad/:id', component: ActividadComponent, data: {title: 'Editar Actividad'}},
   {path: 'trabajadores', component: TrabajadoresComponent, data: {title: 'Trabajadores'}},
   {path: 'trabajador/nuevo', component: TrabajadorComponent, data: {title: 'Nuevo Trabajador'}},
-  {path: 'trabajador/:id', component: TrabajadorComponent, data: {title: 'Editar Trabajador'}}
-
+  {path: 'trabajador/:id', component: TrabajadorComponent, data: {title: 'Editar Trabajador'}},
+  {path: 'accidentes', component: AccidentesComponent, data: {title: 'Accidentes'}},
+  {path: 'accidente/nuevo', component: AccidenteComponent, data: {title: 'Nuevo Accidente'}},
+  {path: 'accidente/:id', component: AccidenteComponent, data: {title: 'Editar Accidente'}}
 ];
 
 @NgModule({

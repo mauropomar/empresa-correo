@@ -114,7 +114,6 @@ export class CargosComponent implements OnInit {
   reload(){
      this.obtenerTodos(true)
   }
-
 }
 
 

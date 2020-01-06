@@ -24,7 +24,8 @@ import {
   MatSelectModule,
   MatPaginatorModule,
   MatSortModule,
-  MatTabsModule
+  MatTabsModule,
+
   } from '@angular/material';
 
 
@@ -49,7 +50,7 @@ const modules = [
   MatPaginatorModule,
   MatSortModule,
   MatSelectModule,
-  MatTabsModule
+  MatTabsModule,
 ];
 
 @NgModule({

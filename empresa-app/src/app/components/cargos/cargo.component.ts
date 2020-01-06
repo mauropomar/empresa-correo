@@ -78,7 +78,7 @@ export class CargoComponent implements OnInit {
       }, (error) => {
         this.showLoading = false;
         this.toastr.error('Ha ocurrido un error al realizar la operación.', 'Error');
-      },)
+      })
   }
 
   modificar() {

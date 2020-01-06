@@ -3,7 +3,10 @@
       <app-search style="width: 100%; margin-left: 20px" (changeText)="filter($event)" (cleanText)="reload()"></app-search>
   </mat-grid-tile>
   <mat-grid-tile>
-    <app-paginated [limit] = "30" ></app-paginated>
+    <app-paginated [limit] = "30" [totalRecords]= "totalRecords" (next) = "nextPage($event)"
+                   [totalPages] ="totalPages" [numberPage]="currentPage" [numberTo]="numberTo" [numberFrom]="numberFrom"
+                   [disabledFastRight]="!isNextPage"  [disabledRight]="!isNextPage"  [disabledFastLeft]="!isLastPage"  [disabledLeft]="!isLastPage"
+                   ></app-paginated>
   </mat-grid-tile>
 </mat-grid-list>
 <div  #customLoadingTemplate class="example-div">

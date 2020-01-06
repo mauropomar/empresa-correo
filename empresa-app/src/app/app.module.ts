@@ -1,5 +1,5 @@
 import {BrowserModule} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
+import {NgModule, LOCALE_ID} from '@angular/core';
 import {HttpClientModule} from '@angular/common/http';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
@@ -11,10 +11,15 @@ import {EcoFabSpeedDialModule} from '@ecodev/fab-speed-dial'
 import { NgxLoadingModule } from 'ngx-loading';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { NgxSpinnerModule } from "ngx-spinner";
+import { MatAutocompleteModule } from "@angular/material/autocomplete";
+import { MatDatepickerModule} from "@angular/material/datepicker";
+import {MatNativeDateModule} from "@angular/material/core";
 
 //Pipes
 import {NoimagePipe} from './pipes/noimage.pipe';
 import {DomseguroPipe} from './pipes/domseguro.pipe';
+import {FechaformatPipe} from "./pipes/fechaformat.pipe";
+
 
 //services
 import { GlobalesService } from "./services/constantes.service";
@@ -42,6 +47,11 @@ import { TrabajadorComponent } from './components/trabajadores/trabajador.compon
 import { TablaActividadesComponent } from './components/trabajadores/tabla-actividades.component';
 import { ScrollContainerComponent } from './components/genericos/scroll-container/scroll-container.component';
 import { PaginatedComponent } from './components/genericos/paginated/paginated.component';
+import { AccidentesComponent } from './components/accidentes/accidentes.component';
+import { AccidenteComponent } from './components/accidentes/accidente.component';
+import { CombotiposComponent } from './components/genericos/tipos-accidentes/combotipos/combotipos.component';
+import { CombocausasComponent } from './components/genericos/causas/combocausas/combocausas.component'
+import { CargoActividadesComponent } from './components/accidentes/cargo-actividades.component';
 
 
 @NgModule({
@@ -54,6 +64,7 @@ import { PaginatedComponent } from './components/genericos/paginated/paginated.c
     SidenavComponent,
     NoimagePipe,
     DomseguroPipe,
+    FechaformatPipe,
     CargosComponent,
     CargoComponent,
     ConfirmDeleteComponent,
@@ -68,7 +79,12 @@ import { PaginatedComponent } from './components/genericos/paginated/paginated.c
     TrabajadorComponent,
     TablaActividadesComponent,
     ScrollContainerComponent,
-    PaginatedComponent
+    PaginatedComponent,
+    AccidentesComponent,
+    AccidenteComponent,
+    CombotiposComponent,
+    CombocausasComponent,
+    CargoActividadesComponent,
   ],
   imports: [
     EcoFabSpeedDialModule,
@@ -84,10 +100,15 @@ import { PaginatedComponent } from './components/genericos/paginated/paginated.c
     ToastrModule.forRoot(),
     NgxLoadingModule.forRoot({}),
     InfiniteScrollModule,
-    NgxSpinnerModule
+    NgxSpinnerModule,
+    MatAutocompleteModule,
+    MatDatepickerModule,
+    MatNativeDateModule
 
   ],
-  providers: [GlobalesService],
+  providers: [GlobalesService, {
+    provide:LOCALE_ID, useValue:"es"
+  }],
   bootstrap: [AppComponent],
   entryComponents: [
     ConfirmDeleteComponent
