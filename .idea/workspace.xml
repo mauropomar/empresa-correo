@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="662a405a-72ed-48b0-bfb0-83b95f2351a3" name="Default Changelist" comment="" />
+    <list default="true" id="662a405a-72ed-48b0-bfb0-83b95f2351a3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-api/app/Http/Controllers/AccidentesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-api/app/Http/Controllers/AccidentesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-api/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-api/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/services/constantes.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/services/constantes.service.ts" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,7 +151,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../siemprevino" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -362,14 +367,8 @@
       <workItem from="1576152567374" duration="2016000" />
       <workItem from="1576183247028" duration="2388000" />
       <workItem from="1576241667947" duration="6421000" />
-      <workItem from="1578318097436" duration="620000" />
-    </task>
-    <task id="LOCAL-00053" summary="Configuracion del crud de cargos">
-      <created>1572987169780</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1572987169780</updated>
+      <workItem from="1578318097436" duration="2035000" />
+      <workItem from="1578769888241" duration="10437000" />
     </task>
     <task id="LOCAL-00054" summary="Configuracion del crud de cargos">
       <created>1572989121863</created>
@@ -707,7 +706,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576082421128</updated>
     </task>
-    <option name="localTasksCounter" value="102" />
+    <task id="LOCAL-00102" summary="Ultimos cambios">
+      <created>1578320544312</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1578320544314</updated>
+    </task>
+    <option name="localTasksCounter" value="103" />
     <servers />
   </component>
   <component name="TodoView">
@@ -758,7 +764,8 @@
     <MESSAGE value="Configuracion del crud de actividades" />
     <MESSAGE value="Configuracion del crud de trabajadores" />
     <MESSAGE value="Configuracion del crud de trabajadores  el paginador" />
-    <option name="LAST_COMMIT_MESSAGE" value="Configuracion del crud de trabajadores  el paginador" />
+    <MESSAGE value="Ultimos cambios" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ultimos cambios" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

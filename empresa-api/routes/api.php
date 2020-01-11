@@ -47,7 +47,7 @@ Route::group(['middleware' => 'cors'], function() {
     Route::put('accidentes/editar/{id}', [\App\Http\Controllers\AccidentesController::class, 'editar']);
     Route::get('accidentes/obtener/{id}', [\App\Http\Controllers\AccidentesController::class, 'obtener']);
     Route::get('accidentes/buscar/{texto}', [\App\Http\Controllers\AccidentesController::class, 'buscar']);
-    Route::get('accidentes/obtenerTodas/{activo}', [\App\Http\Controllers\AccidentesController::class, 'obtenerTodas']);
+    Route::get('accidentes/obtenerTodas', [\App\Http\Controllers\AccidentesController::class, 'obtenerTodas']);
     Route::delete('accidentes/eliminar/{id}', [\App\Http\Controllers\AccidentesController::class, 'eliminar']);
     Route::post('accidentes/eliminarVarios', [\App\Http\Controllers\AccidentesController::class, 'eliminarVarios']);
 

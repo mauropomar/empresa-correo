@@ -7,6 +7,7 @@ use App\Clases\Estado;
 use App\Models\Cargos;
 use App\Models\Trabajadores;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
 
 class AccidentesController extends Controller
 {
@@ -40,9 +41,14 @@ class AccidentesController extends Controller
         return $this->json(true, $accidente, "", Estado::OK);
     }
 
-    public function obtenerTodas($activo)
+    public function obtenerTodas()
     {
-        $accidentes = Accidentes::activos($activo , 10);
+        $fechainicio = Input::get('fechainicio');
+        $fechafin = Input::get('fechafin');
+        $activo = Input::get('activo');
+        $page = Input::get('page');
+        $activo = ($activo)?1:0;
+        $accidentes = Accidentes::where('fecha', '>=', $fechainicio)->activos($activo , 10);
         foreach ($accidentes as $p) {
             $idtrabajador = $p['id_trabajador'];
             $trabajador = Trabajadores::where('id', $idtrabajador)->first();
