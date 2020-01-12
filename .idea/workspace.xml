@@ -4,7 +4,6 @@
     <list default="true" id="662a405a-72ed-48b0-bfb0-83b95f2351a3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/empresa-api/app/Http/Controllers/AccidentesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-api/app/Http/Controllers/AccidentesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-api/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-api/routes/api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/empresa-app/src/app/services/constantes.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/services/constantes.service.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -50,7 +49,7 @@
   <component name="GithubDefaultAccount">
     <option name="defaultAccountId" value="65d3af33-925c-466e-993f-d1e242abc974" />
   </component>
-  <component name="PhpDebugGeneral" ignore_connections_through_unregistered_servers="true" />
+  <component name="PhpDebugGeneral" ignore_connections_through_unregistered_servers="true" listening_started="true" />
   <component name="PhpServers">
     <servers>
       <server host="localhost" id="84a1e171-83e0-45b9-8ba4-f062b4b074ce" name="localhost" port="5800" />
@@ -368,14 +367,7 @@
       <workItem from="1576183247028" duration="2388000" />
       <workItem from="1576241667947" duration="6421000" />
       <workItem from="1578318097436" duration="2035000" />
-      <workItem from="1578769888241" duration="10437000" />
-    </task>
-    <task id="LOCAL-00054" summary="Configuracion del crud de cargos">
-      <created>1572989121863</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1572989121863</updated>
+      <workItem from="1578769888241" duration="14482000" />
     </task>
     <task id="LOCAL-00055" summary="Configuracion del crud de cargos">
       <created>1572991732572</created>
@@ -713,7 +705,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578320544314</updated>
     </task>
-    <option name="localTasksCounter" value="103" />
+    <task id="LOCAL-00103" summary="Ultimos cambios">
+      <created>1578783448096</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1578783448097</updated>
+    </task>
+    <option name="localTasksCounter" value="104" />
     <servers />
   </component>
   <component name="TodoView">

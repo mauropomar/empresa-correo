@@ -1,0 +1,8 @@
+<mat-form-field>
+  <mat-label>Tipo Accidente</mat-label>
+  <mat-select [(value)]="selected"  (selectionChange)="seleccionar($event.value)">
+    <mat-option *ngFor="let tip of tipos" [value]="tip.id">
+      {{tip.nombre}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>

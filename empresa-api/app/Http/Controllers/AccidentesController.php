@@ -43,12 +43,12 @@ class AccidentesController extends Controller
 
     public function obtenerTodas()
     {
-        $fechainicio = Input::get('fechainicio');
-        $fechafin = Input::get('fechafin');
+        $fechainicio = Input::get('fechaInicio');
+        $fechafin = Input::get('fechaFin');
         $activo = Input::get('activo');
         $page = Input::get('page');
         $activo = ($activo)?1:0;
-        $accidentes = Accidentes::where('fecha', '>=', $fechainicio)->activos($activo , 10);
+        $accidentes = Accidentes::whereBetween('fecha', [$fechainicio, $fechafin])->activos($activo , 10);
         foreach ($accidentes as $p) {
             $idtrabajador = $p['id_trabajador'];
             $trabajador = Trabajadores::where('id', $idtrabajador)->first();

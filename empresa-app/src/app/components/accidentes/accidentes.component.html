@@ -1,0 +1,101 @@
+<mat-card class="example-card" #customLoadingTemplate>
+  <mat-grid-list cols="5" rowHeight="65px">
+    <mat-grid-tile colspan="1">
+      <mat-form-field class="x-input">
+        <input matInput [matDatepicker]="picker"  required placeholder="Fecha Inicio" [(ngModel)]="fechaInicio" (dateChange)="reload()">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile colspan="1">
+      <mat-form-field class="x-input">
+        <input matInput [matDatepicker]="picker1"  required placeholder="Fecha Fin" [(ngModel)]="fechaFin" (dateChange)="reload()">
+        <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+        <mat-datepicker #picker1></mat-datepicker>
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile colspan="3">
+         <app-search class="x-input" (changeText)="filter($event)" (cleanText)="reload()"></app-search>
+    </mat-grid-tile>
+  </mat-grid-list>
+  <table mat-table  [dataSource]="accidentes" matSort>
+    <ng-container matColumnDef="imagen">
+      <th mat-header-cell *matHeaderCellDef> Foto</th>
+      <td mat-cell *matCellDef="let element"> <img [src]="element.imagen"/></td>
+    </ng-container>
+
+    <ng-container matColumnDef="codigo">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Código </th>
+      <td mat-cell *matCellDef="let element"> {{element.codigo}} </td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="fecha">
+      <th mat-header-cell  *matHeaderCellDef mat-sort-header> Fecha </th>
+      <td mat-cell *matCellDef="let element"> {{element.fecha | fechaformat}} </td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="trabajador">
+      <th mat-header-cell  *matHeaderCellDef mat-sort-header> Trabajador </th>
+      <td mat-cell *matCellDef="let element"> {{element.trabajador}} </td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="edad">
+      <th mat-header-cell  *matHeaderCellDef mat-sort-header> Edad </th>
+      <td mat-cell *matCellDef="let element"> {{element.edad}} </td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="sexo">
+      <th mat-header-cell  *matHeaderCellDef mat-sort-header> Sexo </th>
+      <td mat-cell *matCellDef="let element"> {{element.sexo}} </td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="cargo">
+      <th mat-header-cell  *matHeaderCellDef mat-sort-header> Cargo </th>
+      <td mat-cell *matCellDef="let element"> {{element.cargo}} </td>
+    </ng-container>
+    <!-- Weight Column -->
+    <ng-container matColumnDef="tipo">
+      <th mat-header-cell  *matHeaderCellDef mat-sort-header> Tipo de Accidente </th>
+      <td mat-cell *matCellDef="let element"> {{element.tipo}} </td>
+    </ng-container>
+    <!-- Weight Column -->
+    <ng-container matColumnDef="causa">
+      <th mat-header-cell  *matHeaderCellDef mat-sort-header> Causa </th>
+      <td mat-cell *matCellDef="let element"> {{element.causa}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef>Acciones</th>
+      <td mat-cell *matCellDef="let element">
+        <button mat-icon-button matTooltip="Editar" class="iconbutton" color="primary" (click) = "editar(element)">
+          <mat-icon aria-label="Edit">launch</mat-icon>
+        </button>
+        <button mat-icon-button matTooltip="Borrar" class="iconbutton" color="warn" (click) = "openDialogDelete(element)">
+          <mat-icon aria-label="Delete">delete_outline</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  <mat-grid-list style="padding-top:25px; margin-bottom: 10px" cols="2" rowHeight="60px">
+  <mat-grid-tile>
+
+  </mat-grid-tile>
+  <mat-grid-tile style="margin-top: 10px">
+    <app-paginated [limit] = "30" [totalRecords]= "totalRecords" (next) = "nextPage($event)"
+                   [totalPages] ="totalPages" [numberPage]="currentPage" [numberTo]="numberTo" [numberFrom]="numberFrom"
+                   [disabledFastRight]="!isNextPage"  [disabledRight]="!isNextPage"  [disabledFastLeft]="!isLastPage"  [disabledLeft]="!isLastPage"
+    ></app-paginated>
+  </mat-grid-tile>
+  </mat-grid-list>
+  <ngx-loading [show]="showLoading" [config]="{ backdropBorderRadius: '3px' }" [template]="customLoadingTemplate"></ngx-loading>
+  <app-favbutton (showActive) = "obtenerTodos($event, 1)" (mostrarNueva) = "nuevo()" color="primary"></app-favbutton>
+</mat-card>
+
+

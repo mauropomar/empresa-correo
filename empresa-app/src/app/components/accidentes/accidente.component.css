@@ -1,0 +1,55 @@
+.example-card {
+  min-height: 82vh;
+  height: 82vh;
+  overflow: auto;
+}
+
+.example-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.example-container > * {
+  width: 100%;
+  height: 100%;
+}
+
+mat-form-field{
+  width: 90%;
+}
+
+mat-card-actions > button {
+  margin-left: 5px;
+  margin-top: 40px;
+}
+
+.example-option-img {
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+[dir='rtl'] .example-option-img {
+  margin-right: 0;
+  margin-left: 8px;
+}
+
+.x-select-combo-grid{
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+
+.titulo{
+  margin-left: 1px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+
+.container{
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+}
+
+

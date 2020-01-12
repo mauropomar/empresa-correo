@@ -1,0 +1,8 @@
+<mat-form-field>
+  <mat-label>Causa</mat-label>
+  <mat-select [(value)]="selected"  (selectionChange)="seleccionar($event.value)">
+    <mat-option *ngFor="let causa of causas" [value]="causa.id">
+      {{causa.nombre}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>

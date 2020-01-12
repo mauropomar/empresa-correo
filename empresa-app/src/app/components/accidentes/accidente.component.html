@@ -1,0 +1,76 @@
+<mat-card class="example-card">
+  <div class="example-container">
+    <form class="example-container" [formGroup]="accidenteForm" #customLoadingTemplate>
+      <mat-grid-list cols="5" rowHeight="65px">
+        <mat-grid-tile colspan="1">
+          <mat-form-field>
+            <input matInput [matDatepicker]="picker"  required placeholder="Fecha" [(ngModel)]="accidente.fecha"
+                   formControlName="fecha" maxlength="15">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="1">
+          <mat-form-field>
+            <input matInput required placeholder="C&oacute;digo" [(ngModel)]="accidente.codigo"
+                   formControlName="codigo" maxlength="15" autofocus>
+            <mat-error *ngIf="codigo.invalid">{{getErrorCodigo()}}</mat-error>
+          </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="3">
+          <mat-form-field>
+            <input matInput placeholder="Trabajador" aria-label="Trabajador" [matAutocomplete]="auto"
+                   (keyup)="filter($event)" formControlName="id_trabajador" [(ngModel)]="accidente.trabajador">
+            <mat-autocomplete #auto="matAutocomplete">
+              <mat-option *ngFor="let trabajador of trabajadoresFiltrados" [value]="trabajador.nombre"
+                          (onSelectionChange)="selectTrabajador($event, trabajador)">
+                <img class="example-option-img" aria-hidden [src]="trabajador.imagen" height="25">
+                <span>{{trabajador.nombre}}</span> |
+                <small>Cargo: {{trabajador.cargo}}</small>
+              </mat-option>
+            </mat-autocomplete>
+            <mat-icon matSuffix *ngIf="showLoadingTrab"><img src="../../../assets/icons/reload.png"/></mat-icon>
+            <mat-hint *ngIf="showMessageTrab">{{messageLoadingTrab}}</mat-hint>
+          </mat-form-field>
+        </mat-grid-tile>
+      </mat-grid-list>
+      <mat-grid-list cols="5" rowHeight="65px" style="margin-top: 20px">
+        <mat-grid-tile colspan="1">
+          <app-combotipos class="x-select-combo-grid" (change)="accidente.id_tipo_accidente=$event"
+                          [selected]="accidente.id_tipo_accidente" [loadfirtsElement]="loadFirtsTipos"></app-combotipos>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="1">
+          <app-combocausas class="x-select-combo-grid" (change)="accidente.id_causa=$event"
+                           [selected]="accidente.id_causa" [loadfirtsElement]="loadFirtsCausas" ></app-combocausas>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="3">
+          <mat-form-field>
+            <input matInput readonly required placeholder="Cargo" [(ngModel)]="cargo" formControlName="cargo">
+          </mat-form-field>
+        </mat-grid-tile>
+      </mat-grid-list>
+      <div class="container">
+        <mat-icon matSuffix *ngIf="showLoadingAct"><img src="../../../assets/icons/reload.png"/></mat-icon>
+        <div class="titulo">
+          <p> {{titulo}} </p>
+        </div>
+      </div>
+      <app-cargo-actividades [actividadesCargos] = "actividades" style="margin-left: 10px"></app-cargo-actividades>
+      <mat-card-actions align="right">
+        <button mat-flat-button color="primary" *ngIf="!editando" (click)="insertar()" [disabled]="!accidenteForm.valid">
+          <mat-icon>add</mat-icon>
+          Agregar
+        </button>
+        <button mat-flat-button color="primary" [disabled]="!accidenteForm.valid" (click)="insertar(true)">
+          <mat-icon>done</mat-icon>
+          Aceptar
+        </button>
+        <button mat-flat-button color="primary" (click)="cancelar()">
+          <mat-icon>cancel</mat-icon>
+          Cancelar
+        </button>
+      </mat-card-actions>
+    </form>
+  </div>
+  <ngx-loading [show]="showLoading" [config]="{ backdropBorderRadius: '3px' }" [template]="customLoadingTemplate"></ngx-loading>
+</mat-card>
