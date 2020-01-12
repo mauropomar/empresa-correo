@@ -6,7 +6,7 @@ import {DatePipe} from "@angular/common";
 })
 export class FechaformatPipe implements PipeTransform {
 
-  transform(value:string): string {
+  transform(value:string, isDate:boolean): string {
     var datePipe = new DatePipe("en-us");
     value = datePipe.transform(value, 'dd/MM/yyyy');
     return value;

@@ -4,8 +4,8 @@
       <mat-grid-list cols="5" rowHeight="65px">
         <mat-grid-tile colspan="1">
           <mat-form-field>
-            <input matInput [matDatepicker]="picker"  required placeholder="Fecha" [(ngModel)]="accidente.fecha"
-                   formControlName="fecha" maxlength="15">
+            <input matInput [matDatepicker]="picker" [max] = "fechaActual" required placeholder="Fecha" [(ngModel)]="accidente.fechaDate"
+                   formControlName="fechaDate" maxlength="15">
             <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
             <mat-datepicker #picker></mat-datepicker>
           </mat-form-field>

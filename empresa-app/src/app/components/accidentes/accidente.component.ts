@@ -23,7 +23,8 @@ export class AccidenteComponent implements OnInit {
   accidente: AccidenteModel = new class implements AccidenteModel {
     activo: number;
     codigo: string;
-    fecha: string;
+    fechaDate: Date;
+    fecha:string;
     id_trabajador: number;
     trabajador:string;
     id_tipo_accidente: number;
@@ -43,10 +44,11 @@ export class AccidenteComponent implements OnInit {
   trabajadoresFiltrados: any = [];
   loadFirtsTipos:boolean = true;
   loadFirtsCausas:boolean = true;
+  fechaActual:Date = new Date();
   accidenteForm: FormGroup;
   codigo = new FormControl('', [Validators.required]);
   id_trabajador = new FormControl('', [Validators.required]);
-  fecha = new FormControl('', [Validators.required]);
+  fechaDate = new FormControl('', [Validators.required]);
 
   constructor(private activateRoute: ActivatedRoute,
               private accidenteService: AccidentesService,
@@ -66,7 +68,8 @@ export class AccidenteComponent implements OnInit {
           this.accidente = data
           this.cargo = data['cargo'];
           this.id_cargo = data['id_cargo'];
-          this.accidente.fecha = data['fecha']; // eslint-disable-line
+          this.accidente.fechaDate = new Date(data['fecha']); // eslint-disable-line
+          this.accidente.fecha = data['fecha'];
           this.obtenerActividades(this.id_cargo);
           this.showLoading = false;
         }, (error) => {
@@ -90,7 +93,7 @@ export class AccidenteComponent implements OnInit {
         Validators.required
       ]],
       'cargo': [this.cargo, []],
-      'fecha': [this.accidente.fecha, [
+      'fechaDate': [this.accidente.fechaDate, [
         Validators.required
       ]],
       'activo': [this.accidente.activo, []]
@@ -155,7 +158,7 @@ export class AccidenteComponent implements OnInit {
     }
     this.showLoading = true;
     this.accidente['id_cargo'] = this.id_cargo;
-    this.accidente['fecha'] = this.globales.formatDate(this.accidente['fecha']);
+    this.accidente['fecha'] = this.globales.formatDate(this.accidente['fechaDate']);
     this.accidenteService.crear(this.accidente)
       .subscribe((data: any) => {
         this.showLoading = false;
@@ -177,7 +180,7 @@ export class AccidenteComponent implements OnInit {
   modificar() {
     this.showLoading = true;
     this.accidente['id_cargo'] = this.id_cargo;
-    this.accidente['fecha'] = this.globales.formatDate(this.accidente['fecha']);
+    this.accidente['fecha'] = this.globales.formatDate(this.accidente['fechaDate']);
     this.accidenteService.modificar(this.accidente)
       .subscribe((data: any) => {
         this.showLoading = false;

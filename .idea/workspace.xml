@@ -3,7 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="662a405a-72ed-48b0-bfb0-83b95f2351a3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-api/app/Http/Controllers/AccidentesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-api/app/Http/Controllers/AccidentesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/accidentes/accidente.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/accidentes/accidente.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/accidentes/accidente.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/accidentes/accidente.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/accidentes/accidentes.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/accidentes/accidentes.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/accidentes/accidentes.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/accidentes/accidentes.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/models/accidente.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/models/accidente.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/pipes/fechaformat.pipe.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/pipes/fechaformat.pipe.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/empresa-app/src/app/services/constantes.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/services/constantes.service.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -367,14 +372,7 @@
       <workItem from="1576183247028" duration="2388000" />
       <workItem from="1576241667947" duration="6421000" />
       <workItem from="1578318097436" duration="2035000" />
-      <workItem from="1578769888241" duration="14482000" />
-    </task>
-    <task id="LOCAL-00055" summary="Configuracion del crud de cargos">
-      <created>1572991732572</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1572991732572</updated>
+      <workItem from="1578769888241" duration="19799000" />
     </task>
     <task id="LOCAL-00056" summary="Configuracion del crud de cargos">
       <created>1572992739091</created>
@@ -712,7 +710,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578783448097</updated>
     </task>
-    <option name="localTasksCounter" value="104" />
+    <task id="LOCAL-00104" summary="Ultimos cambios en accidentes">
+      <created>1578790707523</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1578790707523</updated>
+    </task>
+    <option name="localTasksCounter" value="105" />
     <servers />
   </component>
   <component name="TodoView">
@@ -764,7 +769,8 @@
     <MESSAGE value="Configuracion del crud de trabajadores" />
     <MESSAGE value="Configuracion del crud de trabajadores  el paginador" />
     <MESSAGE value="Ultimos cambios" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ultimos cambios" />
+    <MESSAGE value="Ultimos cambios en accidentes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ultimos cambios en accidentes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

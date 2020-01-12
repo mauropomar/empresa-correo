@@ -1,6 +1,7 @@
 export interface AccidenteModel {
   id:number;
   codigo:string;
+  fechaDate:Date;
   fecha:string;
   id_trabajador:number;
   trabajador:string;

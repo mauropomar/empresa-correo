@@ -32,6 +32,7 @@ export class AccidentesComponent implements OnInit {
   accidentes: MatTableDataSource<AccidenteModel>;
   fechaInicio:Date = new Date();
   fechaFin:Date = new Date();
+  fechaActual:Date = new Date();
   showLoading: boolean = false;
   totalPages:number = 0;
   totalRecords:number = 0;
@@ -48,7 +49,8 @@ export class AccidentesComponent implements OnInit {
               public dialog: MatDialog,
               private globales: GlobalesService,
               private toastr:ToastrService) {
-
+    this.fechaInicio = this.globales.fechaInicioAccidente;
+    this.fechaFin = this.globales.fechaFinAccidente;
     this.obtenerTodos(true, 1);
   }
 
@@ -144,6 +146,12 @@ export class AccidentesComponent implements OnInit {
       }
     }
     this.accidentes = new MatTableDataSource<AccidenteModel>(data);
+  }
+
+  filterFecha(){
+    this.globales.fechaInicioAccidente = this.fechaInicio;
+    this.globales.fechaFinAccidente = this.fechaFin;
+    this.obtenerTodos(true, this.currentPage)
   }
 
   reload(){

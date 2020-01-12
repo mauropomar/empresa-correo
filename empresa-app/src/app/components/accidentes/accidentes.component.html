@@ -2,14 +2,14 @@
   <mat-grid-list cols="5" rowHeight="65px">
     <mat-grid-tile colspan="1">
       <mat-form-field class="x-input">
-        <input matInput [matDatepicker]="picker"  required placeholder="Fecha Inicio" [(ngModel)]="fechaInicio" (dateChange)="reload()">
+        <input matInput [matDatepicker]="picker" [max]="fechaFin" required placeholder="Fecha Inicio" [(ngModel)]="fechaInicio" (dateChange)="filterFecha()">
         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
       </mat-form-field>
     </mat-grid-tile>
     <mat-grid-tile colspan="1">
       <mat-form-field class="x-input">
-        <input matInput [matDatepicker]="picker1"  required placeholder="Fecha Fin" [(ngModel)]="fechaFin" (dateChange)="reload()">
+        <input matInput [matDatepicker]="picker1"  [min]="fechaInicio" [max] = "fechaActual" required placeholder="Fecha Fin" [(ngModel)]="fechaFin" (dateChange)="filterFecha()">
         <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
         <mat-datepicker #picker1></mat-datepicker>
       </mat-form-field>

@@ -10,6 +10,8 @@ export class GlobalesService {
   editando : boolean = true;
   title:string = 'R.H Plus';
   datos:any = new Array();
+  fechaInicioAccidente:Date = new Date();
+  fechaFinAccidente:Date = new Date();
   constructor() { }
 
   pushData(data){
