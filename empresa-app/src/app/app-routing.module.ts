@@ -10,6 +10,7 @@ import {TrabajadoresComponent} from "./components/trabajadores/trabajadores.comp
 import {TrabajadorComponent} from "./components/trabajadores/trabajador.component";
 import {AccidentesComponent} from "./components/accidentes/accidentes.component";
 import {AccidenteComponent} from "./components/accidentes/accidente.component";
+import {ReportesComponent} from "./components/reportes/reportes.component";
 
 
 const routes: Routes = [
@@ -26,12 +27,12 @@ const routes: Routes = [
   {path: 'trabajador/:id', component: TrabajadorComponent, data: {title: 'Editar Trabajador'}},
   {path: 'accidentes', component: AccidentesComponent, data: {title: 'Accidentes'}},
   {path: 'accidente/nuevo', component: AccidenteComponent, data: {title: 'Nuevo Accidente'}},
-  {path: 'accidente/:id', component: AccidenteComponent, data: {title: 'Editar Accidente'}}
+  {path: 'accidente/:id', component: AccidenteComponent, data: {title: 'Editar Accidente'}},
+  {path: 'reportes', component: ReportesComponent, data: {title: 'Reportes'}},
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule {
-}
+export class AppRoutingModule {};
