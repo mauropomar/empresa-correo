@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="662a405a-72ed-48b0-bfb0-83b95f2351a3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/empresa-app/src/app/components/reportes/reportes.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-app/src/app/components/reportes/reportes.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-app/src/app/components/reportes/reportes.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/empresa-app/src/app/components/reportes/form-reportes.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/empresa-app/src/app/components/reportes/form-reportes.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/empresa-app/src/app/components/reportes/form-reportes.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/empresa-app/src/app/components/reportes/tabla-reportes.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/empresa-app/src/app/components/reportes/tabla-reportes.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/empresa-app/src/app/components/reportes/tabla-reportes.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/reportes/reportes.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/reportes/reportes.component.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -376,6 +381,8 @@
       <workItem from="1578769888241" duration="21631000" />
       <workItem from="1578893328647" duration="1837000" />
       <workItem from="1578922011767" duration="390000" />
+      <workItem from="1578953783891" duration="59000" />
+      <workItem from="1579061349141" duration="623000" />
     </task>
     <task id="LOCAL-00058" summary="Configuracion del crud de cargos">
       <created>1573165348344</created>

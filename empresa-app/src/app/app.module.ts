@@ -53,6 +53,8 @@ import { CombotiposComponent } from './components/genericos/tipos-accidentes/com
 import { CombocausasComponent } from './components/genericos/causas/combocausas/combocausas.component'
 import { CargoActividadesComponent } from './components/accidentes/cargo-actividades.component';
 import { ReportesComponent } from './components/reportes/reportes.component';
+import { TablaReportesComponent } from './components/reportes/tabla-reportes.component';
+import { FormReportesComponent } from './components/reportes/form-reportes.component';
 
 
 @NgModule({
@@ -87,6 +89,8 @@ import { ReportesComponent } from './components/reportes/reportes.component';
     CombocausasComponent,
     CargoActividadesComponent,
     ReportesComponent,
+    TablaReportesComponent,
+    FormReportesComponent,
   ],
   imports: [
     EcoFabSpeedDialModule,
