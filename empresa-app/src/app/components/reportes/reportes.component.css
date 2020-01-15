@@ -1,0 +1,5 @@
+.example-card {
+  min-height: 82vh;
+  height: 82vh;
+  overflow: auto;
+}

@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="662a405a-72ed-48b0-bfb0-83b95f2351a3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/empresa-app/src/app/components/reportes/form-reportes.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-app/src/app/components/reportes/form-reportes.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-app/src/app/components/reportes/form-reportes.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-app/src/app/components/reportes/tabla-reportes.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-app/src/app/components/reportes/tabla-reportes.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/empresa-app/src/app/components/reportes/tabla-reportes.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/reportes/form-reportes.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/reportes/form-reportes.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/reportes/form-reportes.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/reportes/form-reportes.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/reportes/form-reportes.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/reportes/form-reportes.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/reportes/reportes.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/reportes/reportes.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/reportes/reportes.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/reportes/reportes.component.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -51,7 +48,7 @@
     <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="dev" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -177,16 +174,17 @@
     <property name="ts.external.directory.path" value="D:\Tony\www\empresa-correo\empresa-app\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Tony\www\empresa-correo\empresa-app\src\app\components\reportes" />
+      <recent name="D:\Tony\www\empresa-correo\empresa-api\app\Models" />
+      <recent name="D:\Tony\www\empresa-correo\empresa-api\app\Provincias.php Municipios.php" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Tony\www\empresa-correo\empresa-api\app\Models" />
       <recent name="D:\Tony\www\empresa-correo\empresa-api\vendor" />
       <recent name="D:\Tony\www\empresa-correo\empresa-app\src\app\components\cargos" />
       <recent name="D:\Tony\www\empresa-correo\empresa-api\app" />
       <recent name="D:\Tony\www\empresa-correo\empresa-api\app\Http\Controllers" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Tony\www\empresa-correo\empresa-api\app\Models" />
-      <recent name="D:\Tony\www\empresa-correo\empresa-api\app\Provincias.php Municipios.php" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -382,14 +380,7 @@
       <workItem from="1578893328647" duration="1837000" />
       <workItem from="1578922011767" duration="390000" />
       <workItem from="1578953783891" duration="59000" />
-      <workItem from="1579061349141" duration="623000" />
-    </task>
-    <task id="LOCAL-00058" summary="Configuracion del crud de cargos">
-      <created>1573165348344</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1573165348345</updated>
+      <workItem from="1579061349141" duration="1943000" />
     </task>
     <task id="LOCAL-00059" summary="Configuracion del crud de cargos">
       <created>1573274833478</created>
@@ -727,7 +718,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578894636791</updated>
     </task>
-    <option name="localTasksCounter" value="107" />
+    <task id="LOCAL-00107" summary="Creacion de la vista reportes">
+      <created>1579062011671</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1579062011672</updated>
+    </task>
+    <option name="localTasksCounter" value="108" />
     <servers />
   </component>
   <component name="TodoView">
@@ -780,7 +778,8 @@
     <MESSAGE value="Configuracion del crud de trabajadores  el paginador" />
     <MESSAGE value="Ultimos cambios" />
     <MESSAGE value="Ultimos cambios en accidentes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ultimos cambios en accidentes" />
+    <MESSAGE value="Creacion de la vista reportes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creacion de la vista reportes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

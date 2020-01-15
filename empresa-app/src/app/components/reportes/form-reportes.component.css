@@ -1,0 +1,16 @@
+.example-card {
+  min-height: 82vh;
+  height: 82vh;
+  overflow: auto;
+}
+
+.example-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.x-input{
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
