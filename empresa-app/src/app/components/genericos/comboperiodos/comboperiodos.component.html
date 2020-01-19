@@ -1,0 +1,8 @@
+<mat-form-field>
+  <mat-label>Periodo</mat-label>
+  <mat-select value="hoy" (selectionChange)="seleccionar($event.value)">
+    <mat-option *ngFor="let p of periodos" [value]="p.value">
+      {{p.nombre}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>

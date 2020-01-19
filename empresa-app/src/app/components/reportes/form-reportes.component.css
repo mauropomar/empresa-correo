@@ -9,8 +9,17 @@
   flex-direction: column;
 }
 
+.example-container > * {
+  width: 80%;
+}
+
 .x-input{
+  width: 100%;
+}
+
+.x-select-periodos{
   display: flex;
   flex-direction: column;
-  width: 90%;
+  width: 100%;
 }
+

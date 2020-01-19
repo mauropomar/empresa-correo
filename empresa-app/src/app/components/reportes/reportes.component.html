@@ -1,11 +1,10 @@
 <mat-card class="example-card" #customLoadingTemplate>
-  <mat-grid-list cols="3" rowHeight="65px">
+  <mat-grid-list cols="3" rowHeight="100%">
     <mat-grid-tile colspan="1">
+      <app-tabla-reportes class="x-table-reporte"></app-tabla-reportes>
     </mat-grid-tile>
     <mat-grid-tile colspan="2">
-      <app-form-reportes></app-form-reportes>
+      <app-form-reportes class="x-form-reporte"></app-form-reportes>
     </mat-grid-tile>
   </mat-grid-list>
-
-
 </mat-card>

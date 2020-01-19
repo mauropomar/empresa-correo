@@ -55,6 +55,7 @@ import { CargoActividadesComponent } from './components/accidentes/cargo-activid
 import { ReportesComponent } from './components/reportes/reportes.component';
 import { TablaReportesComponent } from './components/reportes/tabla-reportes.component';
 import { FormReportesComponent } from './components/reportes/form-reportes.component';
+import { ComboperiodosComponent } from './components/genericos/comboperiodos/comboperiodos.component';
 
 
 @NgModule({
@@ -91,6 +92,7 @@ import { FormReportesComponent } from './components/reportes/form-reportes.compo
     ReportesComponent,
     TablaReportesComponent,
     FormReportesComponent,
+    ComboperiodosComponent,
   ],
   imports: [
     EcoFabSpeedDialModule,
