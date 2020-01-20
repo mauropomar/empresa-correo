@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./reportes.component.css']
 })
 export class ReportesComponent implements OnInit {
-
   constructor() { }
 
   ngOnInit() {
+  }
+
+  seleccionarPeriodo(value){
+   // this.isrango = value;
   }
 
 }

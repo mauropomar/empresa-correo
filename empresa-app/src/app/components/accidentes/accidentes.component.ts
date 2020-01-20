@@ -10,21 +10,12 @@ import {GlobalesService} from "../../services/constantes.service";
 import { ToastrService } from 'ngx-toastr';
 import { FechaformatPipe } from '../../pipes/fechaformat.pipe';
 
-export interface Datos {
-  fechaInicio:Date,
-  fechaFin:Date,
-  activo:boolean
-}
-
-
 @Component({
   selector: 'app-accidentes',
   templateUrl: './accidentes.component.html',
   styleUrls: ['./accidentes.component.css']
 })
 export class AccidentesComponent implements OnInit {
-
-
   message: string = "Esta seguro que desea eliminar el accidente seleccionado.";
   displayedColumns: string[] = ['imagen', 'codigo', 'trabajador', 'fecha', 'edad' , 'sexo',  'cargo','tipo', 'causa', 'actions'];
   @ViewChild(MatSort, {static:true}) sort:MatSort;

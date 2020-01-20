@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewChild, Output, EventEmitter} from '@angular/core';
 import {MatTableDataSource} from "@angular/material/table";
 import {AccidenteModel} from "../../models/accidente.model";
 import {FormControl, FormBuilder, FormGroup, Validators} from '@angular/forms';
@@ -13,7 +13,9 @@ export class FormReportesComponent implements OnInit {
   fechaFin:Date = new Date();
   fechaActual:Date = new Date();
   reporteForm: FormGroup;
-  constructor(private formBuilder: FormBuilder) { }
+  isrango:boolean = false;
+  constructor(private formBuilder: FormBuilder) {
+  }
 
   ngOnInit() {
     this.reporteForm = this.formBuilder.group({})
@@ -21,6 +23,11 @@ export class FormReportesComponent implements OnInit {
 
   filterFecha(){
 
+  }
+
+  selectPeriodo(value){
+     let rango = (value == "hasta_fecha")?true:false;
+     this.isrango = rango;
   }
 
 }

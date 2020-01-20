@@ -18,7 +18,9 @@ export class ComboperiodosComponent implements OnInit {
     {value: 'hasta_fecha', nombre: 'Hasta Fecha'},
     {value: 'rango_fecha', nombre: 'Rango de Fecha'}
   ];
-  constructor() { }
+  constructor() {
+    this.change = new EventEmitter<number>();
+  }
 
   ngOnInit() {
   }

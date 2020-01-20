@@ -1,17 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="662a405a-72ed-48b0-bfb0-83b95f2351a3" name="Default Changelist" comment="Creacion de la vista reportes">
+    <list default="true" id="662a405a-72ed-48b0-bfb0-83b95f2351a3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/reportes/form-reportes.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/reportes/form-reportes.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/accidentes/accidentes.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/accidentes/accidentes.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/genericos/comboperiodos/comboperiodos.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/genericos/comboperiodos/comboperiodos.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/reportes/form-reportes.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/reportes/form-reportes.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/reportes/form-reportes.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/reportes/form-reportes.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/reportes/reportes.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/reportes/reportes.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/reportes/reportes.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/reportes/reportes.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/reportes/tabla-reportes.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/reportes/tabla-reportes.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/reportes/tabla-reportes.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/reportes/tabla-reportes.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/reportes/tabla-reportes.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/reportes/tabla-reportes.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empresa-app/src/app/components/reportes/reportes.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/empresa-app/src/app/components/reportes/reportes.component.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -390,14 +387,8 @@
       <workItem from="1579313226583" duration="4650000" />
       <workItem from="1579356679275" duration="1286000" />
       <workItem from="1579400031593" duration="664000" />
-      <workItem from="1579453669337" duration="3852000" />
-    </task>
-    <task id="LOCAL-00060" summary="Configuracion del crud de actividades">
-      <created>1573319352129</created>
-      <option name="number" value="00060" />
-      <option name="presentableId" value="LOCAL-00060" />
-      <option name="project" value="LOCAL" />
-      <updated>1573319352129</updated>
+      <workItem from="1579453669337" duration="4570000" />
+      <workItem from="1579486400961" duration="4917000" />
     </task>
     <task id="LOCAL-00061" summary="Configuracion del crud de actividades">
       <created>1573448242679</created>
@@ -735,7 +726,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579063315298</updated>
     </task>
-    <option name="localTasksCounter" value="109" />
+    <task id="LOCAL-00109" summary="Creacion de la vista reportes">
+      <created>1579459930823</created>
+      <option name="number" value="00109" />
+      <option name="presentableId" value="LOCAL-00109" />
+      <option name="project" value="LOCAL" />
+      <updated>1579459930824</updated>
+    </task>
+    <option name="localTasksCounter" value="110" />
     <servers />
   </component>
   <component name="TodoView">
