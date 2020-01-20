@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {GlobalesService} from "../../services/constantes.service";
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-reportes',
@@ -6,13 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./reportes.component.css']
 })
 export class ReportesComponent implements OnInit {
-  constructor() { }
+  constructor(private globales: GlobalesService,
+              private activeRoute: ActivatedRoute) {
+  }
 
   ngOnInit() {
+    this.globales.title = this.activeRoute.snapshot.data.title;
   }
-
-  seleccionarPeriodo(value){
-   // this.isrango = value;
-  }
-
 }
